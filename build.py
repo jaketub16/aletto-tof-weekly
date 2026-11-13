@@ -89,7 +89,7 @@ def build(wdir):
 <h1>Top of funnel<span class="dot">.</span><br>{E(S['week_label'])}</h1>
 <p class="sub" style="max-width:900px">Spend, leads, booked calls and Scopes by source, compared with {E(S['prior_label'])}. LinkedIn numbers are actuals. Meta spend is an estimate while the account is locked.</p>
 <div><span class="chip">← → or swipe to move</span><span class="chip">N for speaker notes</span><span class="chip"><a href="../archive/" style="color:inherit">Past weeks →</a></span></div></div>
-<div class="src">Sources: LinkedIn Ads (account 513100372), Hyros booked calls (last touch), GHL contacts and tags, Zernio. Read-only pull, Fri Nov 13. Prospects shown as first name + last initial.</div>
+<div class="src">Sources: LinkedIn Ads (account 513100372), Hyros booked calls (last touch), GHL contacts and tags, Metricool + Zernio (content). Read-only pull, Fri Nov 13. Prospects shown as first name + last initial.</div>
 {notes('Same week window as every Friday pack: Friday to Thursday, Eastern time.', 'Every number ties to the pack files; Meta spend is the standing ~$190/day estimate.')}</section>''')
 
     # 2 week in one slide
@@ -258,18 +258,83 @@ def build(wdir):
 <div class="src">LinkedIn campaign daily and account daily reports. Frequency = impressions ÷ reach for the week. bg1 US Nov 12 jump reflects the $15 → $40 budget change.</div>
 {notes('Rule of thumb: rotate creative before frequency passes ~2 on cold audiences.')}</section>''')
 
-    # 11 content
-    C = D['content']
-    slides.append(f'''<section class="slide" data-title="Content">{top('Content & organic')}
-<h2>The company page started posting. The testimonial was the standout.</h2>
-<p class="sub">Organic booked {org(bk_t, 'books')} calls / {org(bk_t, 'q')} qualified and {sc(bk_t, 'Organic (probable LinkedIn)') + sc(bk_t, 'Organic other')} of the {bk_t['scopes']} Scopes. Organic "5 Ways" report leads {ld_p['by_ch'].get('Organic (5 Ways report)')} → {ld_t['by_ch'].get('Organic (5 Ways report)')}.</p>
-<div class="grid g4" style="margin-bottom:14px">{kpi('Company page posts', C['posts'])}{kpi('Impressions', f"{C['imp']:,}", f'<div class="deltas">~{round(C["imp"] / C["posts"])} per post</div>')}{kpi('Likes · shares · clicks', f"{C['likes']} · {C['shares']} · {C['clicks']}")}{kpi('Organic report leads', ld_t['by_ch'].get('Organic (5 Ways report)'), delta(ld_t['by_ch'].get('Organic (5 Ways report)'), ld_p['by_ch'].get('Organic (5 Ways report)')), color='color:var(--grn)')}</div>
-<div class="grid g2 fill" style="grid-template-columns:1.4fr 1fr">
- <div class="glass card col"><div class="lbl">Impressions per company-page post, Nov 7–12</div><div class="chart"><canvas id="cPosts"></canvas></div></div>
- <div class="glass card"><ul class="clean">{''.join(f'<li>{p}</li>' for p in S['content_points'])}</ul></div>
+    # 11 content (v2: content.json from content_extract.py -> 3 slides; else the old single slide)
+    cpath = os.path.join(wdir, 'content.json')
+    if os.path.exists(cpath) and 'content2' in S:
+        CJ, C2 = json.load(open(cpath)), S['content2']
+        tt, tp = CJ['totals']['this'], CJ['totals']['prior']
+        org_rep_t = ld_t['by_ch'].get('Organic (5 Ways report)', 0); org_rep_p = ld_p['by_ch'].get('Organic (5 Ways report)', 0)
+        g_t, g_p = CJ['ghl']['this']['report_first'], CJ['ghl']['prior']['report_first']
+        LEADMAP = {'Jake · LinkedIn': 'LinkedIn organic', 'Jake · Instagram': 'Instagram', 'Jake · YouTube': 'YouTube', 'Jake · X': 'X',
+                   'Jake · Threads': 'Threads', 'Jake · TikTok': 'TikTok', 'Aletto · Facebook': 'Facebook organic'}
+        fmtn = lambda v: '—' if v is None else f'{v:,}'
+        rows = ''
+        for r in CJ['platforms']:
+            a_, b_ = r['this'], r['prior']
+            lk = LEADMAP.get(r['key'])
+            lv = g_t.get(lk, 0) if lk else ''
+            lead_cell = (f'<b style="color:var(--grn)">{lv}*</b>' if lv and r['key'] == 'Jake · LinkedIn' else (f'<b>{lv}</b>' if lv else ('<span class="z">0</span>' if lk else '<span class="z">—</span>')))
+            dv = (f'<span class="{"up" if a_["views"] >= b_["views"] else "dn"}">{pct(a_["views"], b_["views"])}</span>') if b_['posts'] else '<span class="hint">new</span>'
+            rows += (f'<tr class="{"hl" if r["key"] == "Jake · LinkedIn" else ""}"><td class="ad" style="text-align:left">{E(r["key"])}</td><td>{a_["posts"]}<span class="hint"> ({b_["posts"]})</span></td>'
+                     f'<td><b>{a_["views"]:,}</b></td><td>{dv}</td><td>{fmtn(a_["reach"])}</td><td>{a_["likes"]:,}</td><td>{a_["comments"]:,}</td><td>{a_["shares"]:,}</td>'
+                     f'<td>{a_["saves"]:,}</td><td>{a_["er"] if a_["er"] is not None else "—"}%</td><td>{fmtn(a_["clicks"])}</td><td>{lead_cell}</td></tr>')
+        slides.append(f'''<section class="slide" data-title="Content scoreboard">{top('Content · platform scoreboard')}
+<h2>{C2['score_h']}</h2><p class="sub">{C2['score_sub']}</p>
+<div class="grid g4 g3k" style="margin-bottom:12px">{kpi('Posts', f"{tt['posts']:,}", delta(tt['posts'], tp['posts'], 'none', lambda v: f'{v:,}'))}{kpi('Views / impressions', f"{tt['views']:,}", delta(tt['views'], tp['views'], 'up', lambda v: f'{v:,}'))}{kpi('Engagements', f"{tt['eng']:,}", delta(tt['eng'], tp['eng'], 'up', lambda v: f'{v:,}'))}{kpi('Organic report leads', org_rep_t, delta(org_rep_t, org_rep_p), color='color:var(--grn)')}</div>
+<div class="glass card fill scroll"><table class="tb2"><tr><th style="text-align:left">Brand · platform</th><th>Posts (last wk)</th><th>Views</th><th>vs last wk</th><th>Reach</th><th>Likes</th><th>Comments</th><th>Shares</th><th>Saves</th><th>Eng. rate</th><th>Clicks</th><th>Report leads</th></tr>{rows}
+<tr><td style="text-align:left"><b>Total</b></td><td><b>{tt['posts']:,}</b><span class="hint"> ({tp['posts']:,})</span></td><td><b>{tt['views']:,}</b></td><td><span class="up">{pct(tt['views'], tp['views'])}</span></td><td>{fmtn(tt['reach'])}</td><td>{tt['likes']:,}</td><td>{tt['comments']:,}</td><td>{tt['shares']:,}</td><td>{tt['saves']:,}</td><td>{tt['er']}%</td><td>{fmtn(tt['clicks'])}</td><td><b>{org_rep_t}</b></td></tr></table></div>
+<div class="src">Metricool post analytics (pulled Fri Nov 13, lifetime-to-date per post), cross-checked with Zernio (Threads / Instagram / TikTok / company page within ~10%). Views = platform views; LinkedIn and X = impressions. Engagements = likes + comments + shares/reposts + saves. Clicks: X profile clicks, LinkedIn page clicks. *Report leads = GHL first-touch referrer; 56 "linkedin.com" leads can't be split between Jake's profile and the company page. 5 organic leads had no referrer. Facebook page counted once (Aletto).</div>
+{notes('Threads = 87% of all views but 7% of engagements and 0 leads.', 'LinkedIn: text posts median 160 impressions vs video 64.', 'Jake LinkedIn row includes reposts with comments (e.g. the Nov 8 reply to Jack Porter, 3,145 impressions).')}</section>''')
+
+        def hrow(label, F, L):
+            f = F.get(label, {'strat': 0, 'q': 0, 'scope': 0, 'scope_who': []}); l = L.get(label, {'strat': 0, 'q': 0, 'scope': 0, 'scope_who': []})
+            z = lambda v: f'<span class="z">0</span>' if not v else str(v)
+            who = ', '.join(f['scope_who'] or l['scope_who'])
+            return (f'<tr class="{"hl" if label == "LinkedIn organic" else ""}"><td style="text-align:left" class="ad">{label}</td><td>{z(f["strat"])}</td><td>{z(f["q"])}</td><td>{z(f["scope"])}</td>'
+                    f'<td>{z(l["strat"])}</td><td>{z(l["q"])}</td><td>{z(l["scope"])}</td><td style="text-align:left;color:var(--mut);white-space:normal">{E(who)}</td></tr>')
+        HF, HL = CJ['hyros']['this_first'], CJ['hyros']['this_last']
+        org_labels = ['LinkedIn organic', 'Instagram', 'YouTube', 'X', 'Threads', 'TikTok', 'Facebook organic', 'Google organic', 'Email', 'Free report (nurture)']
+        org_labels += [k for k in list(HF) + list(HL) if k.startswith('Organic ') and k not in org_labels]
+        hrows = ''.join(hrow(k, HF, HL) for k in org_labels)
+        sum_org = lambda T_, k: sum(v[k] for n_, v in T_.items() if not n_.startswith('Paid') and n_ != 'No source')
+        slides.append(f'''<section class="slide" data-title="Organic leads by source">{top('Content · organic leads by source')}
+<h2>{C2['leads_h']}</h2><p class="sub">{C2['leads_sub']}</p>
+<div class="grid g2 fill" style="grid-template-columns:1fr 1.25fr">
+ <div class="glass card col"><div class="lbl">Organic free-report leads by first-touch source, this week vs last</div><div class="chart"><canvas id="cOrg"></canvas></div></div>
+ <div class="glass card col"><div class="lbl">Strategy calls · qualified · Scopes by organic source (Hyros)</div>
+  <div class="scroll fill" style="margin-top:6px"><table class="tb2"><tr><th style="text-align:left">Source</th><th colspan="3">First touch<br><span class="hint">Strat · qual · Scope</span></th><th colspan="3">Last touch<br><span class="hint">Strat · qual · Scope</span></th><th style="text-align:left">Scopes</th></tr>{hrows}
+  <tr><td style="text-align:left"><b>All organic</b></td><td><b>{sum_org(HF, 'strat')}</b></td><td><b>{sum_org(HF, 'q')}</b></td><td><b>{sum_org(HF, 'scope')}</b></td><td><b>{sum_org(HL, 'strat')}</b></td><td><b>{sum_org(HL, 'q')}</b></td><td><b>{sum_org(HL, 'scope')}</b></td><td></td></tr></table></div>
+  <p class="hint" style="margin-top:8px;font-size:12.5px;line-height:1.45">Paid, for scale (first touch): Meta {HF.get('Paid Meta', {}).get('strat', 0)} · {HF.get('Paid Meta', {}).get('q', 0)} · {HF.get('Paid Meta', {}).get('scope', 0)}, LinkedIn ads {HF.get('Paid LinkedIn', {}).get('strat', 0)} · {HF.get('Paid LinkedIn', {}).get('q', 0)} · {HF.get('Paid LinkedIn', {}).get('scope', 0)}, no source {HF.get('No source', {}).get('strat', 0)} · {HF.get('No source', {}).get('q', 0)} · {HF.get('No source', {}).get('scope', 0)}. Hyros source links are per channel (li, ig, fb…), not per post, so no single post can be credited with a lead yet.</p></div>
 </div>
-<div class="src">Zernio analytics, LinkedIn, Oct 30–Nov 12 (all 19 posts fall Nov 7–12; none the week before). GHL "5 Ways" source for organic leads.</div>
-{notes('Testimonial post: 62 impressions, 41 reach, 2 likes, 3 shares.')}</section>''')
+<div class="src">Leads: GHL contacts created in the week (free-report tag/URL or "5 Ways" source), first-touch referrer / in-app browser (LinkedInApp, Instagram). Books: Hyros "Free AI Strategy Call" and "Scope Call", first and last touch; qualified = GHL tag. Prospects shown as first name + last initial.</div>
+{notes('Instagram last week: 3 report leads and 1 qualified strategy call; this week 0 leads and 1 unqualified call.', 'Google organic (last touch) booked 2 qualified calls and Manuel M.\'s Scope; his first touch was LinkedIn organic.')}</section>''')
+
+        H_ = C2['hot']
+        slides.append(f'''<section class="slide cslide" data-title="Hot post, hooks & tests">{top('Content · hot post, hooks & tests')}
+<h2>#1 post, 5 hooks, 3 super hooks, 5 tests</h2>
+<p class="sub">Built from what drove leads (LinkedIn text posts with numbers from our own data) and from the language Scope buyers used on their strategy calls (cold outreach failing, trade shows burning money, founder-led sales hitting a ceiling).</p>
+<div class="grid g3 fill" style="grid-template-columns:1.05fr 1fr 1.15fr;align-items:stretch">
+ <div class="glass card col scroll" style="border-left:3px solid var(--amb)"><div class="lbl" style="color:var(--amb)">🔥 Hot post #1</div><b style="font-size:clamp(17px,1.45vw,21px);margin:6px 0 2px;display:block">{E(H_['title'])}</b><div class="hint" style="margin-bottom:6px"><a href="{H_['url']}" target="_blank" rel="noopener" style="color:var(--blu)">{E(H_['meta'])} ↗</a></div>
+  <ul class="clean">{''.join(f'<li>{x}</li>' for x in H_['why'])}</ul><p class="hint" style="margin-top:8px;font-size:12.5px;line-height:1.45;color:#c3c9d6">{H_['runner']}</p></div>
+ <div class="col" style="gap:12px"><div class="glass card col"><div class="lbl">New hooks to try</div><ul class="clean">{''.join(f'<li>{E(x)}</li>' for x in C2['hooks'])}</ul></div>
+  <div class="glass card col" style="border-left:3px solid var(--red)"><div class="lbl" style="color:#ff8a8a">Super hooks</div><ul class="clean">{''.join(f'<li><b>{E(x)}</b></li>' for x in C2['super'])}</ul></div></div>
+ <div class="glass card col scroll"><div class="lbl">New things to try <span class="tag pend">awaiting go</span></div><ul class="clean">{''.join(f'<li><b>{E(t)}.</b> {E(p)}</li>' for t, p in C2['tests'])}</ul></div>
+</div>
+<div class="src">Hot post = #1 by engagement on the platform that produced the organic leads; post-level lead tracking doesn't exist yet (test 1 fixes that). Scope-buyer language: us-qualified-remakes-2026-11-09/scope_buyer_patterns.md (Fathom strategy-call summaries, n=9). Nothing posted or changed.</div>
+{notes('Hooks are drafts for Jake / the content team. Nothing is scheduled.', 'Super hooks are deliberately bolder; run them as LinkedIn text posts first.')}</section>''')
+    else:
+        # 11 content
+        C = D['content']
+        slides.append(f'''<section class="slide" data-title="Content">{top('Content & organic')}
+    <h2>The company page started posting. The testimonial was the standout.</h2>
+    <p class="sub">Organic booked {org(bk_t, 'books')} calls / {org(bk_t, 'q')} qualified and {sc(bk_t, 'Organic (probable LinkedIn)') + sc(bk_t, 'Organic other')} of the {bk_t['scopes']} Scopes. Organic "5 Ways" report leads {ld_p['by_ch'].get('Organic (5 Ways report)')} → {ld_t['by_ch'].get('Organic (5 Ways report)')}.</p>
+    <div class="grid g4" style="margin-bottom:14px">{kpi('Company page posts', C['posts'])}{kpi('Impressions', f"{C['imp']:,}", f'<div class="deltas">~{round(C["imp"] / C["posts"])} per post</div>')}{kpi('Likes · shares · clicks', f"{C['likes']} · {C['shares']} · {C['clicks']}")}{kpi('Organic report leads', ld_t['by_ch'].get('Organic (5 Ways report)'), delta(ld_t['by_ch'].get('Organic (5 Ways report)'), ld_p['by_ch'].get('Organic (5 Ways report)')), color='color:var(--grn)')}</div>
+    <div class="grid g2 fill" style="grid-template-columns:1.4fr 1fr">
+     <div class="glass card col"><div class="lbl">Impressions per company-page post, Nov 7–12</div><div class="chart"><canvas id="cPosts"></canvas></div></div>
+     <div class="glass card"><ul class="clean">{''.join(f'<li>{p}</li>' for p in S['content_points'])}</ul></div>
+    </div>
+    <div class="src">Zernio analytics, LinkedIn, Oct 30–Nov 12 (all 19 posts fall Nov 7–12; none the week before). GHL "5 Ways" source for organic leads.</div>
+    {notes('Testimonial post: 62 impressions, 41 reach, 2 likes, 3 shares.')}</section>''')
 
     # 12 recommendations
     rc = ''.join(f'<div class="glass card rc"><div class="num">{i}</div><div><b>{E(t)}</b><p>{p}</p></div></div>' for i, (t, p) in enumerate(S['recs'], 1))
@@ -286,7 +351,7 @@ def build(wdir):
 <h2>What we can't see yet</h2>
 <p class="sub">Each gap below is labelled wherever it touches a number in this deck.</p>
 <div class="grid g2 gaps" style="align-content:start">{gp}</div>
-<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email. Leads: GHL contacts by date added. Content: Zernio. Built {S['title_date']}, read-only.</p></div>
+<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email. Leads: GHL contacts by date added. Content: Metricool post analytics, cross-checked with Zernio. Built {S['title_date']}, read-only.</p></div>
 <div class="src">Rebuilt weekly from the Friday pack with build.py. Past weeks: /archive/.</div>
 {notes('Biggest unlock: GA4 on the VSL page, then Meta access.')}</section>''')
 
@@ -314,6 +379,12 @@ def build(wdir):
         'acct': [[d[5:], v['cpm'], v['spend']] for d, v in sorted(D['li_daily'].items())],
         'posts': [[p['date'][5:], p['title'][:60], p['imp'], p['title'] == S['content_best']] for p in D['content']['list']],
     }
+    if os.path.exists(os.path.join(wdir, 'content.json')) and 'content2' in S:
+        _cj = json.load(open(os.path.join(wdir, 'content.json')))
+        _gt, _gp = _cj['ghl']['this']['report_first'], _cj['ghl']['prior']['report_first']
+        _labs = [k for k in ['LinkedIn organic', 'Direct / no referrer', 'Instagram', 'YouTube', 'X', 'Threads', 'TikTok', 'Facebook organic', 'Search', 'AI search', 'Other referrer']
+                 if k in ('LinkedIn organic', 'Instagram', 'YouTube', 'X') or _gt.get(k) or _gp.get(k)]
+        CH['org'] = [[k, _gt.get(k, 0), _gp.get(k, 0)] for k in _labs]
     css = A('base.css') + A('presenter.css') + A('deck.css')
     body = '\n'.join(slides)
     js = A('deck.js').replace('__CH__', json.dumps(CH))

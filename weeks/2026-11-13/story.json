@@ -126,8 +126,8 @@
   ],
   [
    "a",
-   "Jake's personal LinkedIn isn't visible",
-   "Zernio only reports personal posts published through it."
+   "Organic leads can't be tied to single posts",
+   "Metricool now reads every platform, Jake's LinkedIn included. But GHL only records \"linkedin.com\" as the referrer and Hyros only records a channel (li, ig), so a lead can't be credited to one post yet. Per-post tracked links fix this (content test 1)."
   ],
   [
    "a",
@@ -139,5 +139,56 @@
    "SDR-calendar books are excluded",
    "Sales-set calls aren't in Hyros. Closer reports those."
   ]
- ]
+ ],
+ "content2": {
+  "score_h": "729 posts, 508k views. Threads brings the reach; LinkedIn brings the leads.",
+  "score_sub": "Jake + Aletto, every platform Metricool reads, Fri Nov 6 – Thu Nov 12 ET vs the week before. Views up 2.5×, mostly from Threads (440k views, 52 engagements). LinkedIn text posts drove the conversation: 106 of Jake's 122 LinkedIn comments.",
+  "leads_h": "LinkedIn organic brought in the leads. Instagram and YouTube brought none.",
+  "leads_sub": "Of 61 organic free-report leads, 56 came from LinkedIn (first touch) and 5 had no referrer. Instagram and YouTube: 0 report leads and 0 Scopes. Instagram had 1 strategy call (not qualified); YouTube had none.",
+  "hot": {
+   "title": "\"0.27% reply rate on AI-written first lines.\"",
+   "meta": "Jake · LinkedIn text post · Mon Nov 9, 04:00 ET",
+   "url": "https://www.linkedin.com/feed/update/urn:li:share:7525483395028529152",
+   "why": [
+    "It's the most-engaged post on LinkedIn, the platform that brought 56 of the 61 organic leads: 16 engagements (9 likes, 7 comments) on 332 impressions, a 4.8% engagement rate.",
+    "The hook opens on a hard number from our own data (0.27% vs 14.5%), the same pattern as the next two best LinkedIn posts (7% connect rate; 31,000 inboxes).",
+    "It's about cold outreach dying. That was the #1 pain in 8 of 9 Scope buyers' strategy calls."
+   ],
+   "runner": "Top by engagement overall: <b>\"Good cop, bad cop works because we give to those who give to us.\"</b> Posted 9 times on 6 platforms: 5,224 views and 63 engagements. It brought 0 leads, because the Instagram \"Comment REPORT\" CTA got 4 comments across 107 reels."
+  },
+  "hooks": [
+   "\"Our connect rate was 7%. These people had asked us to call them.\"",
+   "\"$5–8k a month on LinkedIn outreach. Zero leads. Here's what was broken.\"",
+   "\"100 cold emails got 8 replies in 2019. Count yours this week.\"",
+   "\"3 in 4 leads never got a call back. Salesforce just admitted it. What's your number?\"",
+   "\"A €40k trade show. 25 leads. €1,600 a lead, before anyone took a meeting.\""
+  ],
+  "super": [
+   "\"Cold email didn't get worse. Google killed it, and 31,000 inboxes died in one day.\"",
+   "\"I'd rather set $40,000 on fire than buy another trade-show booth.\"",
+   "\"If every deal still needs you on the call, you don't own a company. You own a job with payroll.\""
+  ],
+  "tests": [
+   [
+    "Track every LinkedIn post",
+    "Add a per-post tracked link (Hyros or UTM content = post slug) to Jake's LinkedIn posts and profile link. Right now 56 leads say only \"linkedin.com\", so no post can be credited."
+   ],
+   [
+    "Make the LinkedIn mix about 80% text",
+    "Text posts had a median of 160 impressions and 106 comments. Videos had a median of 64 and 10 comments. Turn the weekly own-data number into the standard post."
+   ],
+   [
+    "Fix the Instagram CTA, or stop counting Instagram for leads",
+    "107 reels with \"Comment REPORT\" got 31k views, 4 comments and 0 report leads. Test a bio link with a UTM plus a DM keyword on 3 reels, and judge it on report leads."
+   ],
+   [
+    "Treat Threads as reach only",
+    "230 posts, 440k views, 52 engagements, 0 leads. Keep it automated, but leave it out of lead decisions and don't spend production time on it."
+   ],
+   [
+    "Turn the cold-outreach-is-dead angle into an ad",
+    "Use the 0.27% / 31,000-inboxes angle as a deadcold variant. It's the pain behind the most-engaged posts and 8 of 9 Scope buyers."
+   ]
+  ]
+ }
 }

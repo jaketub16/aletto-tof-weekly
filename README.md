@@ -11,17 +11,33 @@ Arrow keys / space / swipe to move, **N** for speaker notes, `?static` turns ani
 
 ## Weekly rebuild (every Friday)
 ```bash
-# 1. numbers from the new Friday pack + latest last-$5k run
-python3 extract.py --pack /workspace/friday-pack-<dates> --last5k /workspace/li-trim-<date> --out weeks/<YYYY-MM-DD>/data.json
-# 2. copy last week's story.json into weeks/<YYYY-MM-DD>/ and rewrite the words (verdict, winners/losers, fatigue, recs, gaps)
+# 0. content data: refresh Metricool (read-only) and save Zernio daily metrics (optional cross-check)
+/workspace/content-performance/run_daily.sh 30          # -> /workspace/content-performance/data/<Friday>/
+#    Zernio MCP analytics_get_daily_metrics(from_date=<prior Fri>, to_date=<Thu>) -> save JSON as /workspace/content-week-<date>/zernio_daily.json
+# 1. numbers from the new Friday pack + latest last-$5k run (+ content.json when --metricool is given)
+python3 extract.py --pack /workspace/friday-pack-<dates> --last5k /workspace/li-trim-<date> --out weeks/<YYYY-MM-DD>/data.json \
+    --metricool /workspace/content-performance/data/<Friday> --zernio /workspace/content-week-<date>/zernio_daily.json
+# 2. copy last week's story.json into weeks/<YYYY-MM-DD>/ and rewrite the words (verdict, winners/losers, fatigue, recs, gaps,
+#    and content2: score_h/sub, leads_h/sub, hot post + why, 5 hooks, 3 super hooks, tests) from content.json
 # 3. build + verify
 python3 build.py weeks/<YYYY-MM-DD>
-python3 verify.py --pack /workspace/friday-pack-<dates> --last5k /workspace/li-trim-<date> --date <YYYY-MM-DD>
+python3 verify.py --pack /workspace/friday-pack-<dates> --last5k /workspace/li-trim-<date> --date <YYYY-MM-DD> \
+    --metricool /workspace/content-performance/data/<Friday>
 git add -A && git commit -m "TOF deck <YYYY-MM-DD>" && git push
 ```
 `build.py --all` rebuilds every week. Root `index.html` always points at the newest week; old weeks stay at their dated path.
 
-Files: `extract.py` (pack → data.json), `build.py` (data + story → HTML), `verify.py` (deck ↔ pack tie-out), `assets/` (CSS, Chart.js, logo, deck JS), `weeks/<date>/` (data.json + story.json).
+### Content slides (11–13)
+`content_extract.py` writes `weeks/<date>/content.json`:
+- **platforms**: per brand · platform (Jake: LinkedIn, Instagram, Threads, X, TikTok, YouTube; Aletto: LinkedIn page, Instagram, Facebook, YouTube) posts, views, reach, likes, comments, shares, saves, engagement rate, clicks, this vs last week. Source: Metricool raw JSON (lifetime-to-date per post on the pull day).
+- **top / cross_platform / posts_this**: every post this week, top 10 by views, engagement and engagement rate, and hooks reused across platforms.
+- **ghl**: free-report leads by first- and last-touch organic source (LinkedIn organic, Instagram, YouTube, X, Threads, TikTok, Facebook, search, direct), from GHL attribution referrer + in-app user agent.
+- **hyros**: strategy calls / qualified / Scopes by organic source, first and last touch (Hyros source names li, ig, fb, google-organic, email, freereport).
+Hot post rule: #1 by leads where post-level tracking exists; until then #1 by engagement on the platform that produced the most organic leads.
+Hooks / super hooks: built from the winning posts + `/workspace/us-qualified-remakes-2026-11-09/scope_buyer_patterns.md` (Fathom Scope-buyer language).
+If `content.json` or `story.content2` is missing, build.py falls back to the old single Content slide.
+
+Files: `extract.py` (pack → data.json, + content.json), `content_extract.py` (Metricool + GHL + Hyros → content.json), `build.py` (data + story → HTML), `verify.py` (deck ↔ pack tie-out), `assets/` (CSS, Chart.js, logo, deck JS), `weeks/<date>/` (data.json + story.json).
 
 Privacy: prospects are first name + last initial only; no emails, phones or companies of prospects.
 Meta spend is an estimate (~$190/day) while the Aletto Meta ad account is locked, and is labelled that way on every slide.

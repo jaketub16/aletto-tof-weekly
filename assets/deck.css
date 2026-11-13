@@ -78,3 +78,9 @@ ul.clean li{font-size:clamp(14px,1.15vw,16.5px);padding:10px 0}
 @media (max-width:820px){.recs .rc:last-child{grid-column:auto}}
 
 .grid>*{min-width:0}
+
+/* content v2 slide: dense lists */
+.cslide ul.clean li{font-size:clamp(12.5px,.98vw,14.5px);padding:5px 0;line-height:1.38}
+.cslide .card{padding:14px 18px}
+.cslide h2{margin-bottom:4px}
+@media (max-width:820px){.cslide ul.clean li{font-size:13.5px}}
