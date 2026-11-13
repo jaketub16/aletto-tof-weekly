@@ -17,6 +17,7 @@ Output has no prospect emails/phones; prospects appear as first name + last init
 import argparse, collections as C, datetime as dt, glob, json, os, re
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
+from utm_scheme import is_linkedin_paid
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--metricool', required=True); ap.add_argument('--pack', required=True); ap.add_argument('--out', required=True)
@@ -151,7 +152,7 @@ def net(x):
     if not x: return 'No attribution'
     ref = (x.get('referrer') or '').lower(); ua = x.get('userAgent') or ''; us = (x.get('utmSource') or '').lower(); u = (x.get('pageUrl') or x.get('url') or '').lower()
     host = urlparse(ref).netloc or ref
-    if 'li_fat_id' in u or (us == 'linkedin' and x.get('utmCampaign')): return 'Paid LinkedIn'
+    if is_linkedin_paid(x) or 'li_fat_id' in u: return 'Paid LinkedIn'
     if us in ('fb_ad',) or ('fbclid' in u and ('utm_' in u or us == 'facebook')): return 'Paid Meta'
     if 'linkedin' in ref or 'lnkd' in ref or 'LinkedInApp' in ua or 'linkedin' in us: return 'LinkedIn organic'
     if 'instagram' in ref or 'Instagram' in ua or us in ('ig', 'instagram'): return 'Instagram'

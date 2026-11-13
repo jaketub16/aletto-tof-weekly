@@ -34,7 +34,7 @@ git add -A && git commit -m "TOF deck <YYYY-MM-DD>" && git push
 `ga4_extract.py` writes `weeks/<date>/ga4.json` from `ga4_raw/<date>/` (GA4 property 540656492 "Aletto — aletto", timezone America/New_York, so dates are already ET):
 - Pages: report page `go.aletto.ai/saasreport` → VSL `/freetraining-1-7481` (the strategy-call calendar is embedded on the VSL page) → `/confirmed`; `/freetraining-booking-6842` is the email/DM booking page.
 - Unique users, new users, sessions, views, engagement time per page, by session source/medium, device and day; this week, prior week and 30 days.
-- Source buckets: LinkedIn ads = utm_source `linkedin`; Meta ads = `fb_ad`; LinkedIn organic = `linkedin.com`/`lnkd.in`/`li`; everything else = direct, email, IG, YouTube and `(not set)`.
+- Source buckets: LinkedIn ads = utm_source `linkedin` (also `paid_social` medium on a LinkedIn host); Meta ads = `fb_ad`; LinkedIn organic = `linkedin.com`/`lnkd.in`/`li`; everything else = direct, email, IG, YouTube and `(not set)`. Ad-set name is `sessionCampaignName` when medium is generic (`paid_social`, …); otherwise it still sits in `sessionMedium` (old LinkedIn UTMs). See `utm_scheme.py`.
 - VSL visitor → book % = Hyros strategy calls (last touch, same week, same numbers as the Books slide) ÷ GA4 VSL unique users. Jake's bar: 2–5% is good. Not a per-person cohort until a GA4 booking event exists.
 - Slide 4 funnel shows report-page and VSL visitors; slide 5 is "VSL throughput by source"; GA4 tracking gaps go on the Data gaps slide (story.json `gaps`).
 - If `ga4.json` is missing, build.py falls back to the old "not tracked" funnel row and skips slide 5.

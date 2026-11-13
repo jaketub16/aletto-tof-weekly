@@ -14,18 +14,23 @@ Usage: python3 ga4_extract.py --raw ga4_raw/2026-11-13 --data weeks/2026-11-13/d
 """
 import argparse, json, os, datetime as dt, collections as C
 from zoneinfo import ZoneInfo
+from utm_scheme import campaign_from_ga4, is_paid_generic_medium
 
 VSL, OPTIN, BOOKPG, CONF = '/freetraining-1-7481', '/saasreport', '/freetraining-booking-6842', '/confirmed'
 W = ('this', 'prior', 'd30')
-# GA4 sessionSource -> deck bucket (LinkedIn/Meta ads carry utm_source=linkedin / fb_ad; campaign sits in utm_medium)
+# GA4 sessionSource -> deck bucket.
+# LinkedIn/Meta ads: utm_source=linkedin / fb_ad. New LinkedIn UTMs also send sessionMedium=paid_social
+# and sessionCampaignName=<ad set>. Old LinkedIn UTMs put the ad-set name in sessionMedium.
 BUCKETS = [('li_ads', 'LinkedIn ads'), ('meta_ads', 'Meta ads'), ('li_org', 'LinkedIn organic'), ('other', 'Direct, email, IG, YouTube & other'), ('untracked', 'No source in GA4 ((not set))')]
 # Hyros last-touch channel -> bucket. Hyros 'Organic other' + 'No source' have no clean GA4 twin, so they share 'other+untracked'.
 HY = {'LinkedIn ads': 'li_ads', 'Meta ads': 'meta_ads', 'Organic (probable LinkedIn)': 'li_org', 'Organic other': 'rest', 'No source': 'rest'}
 
 
-def bucket(src):
+def bucket(src, med=None):
     s = (src or '').lower()
-    if s == 'linkedin': return 'li_ads'
+    m = (med or '').strip()
+    # source=linkedin stays paid (old and new UTMs). Also catch paid_social if source is a LinkedIn host.
+    if s == 'linkedin' or (is_paid_generic_medium(m) and 'linkedin' in s): return 'li_ads'
     if s == 'fb_ad': return 'meta_ads'
     if s in ('linkedin.com', 'lnkd.in', 'li', 'com.linkedin.android', 'www.linkedin.com'): return 'li_org'
     if s in ('(not set)', '(data not available)', ''): return 'untracked'
@@ -82,9 +87,9 @@ def main():
     detail = C.defaultdict(list)
     for r in rows(J('src_funnel.json')):
         if r['totalUsers'] <= 0: continue
-        b = bucket(r['sessionSource'])
+        b = bucket(r['sessionSource'], r.get('sessionMedium'))
         src[r['pagePath']][r['dateRange']][b] += int(r['totalUsers'])
-        detail[(r['pagePath'], r['dateRange'])].append({'source': r['sessionSource'], 'medium': r['sessionMedium'], 'bucket': b, 'users': int(r['totalUsers']),
+        detail[(r['pagePath'], r['dateRange'])].append({'source': r['sessionSource'], 'medium': r.get('sessionMedium'), 'campaign': campaign_from_ga4(r), 'bucket': b, 'users': int(r['totalUsers']),
                                                        'new': int(r['newUsers']), 'sessions': int(r['sessions']), 'eng_s': int(r['userEngagementDuration'])})
     G['source_detail'] = {f'{p}|{w}': sorted(v, key=lambda x: -x['users']) for (p, w), v in detail.items() if p in (VSL, OPTIN, BOOKPG, CONF)}
     leads_by = {w: D['leads'][w]['by_ch'] for w in ('this', 'prior')}
@@ -133,7 +138,9 @@ def main():
         'confirmed_vs_books': [t['confirmed_users'], t['books']],
         'vsl_untracked_pct': t['vsl_untracked_pct'],
         'li_ads_campaign_in_medium': sorted({x['medium'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads'}),
+        'li_ads_campaigns': sorted({x['campaign'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads' and x.get('campaign')}),
         'meta_campaign_in_medium': sorted({x['medium'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'meta_ads'}),
+        'meta_campaigns': sorted({x['campaign'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'meta_ads' and x.get('campaign')}),
         'booking_page_sources_this': [(x['source'], x['users']) for x in G['source_detail'].get(f'{BOOKPG}|this', [])],
         'meta_optin_eng_per_user_s': r1(sum(x['eng_s'] for x in detail[(OPTIN, 'this')] if x['bucket'] == 'meta_ads') / max(1, src[OPTIN]['this']['meta_ads']), 0),
         'li_optin_eng_per_user_s': r1(sum(x['eng_s'] for x in detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads') / max(1, src[OPTIN]['this']['li_ads']), 0),
