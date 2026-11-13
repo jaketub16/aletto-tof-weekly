@@ -5,6 +5,7 @@ and checks each formatted value appears in <date>/index.html.
 """
 import argparse, json, os, re, sys
 ap = argparse.ArgumentParser(); ap.add_argument('--pack'); ap.add_argument('--last5k'); ap.add_argument('--date'); ap.add_argument('--metricool', help='Metricool day folder; enables independent content re-check')
+ap.add_argument('--ga4', help='ga4_raw/<date> folder; enables independent GA4 VSL re-check from the raw reports')
 a = ap.parse_args()
 S = json.load(open(os.path.join(a.pack, 'summary.json')))
 H = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), a.date, 'index.html')).read()
@@ -73,6 +74,35 @@ if os.path.exists(CP):
             n_, vv = _raw(f, dk, vk); r = next(r for r in CJ['platforms'] if r['key'] == key)
             ok_ = (n_, vv) == (r['this']['posts'], r['this']['views'])
             checks.append((f'raw re-sum {key} {n_} posts / {vv:,} views', f"{vv:,}" if ok_ else f'__RAW_{key}_{n_}_{vv}__'))
+# ---- GA4 VSL slides: recompute straight from the raw GA4 reports + pack summary (not from ga4.json)
+if a.ga4:
+    def _g(f):
+        d = json.load(open(os.path.join(a.ga4, f))); h = [x['name'] for x in d['dimensionHeaders']]
+        return [(dict(zip(h, [v['value'] for v in r['dimensionValues']])), [float(v['value']) for v in r['metricValues']]) for r in d['rows']]
+    pgs = {(dd['pagePath'], dd['dateRange']): mm for dd, mm in _g('pages_funnel.json')}
+    vt, vp, ot = int(pgs[('/freetraining-1-7481', 'this')][0]), int(pgs[('/freetraining-1-7481', 'prior')][0]), int(pgs[('/saasreport', 'this')][0])
+    pct1 = lambda x, y: f"{round(x / y * 100, 1)}%"
+    srcu = {}
+    for dd, mm in _g('src_funnel.json'):
+        if dd['pagePath'] == '/freetraining-1-7481' and dd['dateRange'] == 'this':
+            k = {'linkedin': 'li', 'fb_ad': 'meta', 'linkedin.com': 'lio', 'lnkd.in': 'lio', 'li': 'lio'}.get(dd['sessionSource'].lower(), 'rest')
+            srcu[k] = srcu.get(k, 0) + int(mm[0])
+    bc = b['by_ch']
+    rest_books = bc.get('Organic other', {}).get('books', 0) + bc.get('No source', {}).get('books', 0)
+    checks += [('GA4 VSL visitors this week', f'{vt} VSL visitors ({vp} last week)'), ('GA4 report-page visitors', f'{ot:,} visitors'),
+               ('VSL→book overall', pct1(b['strategy'], vt)), ('VSL→book prior', pct1(bp['strategy'], vp)),
+               ('VSL→book LinkedIn ads', pct1(bc['LinkedIn ads']['books'], srcu['li'])), ('VSL→book Meta', pct1(bc['Meta ads']['books'], srcu['meta'])),
+               ('VSL→book LinkedIn organic', pct1(bc['Organic (probable LinkedIn)']['books'], srcu['lio'])), ('VSL→book everything else', pct1(rest_books, srcu['rest'])),
+               ('report page→VSL', pct1(vt, ot)), ('visitor→lead', pct1(S['leads']['this']['total'], ot)),
+               ('/confirmed vs books', f"/confirmed had {int(pgs[('/confirmed', 'this')][0])} visitors vs {b['strategy']} books"),
+               ('key events 0', 'GA4 has 0 key events'), ('VSL slide present', 'VSL throughput by source'),
+               ('VSL gap removed', 'ok' if 'VSL visitors not tracked' not in txt and "bar can't be checked" not in txt and "VSL and report-page visitors aren't tracked" not in txt else '__VSL_GAP_STILL_SHOWN__')]
+    checks[-1] = (checks[-1][0], 'VSL throughput by source') if checks[-1][1] == 'ok' else checks[-1]
+    ex = os.path.join(a.ga4, 'hyros_d30_extra.json')
+    if os.path.exists(ex):
+        t_ = open(ex).read(); n30 = sum('Strategy' in x['name'] for x in json.loads(t_[t_.find('{'):t_.rfind('}') + 1])['result'])
+        tot30 = n30 + b['strategy'] + bp['strategy']; v30 = int(pgs[('/freetraining-1-7481', 'd30')][0])
+        checks += [('30-day books', str(tot30)), ('30-day VSL→book', pct1(tot30, v30)), ('30-day VSL visitors', f'{v30:,}')]
 # last5k text cross-checks
 for pat, want in [(r'bg2 US \(ss-sd-es\) 732802984 spend \$5002 Strats 31 asked 6 scopes 4 \$/asked \$834', '$834'), (r'bg1 US \(hc-rm-ml\) 700616844 spend \$5039 Strats 31 asked 5 scopes 3 \$/asked \$1008', '$1,008'), (r'deadcold 1534286044\s+\$4570\.30 \| LT S35 A6 Sc6 \$762/ask', '$762')]:
     checks.append(('last5k source has ' + want, want if re.search(pat, L5) else '__MISSING_IN_SOURCE__'))

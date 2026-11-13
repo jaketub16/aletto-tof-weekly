@@ -4,7 +4,7 @@
 Usage:
   python3 extract.py --pack /workspace/friday-pack-2026-11-06-12 \
       --last5k /workspace/li-trim-2026-11-12 --out weeks/2026-11-13/data.json \
-      --metricool /workspace/content-performance/data/2026-11-13
+      --metricool /workspace/content-performance/data/2026-11-13 --ga4 ga4_raw/2026-11-13
 
 Inputs (same layout every Friday):
   <pack>/summary.json            analysis output (LinkedIn, leads, Hyros books, funnel)
@@ -20,6 +20,7 @@ ap.add_argument('--last5k', required=True)
 ap.add_argument('--out', required=True)
 ap.add_argument('--metricool', help='Metricool day folder (content-performance/data/<Friday>); also writes content.json via content_extract.py')
 ap.add_argument('--zernio', help='optional Zernio daily-metrics JSON for the content cross-check')
+ap.add_argument('--ga4', help='folder of saved GA4 report JSONs (ga4_raw/<date>, queries in ga4_queries.json); also writes ga4.json via ga4_extract.py')
 a = ap.parse_args()
 
 S = json.load(open(os.path.join(a.pack, 'summary.json')))
@@ -96,3 +97,9 @@ if a.metricool:
     cmd = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'content_extract.py'), '--metricool', a.metricool,
            '--pack', a.pack, '--out', os.path.join(os.path.dirname(a.out), 'content.json')] + (['--zernio', a.zernio] if a.zernio else [])
     subprocess.run(cmd, check=True)
+
+# ---- GA4 VSL throughput (optional): saved Ryze google_analytics reports -> ga4.json (needs data.json above for Hyros books)
+if a.ga4:
+    import subprocess, sys
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ga4_extract.py'), '--raw', a.ga4,
+                    '--data', a.out, '--out', os.path.join(os.path.dirname(a.out), 'ga4.json')], check=True)

@@ -44,6 +44,8 @@ def ch_short(c):
 def build(wdir):
     D = json.load(open(os.path.join(wdir, 'data.json')))
     S = json.load(open(os.path.join(wdir, 'story.json')))
+    GP = os.path.join(wdir, 'ga4.json')
+    GA = json.load(open(GP)) if os.path.exists(GP) else None   # GA4 VSL throughput (ga4_extract.py)
     date = S['date']
     T, P = 'this', 'prior'
     sp = D['spend']
@@ -131,8 +133,10 @@ def build(wdir):
     q_rate_t = bk_t['q'] / bk_t['strategy'] * 100
     q_rate_p = bk_p['q'] / bk_p['strategy'] * 100
     fun = (fb('LinkedIn clicks', fn_t['li_clicks'], fn_t['li_clicks'], 'rgba(96,165,250,.35)', f'<b>{fn_t["click_to_lead"]}%</b>click → LinkedIn report lead (last week {fn_p["click_to_lead"]}%)')
+           + (fb('Report-page visitors', GA['steps'][T]['optin_users'], fn_t['li_clicks'], 'rgba(96,165,250,.22)', f'<b>{GA["steps"][T]["optin_rate"]}%</b>visitor → report lead, all sources (last week {GA["steps"][P]["optin_rate"]}%)') if GA else '')
            + fb('Report leads', fn_t['report_leads'], fn_t['li_clicks'], 'rgba(167,139,250,.35)', f'<b>{ld_t["by_ch"].get("LinkedIn ads", 0)} / {ld_t["by_ch"].get("Meta ads", 0)} / {ld_t["by_ch"].get("Organic (5 Ways report)", 0)}</b>LinkedIn / Meta / organic')
-           + '<div class="frow"><div class="bx gapbox" style="width:38%"><span>VSL visitors</span>not tracked</div><div class="cv"><b>2–5% bar can\'t be checked</b>no page analytics connected</div></div>'
+           + (fb('VSL visitors', GA['steps'][T]['vsl_users'], fn_t['li_clicks'], 'rgba(251,191,36,.30)', f'<b>{GA["steps"][T]["vsl_to_book"]}%</b>VSL visitor → booked call (last week {GA["steps"][P]["vsl_to_book"]}%) · bar 2–5%') if GA else
+              '<div class="frow"><div class="bx gapbox" style="width:38%"><span>VSL visitors</span>not tracked</div><div class="cv"><b>2–5% bar can\'t be checked</b>no page analytics connected</div></div>')
            + fb('Calls booked', fn_t['books'], fn_t['li_clicks'], 'rgba(52,211,153,.32)', f'<b>{fn_t["lead_to_book"]}%</b>report lead → booked call (last week {fn_p["lead_to_book"]}%)')
            + fb('Qualified', fn_t['q'], fn_t['li_clicks'], 'rgba(52,211,153,.55)', f'<b>{q_rate_t:.0f}%</b>of books qualified (last week {q_rate_p:.0f}%)'))
     slides.append(f'''<section class="slide" data-title="Funnel">{top('Funnel')}
@@ -142,8 +146,52 @@ def build(wdir):
  <div class="glass card col" style="justify-content:center">{fun}</div>
  <div class="glass card col"><div class="lbl">Free-report leads by source</div><div class="chart"><canvas id="cLeads"></canvas></div></div>
 </div>
-<div class="src">Report leads: GHL contacts created in the week with the free-report tag/URL or the "5 Ways" source. Books: Hyros "Free AI Strategy Call". Qualified: GHL tag. Bar widths are scaled (square root) so the small steps stay readable.</div>
-{notes('Organic "5 Ways" leads were the only lead source that grew (52 → 61).', 'VSL visitors are the missing step; GA4 fixes it (recommendation 5).')}</section>''')
+<div class="src">Report leads: GHL contacts created in the week with the free-report tag/URL or the "5 Ways" source. {'Report-page and VSL visitors: GA4 unique users on go.aletto.ai/saasreport and /freetraining-1-7481 (ET week). ' if GA else ''}Books: Hyros "Free AI Strategy Call". Qualified: GHL tag. Bar widths are scaled (square root) so the small steps stay readable.</div>
+{notes('Organic "5 Ways" leads were the only lead source that grew (52 → 61).', ('VSL visitors come from GA4 (connected Nov 13). More people see the VSL than become new leads because repeat opt-ins and email/DM clicks land there too.' if GA else 'VSL visitors are the missing step; GA4 fixes it (recommendation 5).'))}</section>''')
+
+    # 4b VSL throughput by source (GA4)
+    if GA:
+        st = GA['steps']
+        def badge(r):
+            if r is None: return '<span class="hint">—</span>'
+            if r > 5: return '<span class="tag" style="background:rgba(52,211,153,.15);color:var(--grn)">above bar</span>'
+            if r >= 2: return '<span class="tag" style="background:rgba(96,165,250,.15);color:var(--blu)">on bar</span>'
+            return '<span class="tag" style="background:rgba(255,90,90,.15);color:#ff6b6b">below bar</span>'
+        def pc(v): return '—' if v is None else f'{v}%'
+        def col(r): return 'inherit' if r is None else ('var(--grn)' if r > 5 else 'var(--blu)' if r >= 2 else '#ff6b6b')
+        def nm(v): return '—' if v is None else f'{v:,}'
+        def vrow(lab, t, p, cls=''):
+            return (f'<tr class="{cls}"><td style="text-align:left">{lab}</td><td>{nm(t["optin_users"])} <span class="hint">({nm(p["optin_users"])})</span></td>'
+                    f'<td>{pc(t["optin_to_vsl"])} <span class="hint">({pc(p["optin_to_vsl"])})</span></td><td><b>{nm(t["vsl_users"])}</b> <span class="hint">({nm(p["vsl_users"])})</span></td>'
+                    f'<td>{nm(t["books"])} <span class="hint">({nm(p["books"])})</span></td><td><b style="color:{col(t["vsl_to_book"])}">{pc(t["vsl_to_book"])}</b> <span class="hint">({pc(p["vsl_to_book"])})</span></td></tr>')
+        bs = {r['key']: r for r in GA['by_source']}
+        vr = ''.join(vrow(bs[k]['label'], bs[k][T], bs[k][P]) for k in ('li_ads', 'meta_ads', 'li_org'))
+        vr += vrow('Everything else<div class="hint" style="font-size:11px">direct, email, IG, YT, no source</div>', GA['by_source_rest'][T], GA['by_source_rest'][P])
+        vr += vrow('<b>All sources</b>', st[T], st[P], 'hl')
+        d30 = st['d30']
+        vr += (f'<tr><td style="text-align:left;color:var(--mut)">30 days (Oct 14 – Nov 12)</td><td>{nm(d30["optin_users"])}</td><td>{pc(d30["optin_to_vsl"])}</td><td>{nm(d30["vsl_users"])}</td><td>{nm(d30["books"])}</td><td><b style="color:{col(d30["vsl_to_book"])}">{pc(d30["vsl_to_book"])}</b></td></tr>')
+        dv = GA['device']
+        def dev(w):
+            o, v = dv.get(f'/saasreport|{w}', {}), dv.get(f'/freetraining-1-7481|{w}', {})
+            return {k: (v.get(k, 0), o.get(k, 0), round(v.get(k, 0) / o[k] * 100, 1) if o.get(k) else None) for k in ('mobile', 'desktop')}
+        dt_, dp_ = dev(T), dev(P)
+        trk = GA['tracking']; li_s = bs['li_ads']; me_s = bs['meta_ads']
+        leak = (f'<div class="glass card flag a"><b>Biggest leak: the report page</b><p>{st[T]["optin_users"]:,} visitors → {st[T]["leads"]} new leads ({st[T]["optin_rate"]}%). '
+                f'Meta sends {me_s[T]["optin_users"]} visitors who stay ~{trk["meta_optin_eng_per_user_s"]:.0f}s and opt in at {me_s[T]["optin_rate"]}% (LinkedIn ads: ~{trk["li_optin_eng_per_user_s"]:.0f}s, {li_s[T]["optin_rate"]}%).</p></div>'
+                f'<div class="glass card flag a"><b>Mobile drops before the VSL</b><p>Mobile: {dt_["mobile"][1]} report-page visitors → {dt_["mobile"][0]} on the VSL ({dt_["mobile"][2]}%). '
+                f'Desktop: {dt_["desktop"][1]} → {dt_["desktop"][0]} ({dt_["desktop"][2]}%). Last week {dp_["mobile"][2]}% vs {dp_["desktop"][2]}%.</p></div>'
+                f'<div class="glass card flag g" style="border-left-color:var(--blu)"><b>How to read it</b><p>Books are Hyros last touch in the same week, not a cohort of these visitors. '
+                f'Meta\'s {me_s[T]["vsl_to_book"]}% is inflated: Meta bookers often come back through email or DM, so GA4 logs their VSL visit there.</p></div>')
+        slides.append(f'''<section class="slide" data-title="VSL throughput">{top('VSL throughput by source')}
+<h2>The VSL books {st[T]['vsl_to_book']}% of visitors, well over the 2–5% bar. The leak is before it.</h2>
+<p class="sub">{st[T]['vsl_users']} VSL visitors ({st[P]['vsl_users']} last week) → {st[T]['books']} strategy calls booked ({st[P]['books']}). LinkedIn ads fell from {li_s[P]['vsl_to_book']}% to {li_s[T]['vsl_to_book']}% visitor → book, still above the bar. Only {st[T]['optin_to_vsl']}% of report-page visitors reach the VSL.</p>
+<div class="grid g2 fill" style="grid-template-columns:1.7fr 1fr">
+ <div class="glass card col"><div class="lbl">Report page → VSL → booked call · this week (last week) · <span style="color:var(--grn)">green = above the 2–5% bar</span></div>
+  <div class="scroll fill"><table class="tb2" style="font-size:13px"><tr><th style="text-align:left">Source</th><th>Report-page<br>visitors</th><th>→ VSL</th><th>VSL<br>visitors</th><th>Books</th><th>VSL →<br>book</th></tr>{vr}</table></div></div>
+ <div class="col" style="gap:10px">{leak}</div>
+</div>
+<div class="src">GA4 (property 540656492, ET): unique users on go.aletto.ai/saasreport and /freetraining-1-7481, by session source. LinkedIn/Meta ads = utm_source linkedin / fb_ad; LinkedIn organic = linkedin.com referrer. Source rows can overlap slightly (one person, two sources). Books: Hyros strategy calls, last touch; "Everything else" books = Hyros organic other + no source.</div>
+{notes(f"VSL visitors {st[T]['vsl_users']} vs {st[P]['vsl_users']}; 30 days {d30['vsl_users']:,} visitors and {d30['books']} books = {d30['vsl_to_book']}%.", f"{st[T]['vsl_untracked_users']} VSL visitors ({st[T]['vsl_untracked_pct']}%) have no source in GA4.", 'The calendar sits on the VSL page itself, so GA4 can\'t see the booking yet; see Data gaps.', *GA.get('notes_extra', []))}</section>''')
 
     # 5 books & scopes by source
     sl = []
@@ -352,10 +400,10 @@ def build(wdir):
     slides.append(f'''<section class="slide" data-title="Data gaps">{top('Data gaps & how to read this')}
 <h2>What we can't see yet</h2>
 <p class="sub">Each gap below is labelled wherever it touches a number in this deck.</p>
-<div class="grid g2 gaps" style="align-content:start">{gp}</div>
-<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email. Leads: GHL contacts by date added. Content: Metricool post analytics, cross-checked with Zernio. Built {S['title_date']}, read-only.</p></div>
+<div class="grid {'g3 gaps gaps6' if len(S['gaps']) > 5 else 'g2 gaps'}" style="align-content:start{';grid-template-columns:repeat(3,1fr)' if len(S['gaps']) > 5 else ''}">{gp}</div>
+<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email. Leads: GHL contacts by date added. {'Page visitors: GA4 property 540656492 (ET), unique users. ' if GA else ''}Content: Metricool post analytics, cross-checked with Zernio. Built {S['title_date']}, read-only.</p></div>
 <div class="src">Rebuilt weekly from the Friday pack with build.py. Past weeks: /archive/.</div>
-{notes('Biggest unlock: GA4 on the VSL page, then Meta access.')}</section>''')
+{notes('Biggest unlock now: a GA4 booking event on the VSL calendar, so visitor → book is measured per person instead of matched to Hyros totals.' if GA else 'Biggest unlock: GA4 on the VSL page.')}</section>''')
 
     # ---------- chart data
     def daily_series(metric):

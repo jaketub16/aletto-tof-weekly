@@ -109,8 +109,8 @@
    "Meta booked 10 calls / 6 qualified and 2 Scopes on an estimated $1,330. Run the pinned plan on the new brand account at flat total spend so it becomes measurable."
   ],
   [
-   "Reuse the testimonial and connect GA4",
-   "Repost the Healthcare Revenue Group testimonial from Jake's personal LinkedIn and as a static ad. Connect GA4 (or another page tracker) so next week can show VSL visitor → book % against the 2–5% bar."
+   "Reuse the testimonial and track the booking",
+   "Repost the Healthcare Revenue Group testimonial from Jake's personal LinkedIn and as a static ad. GA4 is now connected (VSL slide). Next: add a GA4 booking event on the VSL calendar and fix the ad UTMs, so visitor → book can be read per person and per ad."
   ]
  ],
  "gaps": [
@@ -121,8 +121,18 @@
   ],
   [
    "a",
-   "VSL and report-page visitors aren't tracked",
-   "No page analytics is connected, so the 2–5% visitor → book check can't be done. Report lead → book (16.8%) is the stand-in."
+   "GA4 can't see the booking yet",
+   "The strategy-call calendar sits on the VSL page and GA4 has 0 key events set up. /confirmed had 2 visitors vs 34 books. So visitor → book is GA4 visitors ÷ Hyros books, not tracked per person. Fix: fire a GA4 \"book_call\" event when the calendar books (or redirect it to /confirmed) and mark it a key event."
+  ],
+  [
+   "a",
+   "Ad UTMs land in the wrong fields",
+   "LinkedIn ads put the campaign name in utm_medium and all share utm_campaign \"aletto-fr/lt-winners\"; Meta uses utm_source \"fb_ad\". GA4 files LinkedIn paid as Organic Social and Meta as Unassigned, so its channel reports are wrong (the ad name in utm_content is fine). Fix: utm_source=linkedin or facebook, utm_medium=paid_social, utm_campaign=campaign; keep utm_content=ad."
+  ],
+  [
+   "a",
+   "12.5% of VSL visitors have no source",
+   "36 of 288 VSL visitors show (not set) in GA4, so they sit in \"Everything else\". VSL watch time isn't tracked either (no video events); the only signal is ~73s average engagement per visitor."
   ],
   [
    "a",
@@ -130,14 +140,9 @@
    "Metricool now reads every platform, Jake's LinkedIn included. But GHL only records \"linkedin.com\" as the referrer and Hyros only records a channel (li, ig), so a lead can't be credited to one post yet. Per-post tracked links fix this (content test 1)."
   ],
   [
-   "a",
-   "4 books have no CRM match",
-   "Their booking email isn't in GHL, so qualified status is unknown. They're not counted as qualified."
-  ],
-  [
    "b",
-   "SDR-calendar books are excluded",
-   "Sales-set calls aren't in Hyros. Closer reports those."
+   "4 unmatched books · SDR calls excluded",
+   "Their booking email isn't in GHL, so qualified status is unknown. They're not counted as qualified. Sales-set calls aren't in Hyros. Closer reports those."
   ]
  ],
  "content2": {
