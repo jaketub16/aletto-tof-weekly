@@ -295,6 +295,8 @@ def build(wdir):
         HF, HL = CJ['hyros']['this_first'], CJ['hyros']['this_last']
         org_labels = ['LinkedIn organic', 'Instagram', 'YouTube', 'X', 'Threads', 'TikTok', 'Facebook organic', 'Google organic', 'Email', 'Free report (nurture)']
         org_labels += [k for k in list(HF) + list(HL) if k.startswith('Organic ') and k not in org_labels]
+        _nz = lambda k: any((T_.get(k) or {}).get(m) for T_ in (HF, HL) for m in ('strat', 'scope'))
+        org_labels = [k for k in org_labels if k in ('LinkedIn organic', 'Instagram', 'YouTube', 'X') or _nz(k)]
         hrows = ''.join(hrow(k, HF, HL) for k in org_labels)
         sum_org = lambda T_, k: sum(v[k] for n_, v in T_.items() if not n_.startswith('Paid') and n_ != 'No source')
         slides.append(f'''<section class="slide" data-title="Organic leads by source">{top('Content · organic leads by source')}
