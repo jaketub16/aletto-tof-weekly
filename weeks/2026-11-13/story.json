@@ -1,0 +1,143 @@
+{
+ "date": "2026-11-13",
+ "title_date": "Fri Nov 13, 2026",
+ "week_label": "Fri Nov 6 – Thu Nov 12, 2026 (ET)",
+ "prior_label": "Oct 30 – Nov 5",
+ "verdict_h": "More qualified calls and more Scopes for about the same money",
+ "verdict_sub": "Spend rose 4%. Qualified calls went 17 → 19 and Scopes 6 → 8. But LinkedIn paid had its weakest week: 8 books and 0 Scopes. Meta (estimated spend) and organic carried the week.",
+ "verdict_flags": [
+  [
+   "g",
+   "Meta and organic did the work",
+   "Meta booked 10 calls / 6 qualified and 2 Scopes. Organic booked 12 / 5 and 5 of the 8 Scopes."
+  ],
+  [
+   "r",
+   "LinkedIn paid slipped",
+   "8 books / 4 qualified (16 / 6 last week), $554 per qualified, 0 last-touch Scopes. CPM went $45 → $52."
+  ],
+  [
+   "a",
+   "Nov 12 budget changes need a full week",
+   "Prospecting is now $260/day. Judge next Friday on 7-day books and last-$5k Scopes, not day by day."
+  ]
+ ],
+ "budget_note": "Set live Thu Nov 12 ~17:42 Madrid with Jake's go: bg2 US $130→$100, bg2 EU $110→$100, bg1 US $15→$40, ghosted_v2 paused. static-test-US $20 runs to Sun Nov 15 then ends. rt-vsl retargeting $20/day, uncapped.",
+ "winners": [
+  [
+   "deadcold",
+   "LinkedIn · bg2 EU",
+   "$775 spend · CTR 1.60% · CPC $1.99 · 75 report leads · <b>6 books / 3 qualified</b> ($258 per qualified). Every bg2 EU Scope in the last $5k came from it."
+  ],
+  [
+   "STATIC-hard-to-reach-buyers",
+   "Meta",
+   "<b>6 books / 3 qualified</b>, 13 report leads, and first touch on Andrew S.'s Scope. Spend per ad isn't visible (account locked)."
+  ],
+  [
+   "TOF videos NYP-W2 + T16W",
+   "Meta",
+   "2 books and <b>2 Scopes</b> (Jason C. on NYP-W2, Patty B. on T16W)."
+  ]
+ ],
+ "losers": [
+  [
+   "coldgraveyard",
+   "LinkedIn · bg2 US",
+   "<b>$893</b>, the biggest spender (40% of LinkedIn). 37 report leads but <b>1 book</b> / 1 qualified. CPM $62 → $77."
+  ],
+  [
+   "STATIC-sent-delivered-ghosted_v2",
+   "LinkedIn · static-test-US",
+   "$135, CTR 0.97%, CPC $7.95, <b>0 books</b>. Paused Nov 12."
+  ],
+  [
+   "datadoesn'tlie",
+   "LinkedIn · bg1 US",
+   "$170, <b>CPC $8.51</b>, CPM $119. 1 book, not qualified."
+  ]
+ ],
+ "fatigue": [
+  [
+   "r",
+   "LinkedIn CPM rising",
+   "Account CPM went from $46 on Nov 6 to $58 on Nov 12, up on 5 of those 6 days. Weekly CPM $45 → $52."
+  ],
+  [
+   "a",
+   "bg2 US: audience saturating",
+   "Frequency 1.21 → 1.38 and CPM $60 → $78, but CTR rose to 2.33%. The creative still gets clicks; the audience is getting expensive."
+  ],
+  [
+   "a",
+   "deadcold EU: wearing a little",
+   "Frequency 1.39 → 1.50, CTR 1.68% → 1.61%, CPC $1.77 → $1.99. Rotate a variant in before frequency hits ~2."
+  ],
+  [
+   "r",
+   "bg1 US: expensive",
+   "CPM $75 → $122 and CPC $6.08 → $8.52 on a small budget."
+  ],
+  [
+   "g",
+   "rt-vsl: as expected",
+   "Frequency 2.32 after 2 days on a 182-person audience. Normal for retargeting."
+  ]
+ ],
+ "content_best": "In April, we dropped the ball for Healthcare Revenue Group (Trustpilot testimonial)",
+ "content_points": [
+  "First week the Aletto company page posted through Zernio: <b>19 posts</b> Nov 7–12, <b>399 impressions</b> (~21 per post), 5 likes, 3 shares, 8 clicks.",
+  "Best post: the <b>Healthcare Revenue Group testimonial</b>, 62 impressions and 3 shares, about 3× the average.",
+  "Organic \"5 Ways\" report leads rose <b>52 → 61</b>, and organic sources booked <b>5 of the 8 Scopes</b>.",
+  "Jake's personal LinkedIn isn't visible in any tool, so it's not in these numbers."
+ ],
+ "recs": [
+  [
+   "Hold the Nov 12 budgets for a full week",
+   "Judge them next Friday on 7-day books and last-$5k Scopes. Let static-test-US end Sun Nov 15 as planned ($172 this week, 0 books) and don't move its money. Leave rt-vsl uncapped."
+  ],
+  [
+   "Refresh bg2 US with the US-first qualifying remakes",
+   "Same $100/day. If the next ~$1k there still books 0 Scopes, move that budget flat into deadcold EU."
+  ],
+  [
+   "Prep a deadcold variant",
+   "Same hook, new visual. Rotate it in before EU frequency passes ~2 (it's 1.50 now)."
+  ],
+  [
+   "Run the Nov 4 Meta plan when Facebook is ready",
+   "Meta booked 10 calls / 6 qualified and 2 Scopes on an estimated $1,330. Run the pinned plan on the new brand account at flat total spend so it becomes measurable."
+  ],
+  [
+   "Reuse the testimonial and connect GA4",
+   "Repost the Healthcare Revenue Group testimonial from Jake's personal LinkedIn and as a static ad. Connect GA4 (or another page tracker) so next week can show VSL visitor → book % against the 2–5% bar."
+  ]
+ ],
+ "gaps": [
+  [
+   "a",
+   "Meta spend is an estimate",
+   "The Aletto Meta ad account is locked. ~$190/day × 7 = ~$1,330, the same method as every pack. Meta CTR, CPM and frequency can't be seen."
+  ],
+  [
+   "a",
+   "VSL and report-page visitors aren't tracked",
+   "No page analytics is connected, so the 2–5% visitor → book check can't be done. Report lead → book (16.8%) is the stand-in."
+  ],
+  [
+   "a",
+   "Jake's personal LinkedIn isn't visible",
+   "Zernio only reports personal posts published through it."
+  ],
+  [
+   "a",
+   "4 books have no CRM match",
+   "Their booking email isn't in GHL, so qualified status is unknown. They're not counted as qualified."
+  ],
+  [
+   "b",
+   "SDR-calendar books are excluded",
+   "Sales-set calls aren't in Hyros. Closer reports those."
+  ]
+ ]
+}

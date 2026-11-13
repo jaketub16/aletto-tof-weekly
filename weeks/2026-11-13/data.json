@@ -1,0 +1,2302 @@
+{
+ "window": {
+  "this": "Fri 2026-11-06 \u2013 Thu 2026-11-12 ET",
+  "prior": "Fri 2026-10-30 \u2013 Thu 2026-11-05 ET"
+ },
+ "spend": {
+  "total": {
+   "this": 3544.46,
+   "prior": 3406.83
+  },
+  "li": {
+   "this": 2214.46,
+   "prior": 2076.83
+  },
+  "li_rt": 68.91,
+  "li_prosp": 2145.55,
+  "meta_est": {
+   "this": 1330,
+   "prior": 1330,
+   "per_day": 190,
+   "method": "~$190/day standing estimate x 7 days (same as prior packs and daily TOF pulses); Aletto Meta account locked, Ryze meta_ads not connected"
+  }
+ },
+ "li_total": {
+  "this": {
+   "spend": 2214.46,
+   "imp": 42548,
+   "clk": 750,
+   "conv": 43,
+   "ctr": 1.76,
+   "cpc": 2.95,
+   "cpm": 52.0
+  },
+  "prior": {
+   "spend": 2076.83,
+   "imp": 46274,
+   "clk": 767,
+   "conv": 61,
+   "ctr": 1.66,
+   "cpc": 2.71,
+   "cpm": 44.9
+  }
+ },
+ "li_camp": {
+  "this": [
+   {
+    "spend": 951.98,
+    "imp": 12200,
+    "clk": 284,
+    "lpc": 284,
+    "conv": 16,
+    "reach": 8834,
+    "vv": 0,
+    "ctr": 2.33,
+    "cpc": 3.35,
+    "cpm": 78.0,
+    "freq": 1.38,
+    "name": "fr-winners-bg2-ss-sd-es",
+    "label": "bg2 US"
+   },
+   {
+    "spend": 833.67,
+    "imp": 26082,
+    "clk": 419,
+    "lpc": 419,
+    "conv": 13,
+    "reach": 17416,
+    "vv": 0,
+    "ctr": 1.61,
+    "cpc": 1.99,
+    "cpm": 32.0,
+    "freq": 1.5,
+    "name": "fr-winners-bg2-ss-sd-es-eu",
+    "label": "bg2 EU"
+   },
+   {
+    "spend": 187.51,
+    "imp": 1541,
+    "clk": 22,
+    "lpc": 22,
+    "conv": 11,
+    "reach": 993,
+    "vv": 0,
+    "ctr": 1.43,
+    "cpc": 8.52,
+    "cpm": 121.7,
+    "freq": 1.55,
+    "name": "fr-winners-bg1-hc-rm-ml",
+    "label": "bg1 US"
+   },
+   {
+    "spend": 172.39,
+    "imp": 2303,
+    "clk": 24,
+    "lpc": 24,
+    "conv": 0,
+    "reach": 1910,
+    "vv": 0,
+    "ctr": 1.04,
+    "cpc": 7.18,
+    "cpm": 74.9,
+    "freq": 1.21,
+    "name": "static-test-US",
+    "label": "static test US"
+   },
+   {
+    "spend": 68.91,
+    "imp": 422,
+    "clk": 1,
+    "lpc": 1,
+    "conv": 0,
+    "reach": 182,
+    "vv": 243,
+    "ctr": 0.24,
+    "cpc": 68.91,
+    "cpm": 163.3,
+    "freq": 2.32,
+    "name": "rt-vsl",
+    "label": "retargeting (rt-vsl)"
+   },
+   {
+    "spend": 0.0,
+    "imp": 0,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 3,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0,
+    "cpc": null,
+    "cpm": null,
+    "freq": null,
+    "name": "fr-winners-bg1-hc-rm-ml-eu",
+    "label": "bg1 EU"
+   }
+  ],
+  "prior": [
+   {
+    "spend": 816.04,
+    "imp": 13500,
+    "clk": 238,
+    "lpc": 238,
+    "conv": 16,
+    "reach": 11143,
+    "vv": 0,
+    "ctr": 1.76,
+    "cpc": 3.43,
+    "cpm": 60.4,
+    "freq": 1.21,
+    "name": "fr-winners-bg2-ss-sd-es",
+    "label": "bg2 US"
+   },
+   {
+    "spend": 796.1,
+    "imp": 26826,
+    "clk": 450,
+    "lpc": 450,
+    "conv": 24,
+    "reach": 19294,
+    "vv": 0,
+    "ctr": 1.68,
+    "cpc": 1.77,
+    "cpm": 29.7,
+    "freq": 1.39,
+    "name": "fr-winners-bg2-ss-sd-es-eu",
+    "label": "bg2 EU"
+   },
+   {
+    "spend": 376.92,
+    "imp": 5037,
+    "clk": 62,
+    "lpc": 62,
+    "conv": 11,
+    "reach": 4182,
+    "vv": 0,
+    "ctr": 1.23,
+    "cpc": 6.08,
+    "cpm": 74.8,
+    "freq": 1.2,
+    "name": "fr-winners-bg1-hc-rm-ml",
+    "label": "bg1 US"
+   },
+   {
+    "spend": 87.77,
+    "imp": 911,
+    "clk": 17,
+    "lpc": 17,
+    "conv": 8,
+    "reach": 765,
+    "vv": 0,
+    "ctr": 1.87,
+    "cpc": 5.16,
+    "cpm": 96.3,
+    "freq": 1.19,
+    "name": "fr-winners-bg1-hc-rm-ml-eu",
+    "label": "bg1 EU"
+   },
+   {
+    "spend": 0.0,
+    "imp": 0,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 2,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0,
+    "cpc": null,
+    "cpm": null,
+    "freq": null,
+    "name": "fr-winners-bg2-se-ms-mdas",
+    "label": "bg2 se-ms (old)"
+   }
+  ]
+ },
+ "li_daily": {
+  "2026-10-30": {
+   "spend": 297.16,
+   "imp": 5079,
+   "clk": 91,
+   "lpc": 91,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.79,
+   "cpc": 3.27,
+   "cpm": 58.5,
+   "freq": null
+  },
+  "2026-10-31": {
+   "spend": 205.69,
+   "imp": 3100,
+   "clk": 56,
+   "lpc": 56,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.81,
+   "cpc": 3.67,
+   "cpm": 66.4,
+   "freq": null
+  },
+  "2026-11-01": {
+   "spend": 180.05,
+   "imp": 3382,
+   "clk": 73,
+   "lpc": 73,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 2.16,
+   "cpc": 2.47,
+   "cpm": 53.2,
+   "freq": null
+  },
+  "2026-11-02": {
+   "spend": 331.98,
+   "imp": 9572,
+   "clk": 147,
+   "lpc": 147,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.54,
+   "cpc": 2.26,
+   "cpm": 34.7,
+   "freq": null
+  },
+  "2026-11-03": {
+   "spend": 314.03,
+   "imp": 7684,
+   "clk": 116,
+   "lpc": 116,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.51,
+   "cpc": 2.71,
+   "cpm": 40.9,
+   "freq": null
+  },
+  "2026-11-04": {
+   "spend": 381.14,
+   "imp": 10112,
+   "clk": 145,
+   "lpc": 145,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.43,
+   "cpc": 2.63,
+   "cpm": 37.7,
+   "freq": null
+  },
+  "2026-11-05": {
+   "spend": 366.78,
+   "imp": 7345,
+   "clk": 139,
+   "lpc": 139,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.89,
+   "cpc": 2.64,
+   "cpm": 49.9,
+   "freq": null
+  },
+  "2026-11-06": {
+   "spend": 360.92,
+   "imp": 7791,
+   "clk": 142,
+   "lpc": 142,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.82,
+   "cpc": 2.54,
+   "cpm": 46.3,
+   "freq": null
+  },
+  "2026-11-07": {
+   "spend": 250.27,
+   "imp": 5060,
+   "clk": 83,
+   "lpc": 83,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.64,
+   "cpc": 3.02,
+   "cpm": 49.5,
+   "freq": null
+  },
+  "2026-11-08": {
+   "spend": 236.12,
+   "imp": 4627,
+   "clk": 71,
+   "lpc": 71,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.53,
+   "cpc": 3.33,
+   "cpm": 51.0,
+   "freq": null
+  },
+  "2026-11-09": {
+   "spend": 302.36,
+   "imp": 6016,
+   "clk": 107,
+   "lpc": 107,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.78,
+   "cpc": 2.83,
+   "cpm": 50.3,
+   "freq": null
+  },
+  "2026-11-10": {
+   "spend": 314.17,
+   "imp": 5843,
+   "clk": 101,
+   "lpc": 101,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.73,
+   "cpc": 3.11,
+   "cpm": 53.8,
+   "freq": null
+  },
+  "2026-11-11": {
+   "spend": 344.04,
+   "imp": 6257,
+   "clk": 121,
+   "lpc": 121,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.93,
+   "cpc": 2.84,
+   "cpm": 55.0,
+   "freq": null
+  },
+  "2026-11-12": {
+   "spend": 406.58,
+   "imp": 6954,
+   "clk": 125,
+   "lpc": 125,
+   "conv": 0,
+   "reach": null,
+   "vv": 0,
+   "ctr": 1.8,
+   "cpc": 3.25,
+   "cpm": 58.5,
+   "freq": null
+  }
+ },
+ "li_camp_daily": {
+  "bg2 EU": {
+   "2026-11-06": {
+    "spend": 141.22,
+    "imp": 4595,
+    "clk": 78,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.7,
+    "cpc": 1.81,
+    "cpm": 30.7,
+    "freq": null
+   },
+   "2026-11-07": {
+    "spend": 94.01,
+    "imp": 2870,
+    "clk": 48,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.67,
+    "cpc": 1.96,
+    "cpm": 32.8,
+    "freq": null
+   },
+   "2026-11-08": {
+    "spend": 94.53,
+    "imp": 3008,
+    "clk": 46,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.53,
+    "cpc": 2.06,
+    "cpm": 31.4,
+    "freq": null
+   },
+   "2026-11-09": {
+    "spend": 124.08,
+    "imp": 4040,
+    "clk": 63,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.56,
+    "cpc": 1.97,
+    "cpm": 30.7,
+    "freq": null
+   },
+   "2026-11-10": {
+    "spend": 124.41,
+    "imp": 3511,
+    "clk": 44,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.25,
+    "cpc": 2.83,
+    "cpm": 35.4,
+    "freq": null
+   },
+   "2026-11-11": {
+    "spend": 123.32,
+    "imp": 3735,
+    "clk": 63,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.69,
+    "cpc": 1.96,
+    "cpm": 33.0,
+    "freq": null
+   },
+   "2026-11-12": {
+    "spend": 132.1,
+    "imp": 4323,
+    "clk": 77,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.78,
+    "cpc": 1.72,
+    "cpm": 30.6,
+    "freq": null
+   }
+  },
+  "bg2 US": {
+   "2026-11-06": {
+    "spend": 167.07,
+    "imp": 2420,
+    "clk": 56,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.31,
+    "cpc": 2.98,
+    "cpm": 69.0,
+    "freq": null
+   },
+   "2026-11-07": {
+    "spend": 113.44,
+    "imp": 1512,
+    "clk": 31,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.05,
+    "cpc": 3.66,
+    "cpm": 75.0,
+    "freq": null
+   },
+   "2026-11-08": {
+    "spend": 103.86,
+    "imp": 1267,
+    "clk": 22,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.74,
+    "cpc": 4.72,
+    "cpm": 82.0,
+    "freq": null
+   },
+   "2026-11-09": {
+    "spend": 138.49,
+    "imp": 1574,
+    "clk": 39,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.48,
+    "cpc": 3.55,
+    "cpm": 88.0,
+    "freq": null
+   },
+   "2026-11-10": {
+    "spend": 147.53,
+    "imp": 1935,
+    "clk": 49,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.53,
+    "cpc": 3.01,
+    "cpm": 76.2,
+    "freq": null
+   },
+   "2026-11-11": {
+    "spend": 147.58,
+    "imp": 1885,
+    "clk": 54,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.86,
+    "cpc": 2.73,
+    "cpm": 78.3,
+    "freq": null
+   },
+   "2026-11-12": {
+    "spend": 134.01,
+    "imp": 1607,
+    "clk": 33,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 2.05,
+    "cpc": 4.06,
+    "cpm": 83.4,
+    "freq": null
+   }
+  },
+  "static test US": {
+   "2026-11-06": {
+    "spend": 30.0,
+    "imp": 549,
+    "clk": 7,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.28,
+    "cpc": 4.29,
+    "cpm": 54.6,
+    "freq": null
+   },
+   "2026-11-07": {
+    "spend": 26.87,
+    "imp": 517,
+    "clk": 3,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.58,
+    "cpc": 8.96,
+    "cpm": 52.0,
+    "freq": null
+   },
+   "2026-11-08": {
+    "spend": 23.13,
+    "imp": 253,
+    "clk": 2,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.79,
+    "cpc": 11.56,
+    "cpm": 91.4,
+    "freq": null
+   },
+   "2026-11-09": {
+    "spend": 22.3,
+    "imp": 242,
+    "clk": 2,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.83,
+    "cpc": 11.15,
+    "cpm": 92.1,
+    "freq": null
+   },
+   "2026-11-10": {
+    "spend": 23.25,
+    "imp": 233,
+    "clk": 2,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.86,
+    "cpc": 11.63,
+    "cpm": 99.8,
+    "freq": null
+   },
+   "2026-11-11": {
+    "spend": 23.58,
+    "imp": 270,
+    "clk": 4,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.48,
+    "cpc": 5.89,
+    "cpm": 87.3,
+    "freq": null
+   },
+   "2026-11-12": {
+    "spend": 23.26,
+    "imp": 239,
+    "clk": 4,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.67,
+    "cpc": 5.81,
+    "cpm": 97.3,
+    "freq": null
+   }
+  },
+  "bg1 US": {
+   "2026-11-06": {
+    "spend": 22.63,
+    "imp": 227,
+    "clk": 1,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.44,
+    "cpc": 22.63,
+    "cpm": 99.7,
+    "freq": null
+   },
+   "2026-11-07": {
+    "spend": 15.95,
+    "imp": 161,
+    "clk": 1,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.62,
+    "cpc": 15.95,
+    "cpm": 99.1,
+    "freq": null
+   },
+   "2026-11-08": {
+    "spend": 14.6,
+    "imp": 99,
+    "clk": 1,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.01,
+    "cpc": 14.6,
+    "cpm": 147.5,
+    "freq": null
+   },
+   "2026-11-09": {
+    "spend": 17.49,
+    "imp": 160,
+    "clk": 3,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.88,
+    "cpc": 5.83,
+    "cpm": 109.3,
+    "freq": null
+   },
+   "2026-11-10": {
+    "spend": 18.98,
+    "imp": 164,
+    "clk": 6,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 3.66,
+    "cpc": 3.16,
+    "cpm": 115.7,
+    "freq": null
+   },
+   "2026-11-11": {
+    "spend": 17.86,
+    "imp": 182,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 98.1,
+    "freq": null
+   },
+   "2026-11-12": {
+    "spend": 80.0,
+    "imp": 548,
+    "clk": 10,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 1.82,
+    "cpc": 8.0,
+    "cpm": 146.0,
+    "freq": null
+   }
+  },
+  "retargeting (rt-vsl)": {
+   "2026-11-11": {
+    "spend": 31.7,
+    "imp": 185,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 171.4,
+    "freq": null
+   },
+   "2026-11-12": {
+    "spend": 37.21,
+    "imp": 237,
+    "clk": 1,
+    "lpc": 0,
+    "conv": 0,
+    "reach": null,
+    "vv": 0,
+    "ctr": 0.42,
+    "cpc": 37.21,
+    "cpm": 157.0,
+    "freq": null
+   }
+  }
+ },
+ "li_cr": {
+  "this": [
+   {
+    "spend": 892.73,
+    "imp": 11575,
+    "clk": 265,
+    "lpc": 265,
+    "conv": 10,
+    "reach": 8568,
+    "vv": 0,
+    "ctr": 2.29,
+    "cpc": 3.37,
+    "cpm": 77.1,
+    "freq": 1.35,
+    "name": "coldgraveyard",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 774.6,
+    "imp": 24318,
+    "clk": 390,
+    "lpc": 390,
+    "conv": 13,
+    "reach": 16546,
+    "vv": 0,
+    "ctr": 1.6,
+    "cpc": 1.99,
+    "cpm": 31.9,
+    "freq": 1.47,
+    "name": "deadcold",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 170.24,
+    "imp": 1435,
+    "clk": 20,
+    "lpc": 20,
+    "conv": 1,
+    "reach": 938,
+    "vv": 0,
+    "ctr": 1.39,
+    "cpc": 8.51,
+    "cpm": 118.6,
+    "freq": 1.53,
+    "name": "datadoesn'tlie",
+    "camp": "bg1 US"
+   },
+   {
+    "spend": 135.22,
+    "imp": 1749,
+    "clk": 17,
+    "lpc": 17,
+    "conv": 0,
+    "reach": 1494,
+    "vv": 0,
+    "ctr": 0.97,
+    "cpc": 7.95,
+    "cpm": 77.3,
+    "freq": 1.17,
+    "name": "STATIC-sent-delivered-ghosted_v2",
+    "camp": "static test US"
+   },
+   {
+    "spend": 51.49,
+    "imp": 1449,
+    "clk": 29,
+    "lpc": 29,
+    "conv": 0,
+    "reach": 836,
+    "vv": 0,
+    "ctr": 2.0,
+    "cpc": 1.78,
+    "cpm": 35.5,
+    "freq": 1.73,
+    "name": "STATIC-inmails-map-eu",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 33.09,
+    "imp": 354,
+    "clk": 10,
+    "lpc": 10,
+    "conv": 0,
+    "reach": 255,
+    "vv": 0,
+    "ctr": 2.82,
+    "cpc": 3.31,
+    "cpm": 93.5,
+    "freq": 1.39,
+    "name": "drypipe",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 28.99,
+    "imp": 145,
+    "clk": 1,
+    "lpc": 1,
+    "conv": 0,
+    "reach": 73,
+    "vv": 79,
+    "ctr": 0.69,
+    "cpc": 28.99,
+    "cpm": 199.9,
+    "freq": 1.99,
+    "name": "robertwray1",
+    "camp": "retargeting (rt-vsl)"
+   },
+   {
+    "spend": 17.27,
+    "imp": 106,
+    "clk": 2,
+    "lpc": 2,
+    "conv": 1,
+    "reach": 49,
+    "vv": 0,
+    "ctr": 1.89,
+    "cpc": 8.63,
+    "cpm": 162.9,
+    "freq": 2.16,
+    "name": "beforeafter",
+    "camp": "bg1 US"
+   },
+   {
+    "spend": 14.86,
+    "imp": 165,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 145,
+    "vv": 0,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 90.1,
+    "freq": 1.14,
+    "name": "STATIC-team-not-tied-to-number",
+    "camp": "static test US"
+   },
+   {
+    "spend": 13.71,
+    "imp": 78,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 41,
+    "vv": 42,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 175.8,
+    "freq": 1.9,
+    "name": "masterclass-training-video",
+    "camp": "retargeting (rt-vsl)"
+   },
+   {
+    "spend": 12.9,
+    "imp": 211,
+    "clk": 4,
+    "lpc": 4,
+    "conv": 0,
+    "reach": 139,
+    "vv": 0,
+    "ctr": 1.9,
+    "cpc": 3.22,
+    "cpm": 61.1,
+    "freq": 1.52,
+    "name": "STATIC-inmails-map",
+    "camp": "static test US"
+   },
+   {
+    "spend": 11.57,
+    "imp": 122,
+    "clk": 4,
+    "lpc": 4,
+    "conv": 0,
+    "reach": 48,
+    "vv": 0,
+    "ctr": 3.28,
+    "cpc": 2.89,
+    "cpm": 94.9,
+    "freq": 2.54,
+    "name": "drypipe_v2",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 7.74,
+    "imp": 51,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 19,
+    "vv": 32,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 151.8,
+    "freq": 2.68,
+    "name": "timmoran",
+    "camp": "retargeting (rt-vsl)"
+   },
+   {
+    "spend": 7.73,
+    "imp": 81,
+    "clk": 2,
+    "lpc": 2,
+    "conv": 2,
+    "reach": 65,
+    "vv": 0,
+    "ctr": 2.47,
+    "cpc": 3.86,
+    "cpm": 95.4,
+    "freq": 1.25,
+    "name": "2013selling_v2_inmails",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 7.48,
+    "imp": 54,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 19,
+    "vv": 32,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 138.6,
+    "freq": 2.84,
+    "name": "robertwray2",
+    "camp": "retargeting (rt-vsl)"
+   },
+   {
+    "spend": 7.26,
+    "imp": 119,
+    "clk": 3,
+    "lpc": 3,
+    "conv": 0,
+    "reach": 100,
+    "vv": 0,
+    "ctr": 2.52,
+    "cpc": 2.42,
+    "cpm": 61.0,
+    "freq": 1.19,
+    "name": "STATIC-same-50-firm-list",
+    "camp": "static test US"
+   },
+   {
+    "spend": 6.53,
+    "imp": 267,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 213,
+    "vv": 0,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 24.5,
+    "freq": 1.25,
+    "name": "STATIC-team-not-tied-to-number-eu",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 5.62,
+    "imp": 49,
+    "clk": 0,
+    "lpc": 0,
+    "conv": 0,
+    "reach": 13,
+    "vv": 30,
+    "ctr": 0.0,
+    "cpc": null,
+    "cpm": 114.7,
+    "freq": 3.77,
+    "name": "RT-testimonial-reel-2026-11-09",
+    "camp": "retargeting (rt-vsl)"
+   }
+  ],
+  "prior": [
+   {
+    "spend": 752.86,
+    "imp": 25197,
+    "clk": 440,
+    "lpc": 440,
+    "conv": 23,
+    "reach": 19085,
+    "vv": 0,
+    "ctr": 1.75,
+    "cpc": 1.71,
+    "cpm": 29.9,
+    "freq": 1.32,
+    "name": "deadcold",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 456.87,
+    "imp": 7365,
+    "clk": 148,
+    "lpc": 148,
+    "conv": 8,
+    "reach": 6444,
+    "vv": 0,
+    "ctr": 2.01,
+    "cpc": 3.09,
+    "cpm": 62.0,
+    "freq": 1.14,
+    "name": "coldgraveyard",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 255.18,
+    "imp": 4153,
+    "clk": 61,
+    "lpc": 61,
+    "conv": 1,
+    "reach": 3796,
+    "vv": 0,
+    "ctr": 1.47,
+    "cpc": 4.18,
+    "cpm": 61.4,
+    "freq": 1.09,
+    "name": "coldemail",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 242.99,
+    "imp": 3777,
+    "clk": 48,
+    "lpc": 48,
+    "conv": 4,
+    "reach": 3307,
+    "vv": 0,
+    "ctr": 1.27,
+    "cpc": 5.06,
+    "cpm": 64.3,
+    "freq": 1.14,
+    "name": "colddead",
+    "camp": "bg1 US"
+   },
+   {
+    "spend": 87.77,
+    "imp": 911,
+    "clk": 17,
+    "lpc": 17,
+    "conv": 5,
+    "reach": 765,
+    "vv": 0,
+    "ctr": 1.87,
+    "cpc": 5.16,
+    "cpm": 96.3,
+    "freq": 1.19,
+    "name": "drypipe2",
+    "camp": "bg1 EU"
+   },
+   {
+    "spend": 85.02,
+    "imp": 643,
+    "clk": 9,
+    "lpc": 9,
+    "conv": 2,
+    "reach": 577,
+    "vv": 0,
+    "ctr": 1.4,
+    "cpc": 9.45,
+    "cpm": 132.2,
+    "freq": 1.11,
+    "name": "drypipe2",
+    "camp": "bg1 US"
+   },
+   {
+    "spend": 82.17,
+    "imp": 1673,
+    "clk": 27,
+    "lpc": 27,
+    "conv": 2,
+    "reach": 1541,
+    "vv": 0,
+    "ctr": 1.61,
+    "cpc": 3.04,
+    "cpm": 49.1,
+    "freq": 1.09,
+    "name": "colddead",
+    "camp": "bg2 US"
+   },
+   {
+    "spend": 46.17,
+    "imp": 589,
+    "clk": 5,
+    "lpc": 5,
+    "conv": 4,
+    "reach": 564,
+    "vv": 0,
+    "ctr": 0.85,
+    "cpc": 9.23,
+    "cpm": 78.4,
+    "freq": 1.04,
+    "name": "datadoesn'tlie",
+    "camp": "bg1 US"
+   },
+   {
+    "spend": 15.84,
+    "imp": 488,
+    "clk": 6,
+    "lpc": 6,
+    "conv": 1,
+    "reach": 367,
+    "vv": 0,
+    "ctr": 1.23,
+    "cpc": 2.64,
+    "cpm": 32.5,
+    "freq": 1.33,
+    "name": "STATIC-inmails-map-eu",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 13.06,
+    "imp": 685,
+    "clk": 2,
+    "lpc": 2,
+    "conv": 0,
+    "reach": 602,
+    "vv": 0,
+    "ctr": 0.29,
+    "cpc": 6.53,
+    "cpm": 19.1,
+    "freq": 1.14,
+    "name": "STATIC-team-not-tied-to-number-eu",
+    "camp": "bg2 EU"
+   },
+   {
+    "spend": 11.73,
+    "imp": 153,
+    "clk": 2,
+    "lpc": 2,
+    "conv": 0,
+    "reach": 143,
+    "vv": 0,
+    "ctr": 1.31,
+    "cpc": 5.87,
+    "cpm": 76.7,
+    "freq": 1.07,
+    "name": "drypipe",
+    "camp": "bg2 US"
+   }
+  ]
+ },
+ "budgets_now": [
+  {
+   "name": "static-test-US",
+   "daily": 20.0,
+   "status": "ACTIVE"
+  },
+  {
+   "name": "fr-winners-bg2-ss-sd-es-eu",
+   "daily": 100.0,
+   "status": "ACTIVE"
+  },
+  {
+   "name": "fr-winners-bg1-hc-rm-ml",
+   "daily": 40.0,
+   "status": "ACTIVE"
+  },
+  {
+   "name": "rt-vsl",
+   "daily": 20.0,
+   "status": "ACTIVE"
+  },
+  {
+   "name": "fr-winners-bg2-ss-sd-es",
+   "daily": 100.0,
+   "status": "ACTIVE"
+  }
+ ],
+ "leads": {
+  "this": {
+   "total": 202,
+   "by_ch": {
+    "LinkedIn ads": 123,
+    "Meta ads": 18,
+    "Organic (5 Ways report)": 61
+   },
+   "qlead": 94,
+   "li_utm": {
+    "coldgraveyard": 37,
+    "deadcold": 75,
+    "datadoesn'tlie": 2,
+    "Duplicate_Ad_3_11May2026": 1,
+    "null": 3,
+    "coldemail": 1,
+    "Duplicate_googletranslate": 1,
+    "colddead": 1,
+    "Ad_1_11May2026": 1,
+    "STATIC-inmails-map-eu": 1
+   },
+   "meta_utm": {
+    "STATIC-hard-to-reach-buyers -W": 13,
+    "13-100KDEALS-W": 4,
+    "1195-WW-LT": 1
+   },
+   "by_day": {
+    "2026-11-06": 32,
+    "2026-11-07": 24,
+    "2026-11-08": 21,
+    "2026-11-09": 30,
+    "2026-11-10": 35,
+    "2026-11-11": 29,
+    "2026-11-12": 31
+   }
+  },
+  "prior": {
+   "total": 210,
+   "by_ch": {
+    "LinkedIn ads": 131,
+    "Meta ads": 24,
+    "Organic (5 Ways report)": 52,
+    "Other": 3
+   },
+   "qlead": 98,
+   "li_utm": {
+    "deadcold": 84,
+    "coldgraveyard": 29,
+    "coldemail": 7,
+    "colddead": 4,
+    "drypipe2": 6,
+    "datadoesn'tlie": 1
+   },
+   "meta_utm": {
+    "STATIC-hard-to-reach-buyers -W": 15,
+    "COLD-IS-DEAD-FR-VRM": 2,
+    "13-100KDEALS-W": 6,
+    "null": 1
+   },
+   "by_day": {
+    "2026-10-30": 21,
+    "2026-10-31": 14,
+    "2026-11-01": 18,
+    "2026-11-02": 41,
+    "2026-11-03": 29,
+    "2026-11-04": 39,
+    "2026-11-05": 48
+   }
+  }
+ },
+ "books": {
+  "this": {
+   "strategy": 34,
+   "people": 33,
+   "q": 19,
+   "unk": 4,
+   "by_ch": {
+    "No source": {
+     "books": 4,
+     "q": 4,
+     "unk": 0,
+     "cancel": 1,
+     "noshow": 0
+    },
+    "LinkedIn ads": {
+     "books": 8,
+     "q": 4,
+     "unk": 0,
+     "cancel": 2,
+     "noshow": 0
+    },
+    "Organic (probable LinkedIn)": {
+     "books": 7,
+     "q": 3,
+     "unk": 2,
+     "cancel": 2,
+     "noshow": 1
+    },
+    "Meta ads": {
+     "books": 10,
+     "q": 6,
+     "unk": 1,
+     "cancel": 2,
+     "noshow": 1
+    },
+    "Organic other": {
+     "books": 5,
+     "q": 2,
+     "unk": 1,
+     "cancel": 2,
+     "noshow": 0
+    }
+   },
+   "by_cr": [
+    {
+     "ch": "LinkedIn ads",
+     "cr": "deadcold",
+     "camp": "fr-winners-bg2-ss-sd-es-eu",
+     "books": 6,
+     "q": 3,
+     "people": [
+      "Rafa B. (Q, qualified)",
+      "Sabine D. (Q, qualified)",
+      "Amanda H. (not Q, qualified)",
+      "Puchakayalavenkata M. (not Q, qualified)",
+      "Almond C. (Q, cancelled)",
+      "Niiru G. (not Q, cancelled)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "STATIC-hard-to-reach-buyers -W",
+     "camp": "FR-WINNERS2",
+     "books": 6,
+     "q": 3,
+     "people": [
+      "Walter B. (Q, qualified)",
+      "Raymond M. (Q, qualified)",
+      "Mike M. (not Q, cancelled)",
+      "Ryan S. (Q, no_show)",
+      "Andrew S. (not Q, qualified)",
+      "Suzie G. (not Q, cancelled)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "FRTEST15",
+     "camp": "FR-ORG-T2",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Robert B. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "TOF-FR-WHYTF-W2",
+     "camp": "Winners-APLUS-FR-HQL-2-HC1",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Cindy H. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "TOF-FR-T16W",
+     "camp": "Winners-EBLA-FR-HQL-2",
+     "books": 1,
+     "q": 0,
+     "people": [
+      "Dennis Y. (?, qualified)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "coldgraveyard",
+     "camp": "fr-winners-bg2-ss-sd-es",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Dianna G. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "TOF-FR-NYP-W2",
+     "camp": "Winners-EBLA-FR-HQL-2",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Jason C. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "datadoesn'tlie",
+     "camp": "fr-winners-bg1-hc-rm-ml",
+     "books": 1,
+     "q": 0,
+     "people": [
+      "Will H. (not Q, qualified)"
+     ]
+    }
+   ],
+   "scopes": 8,
+   "scopes_by_ch": {
+    "Organic (probable LinkedIn)": 3,
+    "Meta ads": 2,
+    "Organic other": 2,
+    "No source": 1
+   },
+   "scope_list": [
+    "Ian M. \u2014 2026-11-06 \u2014 No source (; first touch No source )",
+    "Patty B. \u2014 2026-11-09 \u2014 Meta ads (TOF-FR-T16W; first touch Meta ads TOF-FR-T16W)",
+    "Fredj R. \u2014 2026-11-09 \u2014 Organic (probable LinkedIn) (li; first touch Organic (probable LinkedIn) )",
+    "Andrew S. \u2014 2026-11-10 \u2014 Organic other (freereport; first touch Meta ads STATIC-hard-to-reach-buyers -W)",
+    "Manuel M. \u2014 2026-11-11 \u2014 Organic other (google-organic; first touch Organic (probable LinkedIn) )",
+    "Marcus P. \u2014 2026-11-11 \u2014 Organic (probable LinkedIn) (li; first touch Organic (probable LinkedIn) )",
+    "Jason C. \u2014 2026-11-12 \u2014 Meta ads (TOF-FR-NYP-W2; first touch Meta ads TOF-FR-NYP-W2)",
+    "Paul S. \u2014 2026-11-12 \u2014 Organic (probable LinkedIn) (li; first touch Organic (probable LinkedIn) )"
+   ]
+  },
+  "prior": {
+   "strategy": 35,
+   "people": 35,
+   "q": 17,
+   "unk": 4,
+   "by_ch": {
+    "Organic other": {
+     "books": 3,
+     "q": 2,
+     "unk": 1,
+     "cancel": 2,
+     "noshow": 1
+    },
+    "Organic (probable LinkedIn)": {
+     "books": 10,
+     "q": 5,
+     "unk": 1,
+     "cancel": 7,
+     "noshow": 0
+    },
+    "LinkedIn ads": {
+     "books": 16,
+     "q": 6,
+     "unk": 2,
+     "cancel": 12,
+     "noshow": 2
+    },
+    "No source": {
+     "books": 2,
+     "q": 2,
+     "unk": 0,
+     "cancel": 1,
+     "noshow": 0
+    },
+    "Meta ads": {
+     "books": 4,
+     "q": 2,
+     "unk": 0,
+     "cancel": 1,
+     "noshow": 1
+    }
+   },
+   "by_cr": [
+    {
+     "ch": "LinkedIn ads",
+     "cr": "deadcold",
+     "camp": "fr-winners-bg2-ss-sd-es-eu",
+     "books": 9,
+     "q": 5,
+     "people": [
+      "Simon R. (not Q, cancelled)",
+      "Ramon . (Q, cancelled)",
+      "Salmanali M. (not Q, cancelled)",
+      "Christoph G. (Q, no_show)",
+      "Eduardo C. (not Q, cancelled)",
+      "Michael W. (Q, cancelled)",
+      "Romo P. (not Q, cancelled)",
+      "Thomas E. (Q, cancelled)",
+      "Garry S. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "STATIC-hard-to-reach-buyers -W",
+     "camp": "FR-WINNERS2",
+     "books": 3,
+     "q": 1,
+     "people": [
+      "Abhishek V. (not Q, qualified)",
+      "Ryan M. (not Q, cancelled)",
+      "Aaron M. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "coldgraveyard",
+     "camp": "fr-winners-bg2-ss-sd-es",
+     "books": 2,
+     "q": 0,
+     "people": [
+      "Al D. (not Q, no_show)",
+      "Sharmistha S. (?, cancelled)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "coldemail",
+     "camp": "fr-winners-bg2-ss-sd-es",
+     "books": 2,
+     "q": 0,
+     "people": [
+      "Jr K. (not Q, cancelled)",
+      "Tom S. (?, cancelled)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "2013selling",
+     "camp": "fr-winners-bg1-hc-rm-ml",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Karl W. (Q, qualified)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "drypipe2",
+     "camp": "fr-winners-bg1-hc-rm-ml",
+     "books": 1,
+     "q": 0,
+     "people": [
+      "Shimon L. (not Q, cancelled)"
+     ]
+    },
+    {
+     "ch": "LinkedIn ads",
+     "cr": "colddead",
+     "camp": "fr-winners-bg1-hc-rm-ml",
+     "books": 1,
+     "q": 0,
+     "people": [
+      "Karna . (not Q, cancelled)"
+     ]
+    },
+    {
+     "ch": "Meta ads",
+     "cr": "13-100KDEALS-W",
+     "camp": "VRM/LRM-FR-WINNERS",
+     "books": 1,
+     "q": 1,
+     "people": [
+      "Junaid A. (Q, no_show)"
+     ]
+    }
+   ],
+   "scopes": 6,
+   "scopes_by_ch": {
+    "Meta ads": 4,
+    "LinkedIn ads": 2
+   },
+   "scope_list": [
+    "Wes N. \u2014 2026-10-30 \u2014 Meta ads (STATIC-hard-to-reach-buyers -W; first touch Meta ads STATIC-hard-to-reach-buyers -W)",
+    "Dave B. \u2014 2026-11-03 \u2014 Meta ads (13-100KDEALS-W; first touch Meta ads TOF-FR-WHYTF-W2)",
+    "S A. \u2014 2026-11-03 \u2014 Meta ads (STATIC-hard-to-reach-buyers -W; first touch Meta ads STATIC-hard-to-reach-buyers -W)",
+    "Manuel H. \u2014 2026-11-04 \u2014 LinkedIn ads (deadcold; first touch LinkedIn ads deadcold)",
+    "Garry S. \u2014 2026-11-05 \u2014 LinkedIn ads (deadcold; first touch LinkedIn ads deadcold)",
+    "Aaron M. \u2014 2026-11-05 \u2014 Meta ads (13-100KDEALS-W; first touch Meta ads STATIC-hard-to-reach-buyers -W)"
+   ]
+  }
+ },
+ "funnel": {
+  "this": {
+   "li_clicks": 750,
+   "li_report_leads": 123,
+   "report_leads": 202,
+   "click_to_lead": 16.4,
+   "lead_to_book": 16.8,
+   "vsl_visitors": null,
+   "books": 34,
+   "q": 19
+  },
+  "prior": {
+   "li_clicks": 767,
+   "li_report_leads": 131,
+   "report_leads": 210,
+   "click_to_lead": 17.1,
+   "lead_to_book": 16.7,
+   "vsl_visitors": null,
+   "books": 35,
+   "q": 17
+  }
+ },
+ "content": {
+  "posts": 19,
+  "imp": 399,
+  "likes": 5,
+  "shares": 3,
+  "clicks": 8,
+  "list": [
+   {
+    "date": "2026-11-07",
+    "title": "Why Giving Away Your Best Advice Pays Off in B2B",
+    "imp": 20,
+    "reach": 12,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-07",
+    "title": "How to Handle \\\"Now Isn't a Good Time\\\" Sales Objections",
+    "imp": 15,
+    "reach": 13,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-07",
+    "title": "Why Demographics Belong in Ad Copy, Not the Hook",
+    "imp": 20,
+    "reach": 14,
+    "likes": 1,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-08",
+    "title": "How to Find the Real Priority Behind a Stalled Deal",
+    "imp": 27,
+    "reach": 22,
+    "likes": 2,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-08",
+    "title": "How to Layer Ad Copy From Call-Out to Free Offer",
+    "imp": 10,
+    "reach": 8,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-08",
+    "title": "Why Modern Salespeople Turned Into Order Takers",
+    "imp": 7,
+    "reach": 6,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-09",
+    "title": "Why \\\"When X Happens, Then I'll Buy\\\" Keeps Buyers Stuck",
+    "imp": 18,
+    "reach": 16,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 1
+   },
+   {
+    "date": "2026-11-09",
+    "title": "How to Handle the \\\"I'm Too Busy\\\" Sales Objection",
+    "imp": 23,
+    "reach": 19,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 2
+   },
+   {
+    "date": "2026-11-09",
+    "title": "Why Education Is Your B2B Brand",
+    "imp": 15,
+    "reach": 9,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-10",
+    "title": "Why Urgency Makes Sales Objections Disappear",
+    "imp": 22,
+    "reach": 14,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 3
+   },
+   {
+    "date": "2026-11-10",
+    "title": "How to Re-Engage a Cold B2B Lead in One Phone Call",
+    "imp": 14,
+    "reach": 10,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-10",
+    "title": "How to Use an Identity Frame to Stop Sales Stalls",
+    "imp": 8,
+    "reach": 8,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-11",
+    "title": "Sell a Prepaid Pilot Up Front, Then Upsell Into Recurring",
+    "imp": 30,
+    "reach": 17,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-11",
+    "title": "Why Buyer Risk Peaks at the End of a Deal",
+    "imp": 21,
+    "reach": 11,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-11",
+    "title": "In April, we dropped the ball for Healthcare Revenue Group (Trustpilot testimonial)",
+    "imp": 62,
+    "reach": 41,
+    "likes": 2,
+    "shares": 3,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-11",
+    "title": "Why Doing Less for a Narrower Customer Grew Our Revenue",
+    "imp": 22,
+    "reach": 11,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-12",
+    "title": "Work Enterprise Deals Backward From the Buyer",
+    "imp": 16,
+    "reach": 10,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   },
+   {
+    "date": "2026-11-12",
+    "title": "Fix the Fire That Will Kill Your Business First",
+    "imp": 32,
+    "reach": 17,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 2
+   },
+   {
+    "date": "2026-11-12",
+    "title": "Call the Final Decision-Maker Before Their Team Tests Your Product",
+    "imp": 17,
+    "reach": 10,
+    "likes": 0,
+    "shares": 0,
+    "clicks": 0
+   }
+  ]
+ },
+ "last5k": [
+  {
+   "camp": "bg2 US",
+   "id": "732802984",
+   "start": "2026-09-15",
+   "spend": 5002.3,
+   "strict": {
+    "strats": 20,
+    "asked": 2,
+    "scopes": 1
+   },
+   "ft_scopes": 3,
+   "any": {
+    "strats": 31,
+    "asked": 6,
+    "scopes": 4,
+    "ads": [
+     {
+      "ad": "coldgraveyard",
+      "strats": 18,
+      "asked": 4,
+      "scopes": 2,
+      "who": [
+       "Bruce R.",
+       "Dan K."
+      ]
+     },
+     {
+      "ad": "Duplicate_Ad_3_11May2026(FT)",
+      "strats": 4,
+      "asked": 2,
+      "scopes": 2,
+      "who": [
+       "Dave B.",
+       "Howard A."
+      ]
+     },
+     {
+      "ad": "coldemail",
+      "strats": 4,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "colddead",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "colddead(FT)",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "Ad_1_11May2026(FT)",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "coldgraveyard(FT)",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "coldemail(FT)",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     }
+    ]
+   },
+   "ads": [
+    {
+     "ad": "coldgraveyard",
+     "spend": 2965.3,
+     "strats": 15,
+     "asked": 2,
+     "scopes": 1,
+     "ft_scopes": 1
+    },
+    {
+     "ad": "coldemail",
+     "spend": 1218.83,
+     "strats": 4,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "colddead",
+     "spend": 699.16,
+     "strats": 1,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "drypipe",
+     "spend": 82.57,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "Duplicate_drypipe",
+     "spend": 12.54,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "2013selling_v2_inmails",
+     "spend": 6.14,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "drypipe_v2",
+     "spend": 4.83,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-team-not-tied-to-number",
+     "spend": 3.97,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "freereport",
+     "spend": 3.04,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-inmails-map",
+     "spend": 2.91,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-sent-delivered-ghosted_v2",
+     "spend": 1.86,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-same-50-firm-list",
+     "spend": 0.99,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-conference-budget",
+     "spend": 0.15,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "Duplicate_Ad_3_11May2026",
+     "spend": 0.0,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 2
+    },
+    {
+     "ad": "Ad_1_11May2026",
+     "spend": 0.0,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    }
+   ]
+  },
+  {
+   "camp": "bg1 US",
+   "id": "700616844",
+   "start": "2026-09-18",
+   "spend": 5038.77,
+   "strict": {
+    "strats": 23,
+    "asked": 1,
+    "scopes": 0
+   },
+   "ft_scopes": 1,
+   "any": {
+    "strats": 31,
+    "asked": 5,
+    "scopes": 3,
+    "ads": [
+     {
+      "ad": "drypipe2",
+      "strats": 12,
+      "asked": 1,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "colddead",
+      "strats": 9,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "drypipe2(FT)",
+      "strats": 4,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "2013selling(FT)",
+      "strats": 3,
+      "asked": 3,
+      "scopes": 2,
+      "who": [
+       "Bruce R.",
+       "Sikesdorsey I."
+      ]
+     },
+     {
+      "ad": "datadoesn'tlie",
+      "strats": 1,
+      "asked": 1,
+      "scopes": 1,
+      "who": [
+       "Will H."
+      ]
+     },
+     {
+      "ad": "freebook",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "2013selling",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     }
+    ]
+   },
+   "ads": [
+    {
+     "ad": "colddead",
+     "spend": 2743.5,
+     "strats": 9,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "drypipe2",
+     "spend": 1946.46,
+     "strats": 12,
+     "asked": 1,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "datadoesn'tlie",
+     "spend": 143.55,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "freebook",
+     "spend": 107.75,
+     "strats": 1,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "Duplicate_googletranslate",
+     "spend": 84.62,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "beforeafter",
+     "spend": 12.88,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "2013selling",
+     "spend": 0.0,
+     "strats": 1,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 1
+    }
+   ]
+  },
+  {
+   "camp": "bg2 EU",
+   "id": "887084114",
+   "start": "2026-08-29",
+   "spend": 5007.03,
+   "strict": {
+    "strats": 35,
+    "asked": 6,
+    "scopes": 6
+   },
+   "ft_scopes": 6,
+   "any": {
+    "strats": 39,
+    "asked": 6,
+    "scopes": 6,
+    "ads": [
+     {
+      "ad": "deadcold",
+      "strats": 35,
+      "asked": 6,
+      "scopes": 6,
+      "who": [
+       "Milos N.",
+       "Nuno F.",
+       "Liban D.",
+       "Manuel H.",
+       "Mario S.",
+       "Garry S."
+      ]
+     },
+     {
+      "ad": "deadcold(FT)",
+      "strats": 3,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     },
+     {
+      "ad": "drypipe(FT)",
+      "strats": 1,
+      "asked": 0,
+      "scopes": 0,
+      "who": []
+     }
+    ]
+   },
+   "ads": [
+    {
+     "ad": "deadcold",
+     "spend": 4570.3,
+     "strats": 35,
+     "asked": 6,
+     "scopes": 6,
+     "ft_scopes": 6
+    },
+    {
+     "ad": "drypipe",
+     "spend": 226.39,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "toetag",
+     "spend": 82.87,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-inmails-map-eu",
+     "spend": 54.75,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "googletranslate",
+     "spend": 30.73,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "freereport",
+     "spend": 19.67,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-team-not-tied-to-number-eu",
+     "spend": 19.14,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-sent-delivered-ghosted-eu",
+     "spend": 2.62,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    },
+    {
+     "ad": "STATIC-same-50-firm-list-eu",
+     "spend": 0.56,
+     "strats": 0,
+     "asked": 0,
+     "scopes": 0,
+     "ft_scopes": 0
+    }
+   ]
+  }
+ ]
+}
