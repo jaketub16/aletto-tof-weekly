@@ -4,7 +4,7 @@
 Usage:
   python3 extract.py --pack /workspace/friday-pack-2026-11-06-12 \
       --last5k /workspace/li-trim-2026-11-12 --out weeks/2026-11-13/data.json \
-      --content /workspace/content-week-2026-11-13/content.json --organic /workspace/content-week-2026-11-13/organic.json
+      --metricool /workspace/content-performance/data/2026-11-13
 
 Inputs (same layout every Friday):
   <pack>/summary.json            analysis output (LinkedIn, leads, Hyros books, funnel)
@@ -20,8 +20,6 @@ ap.add_argument('--last5k', required=True)
 ap.add_argument('--out', required=True)
 ap.add_argument('--metricool', help='Metricool day folder (content-performance/data/<Friday>); also writes content.json via content_extract.py')
 ap.add_argument('--zernio', help='optional Zernio daily-metrics JSON for the content cross-check')
-ap.add_argument('--content', help='content.json from content.py (Metricool, all platforms)')
-ap.add_argument('--organic', help='organic.json from organic.py (GHL first touch + Hyros first/last touch)')
 a = ap.parse_args()
 
 S = json.load(open(os.path.join(a.pack, 'summary.json')))
@@ -87,15 +85,6 @@ for k, v in L.items():
                'strict': {'strats': v['tot']['lt'][0], 'asked': v['tot']['lt'][1], 'scopes': v['tot']['lt'][2]},
                'ft_scopes': v['tot']['ft'][2], 'any': alt.get(cid), 'ads': ads})
 D['last5k'] = l5
-
-# ---- content, all platforms (Metricool) + organic leads by source (GHL + Hyros)
-if a.content:
-    CW = json.load(open(a.content))
-    slim = lambda p: {k: p.get(k) for k in ('platform', 'acct', 'fmt', 'et', 'hook', 'url', 'views', 'reach', 'likes', 'comments', 'shares', 'saves', 'eng', 'er', 'clicks')}
-    D['content_week'] = {'weeks': CW['weeks'], 'platforms': CW['platforms'], 'accounts': CW['accounts'],
-                         'top': {w: {k: [slim(p) for p in v[:5]] for k, v in CW['top'][w].items()} for w in CW['top']}}
-if a.organic:
-    D['organic'] = json.load(open(a.organic))
 
 os.makedirs(os.path.dirname(a.out), exist_ok=True)
 json.dump(D, open(a.out, 'w'), indent=1)
