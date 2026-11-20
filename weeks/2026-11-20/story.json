@@ -1,0 +1,287 @@
+{
+ "date": "2026-11-20",
+ "title_date": "Fri Nov 20, 2026",
+ "week_label": "Fri Nov 13 – Thu Nov 19, 2026 (ET)",
+ "prior_label": "Nov 6 – Nov 12",
+ "verdict_h": "Same money, same number of calls, one more Scope. LinkedIn paid is booking Scopes again.",
+ "verdict_sub": "Spend ~$3,550 (flat). 34 strategy calls (34), 14 qualified (15) and 9 Scopes (8). LinkedIn ads booked 12 calls and 2 last-touch Scopes (8 and 0), or 17 calls counting the untagged post-text link. Meta halved to 5 calls while the old account winds down and the new Heat account started on Nov 19.",
+ "verdict_flags": [
+  [
+   "g",
+   "LinkedIn paid recovered",
+   "12 books / 6 qualified (8 / 2), $347 per qualified ($1,107). With the 5 post-text-link calls Hyros files as organic: 17 / 7, ~$297 per qualified. 2 last-touch Scopes (Dianna G., Dan K.), and LinkedIn was first touch on 4 of the 9."
+  ],
+  [
+   "r",
+   "Meta booked half as much",
+   "5 books / 3 qualified (10 / 5) on ~$1,470 (old-account estimate + $140 actual on Heat). Meta visitors to the report page opt in at 5.0%, vs 28.6% from LinkedIn."
+  ],
+  [
+   "a",
+   "LinkedIn was trimmed overnight",
+   "bg1 US and static-test-US were paused, and bg2 EU went from $100 to $70 (read live Fri morning; this pack changed nothing). LinkedIn now runs $190/day. Judge it next Friday."
+  ]
+ ],
+ "budget_note": "Read live Fri Nov 20 ~08:50 Madrid (read-only): bg2 US $100, bg2 EU $70 (was $100), rt-vsl $20 (retargeting, uncapped). bg1 US ($40) and static-test-US ($20) were PAUSED overnight (~00:47 Madrid), not by this pack. Meta Heat: 8 cold ABO ad sets + RT have been live since Nov 19.",
+ "winners": [
+  [
+   "coldgraveyard",
+   "LinkedIn · bg2 US",
+   "$668 · CTR 2.04% · CPC $3.41 · 46 report leads · <b>5 books / 3 qualified</b>. Dan K.'s Scope (last touch) and first touch on Luis F.'s and Gibran's. Last $5k: <b>5 Scopes</b>."
+  ],
+  [
+   "deadcold",
+   "LinkedIn · bg2 EU",
+   "$644 · CTR 1.69% · CPC $1.93 · 69 report leads · <b>6 books / 3 qualified</b> ($215 per qualified). 0 Scopes this week."
+  ],
+  [
+   "STATIC-hard-to-reach-buyers",
+   "Meta · old account",
+   "18 report leads · <b>5 books / 3 qualified</b> · Jeff Y.'s Scope and first touch on Jenny B.'s. 18 VSL visitors → 5 books. Spend per ad isn't visible."
+  ]
+ ],
+ "losers": [
+  [
+   "datadoesn'tlie",
+   "LinkedIn · bg1 US",
+   "$264 · <b>CPC $8.51</b> · CPM ~$110 · 3 leads · 1 book (not qualified). bg1 US was paused overnight."
+  ],
+  [
+   "STATIC-inmails-map",
+   "LinkedIn · static-test-US",
+   "$101 · CPC $6.76 · 1 lead · <b>0 books</b>. The campaign was paused overnight."
+  ],
+  [
+   "STATIC-inmails-map-eu",
+   "LinkedIn · bg2 EU",
+   "$79 · 5 leads · <b>0 books</b>. $147 in its last-$5k window, 0 Strats."
+  ]
+ ],
+ "fatigue": [
+  [
+   "a",
+   "bg2 US: reach shrinking",
+   "Frequency 1.25 → 1.41 and reach 9,776 → 7,484 (−23%). CTR 2.33% → 2.09%, while CPM eased from $78 to $71. coldgraveyard took 89% of bg2 US spend."
+  ],
+  [
+   "a",
+   "bg2 EU / deadcold: wearing",
+   "Frequency 1.21 → 1.39, reach 21,534 → 16,390 (−24%), CPC $1.99 → $2.04, CTR flat at 1.61%. Leads 76 → 69."
+  ],
+  [
+   "r",
+   "rt-vsl: high frequency, few clicks",
+   "Frequency 2.40 on 706 people, CTR 0.41%, $169 (up from $69). robertwray1 took $141 at a 0.42% CTR. Retargeting stays uncapped, so refresh the creative instead of capping it."
+  ],
+  [
+   "g",
+   "Account CPM steady",
+   "Weekly CPM $52.0 → $53.2. Daily: $50.9 (Nov 13) → $55.2 (Nov 19). Last week's $46 → $58 climb didn't continue."
+  ],
+  [
+   "a",
+   "Meta: day 1 on Heat",
+   "8 cold ABO ad sets at about $13–$19 each on Nov 19, frequency ~1.1. The old account can't be seen."
+  ]
+ ],
+ "content_best": "Use Shared Connections to Restart a Stalled Enterprise Deal",
+ "content_points": [
+  "Aletto company page: 3 posts, all on Nov 13 (19 the week before)."
+ ],
+ "recs": [
+  [
+   "Hold the overnight LinkedIn trim for 7 days",
+   "LinkedIn is now $190/day: bg2 US $100, bg2 EU $70, rt-vsl $20 (uncapped). bg1 US earned 0 strict Scopes on its last $5,069, and static-test-US booked 0 calls on $139. Judge on Fri Nov 27 by Scopes, not daily CPL."
+  ],
+  [
+   "Keep bg2 US on coldgraveyard + one US-first remake",
+   "coldgraveyard has 5 of bg2 US's last-$5k Scopes (any Strat) on $3,230. It's the only US ad with Scopes. Inside the same $100, add the A1 remake (\"4,500 dials. 8 demos.\") and pause drypipe and drypipe_v2 ($74 this week, 4 leads, 0 calls)."
+  ],
+  [
+   "Give deadcold until Tue Nov 24, then decide",
+   "It books the cheapest calls (6 books / 3 qualified, $215 per qualified), but no Scope has come from a Strat booked after Oct 31, and reach fell 24%. If this week's 6 Strats produce 0 Scopes by Tuesday, rotate in a deadcold variant before trimming more."
+  ],
+  [
+   "Let Heat's 8 ABO tests reach ~$100 each before cutting",
+   "Day 1 (Nov 19): $140 spent, 7 GHL leads, 0 calls. Pick winners by Scopes booked, then graduate them to CBO. Meta report-page traffic opts in at 5.0% with ~5s on the page, so test one ad set that sends people straight to the VSL."
+  ],
+  [
+   "Fix the two tracking leaks",
+   "(1) Tag the lnkd.in link in LinkedIn ad post text: it brought 39 report leads and 5 calls this week that were filed as organic. (2) book_strategy_call has no source on 7 of 8 events, so keep the source through the /quickform redirect. Also on mobile, only 14.4% of report-page visitors reach the VSL (desktop: 43.5%)."
+  ]
+ ],
+ "gaps": [
+  [
+   "a",
+   "Old Meta account spend is an estimate",
+   "The locked account still delivers (FR-WINNERS2 / VRM leads every day Nov 13–19), so ~$190/day × 7 = ~$1,330 is kept. Heat (the new account) is actual: $139.89, first spend Nov 19. The old account shows no CPM, CTR or frequency."
+  ],
+  [
+   "a",
+   "GA4 booking event not usable per source yet",
+   "book_strategy_call (live Nov 18) fired 8 times for 4 users, all on Nov 19. 7 of the 8 have source (not set), probably lost on the /quickform redirect. /confirmed now gets 0 visitors. So visitor → book is still GA4 visitors ÷ Hyros books."
+  ],
+  [
+   "a",
+   "Old ads still put UTMs in the wrong fields",
+   "Old-scheme LinkedIn ads put the ad set in utm_medium. GA4's default channels file 26 LinkedIn-ad VSL users as Organic Social and Meta as Unassigned. 31 of 292 VSL visitors (10.6%) have no source. The \"Aletto Channels\" group isn't in these queries yet."
+  ],
+  [
+   "a",
+   "LinkedIn post-text link is untagged",
+   "39 of 169 LinkedIn report leads (23%) came through it, plus 5 of the 6 Hyros \"Organic (LinkedIn)\" calls. They're counted as LinkedIn ads with no ad set. The new al_* fields are on 46 of 46 leads since Nov 18, but they label these \"Organic Social\" too."
+  ],
+  [
+   "a",
+   "Last week's organic number restated",
+   "Last week's deck showed 61 organic report leads. Under the Nov 19 lead rule that week restates to 5 (54 were ad post-text leads). Content views are lifetime-to-date, so this week's posts (1–7 days old) look smaller than last week's (8–14 days)."
+  ],
+  [
+   "b",
+   "Qualified is a floor · 3 unmatched",
+   "14 of 34 calls are tagged qualified so far; tags land after the call. Bill W., Lori T. and Simon C. aren't in GHL under their booking email. Scope-asked uses the Nov 9 CSV + booked Scopes. SDR-set calls are Closer's."
+  ]
+ ],
+ "content2": {
+  "score_h": "521 posts, 317k views. Instagram drove the engagement; LinkedIn text drove the comments.",
+  "score_sub": "Jake + Aletto, every platform Metricool reads, Fri Nov 13 – Thu Nov 19 ET vs the week before. Views −39% on 34% fewer posts (and this week's posts have had less time to collect views). Instagram: 441 engagements on 25.5k views (1.73%). Threads: 277k views but 38 engagements. Jake's LinkedIn: 4.77% engagement rate.",
+  "leads_h": "Organic content brought a handful of report leads and no Scopes. Instagram led on leads (2), YouTube on calls (2).",
+  "leads_sub": "GHL, shared lead rule: 4 non-paid report leads (5): Instagram 2 (0 last week), aletto.ai site 1, direct 1, LinkedIn organic 0. Hyros last touch: YouTube organic 2 strategy calls (1 qualified). Hyros shows LinkedIn organic at 6, but GHL shows 5 of those came through LinkedIn ad post text, so they're ads. Google organic's 2 Scopes (Luis F., Gibran) started on the coldgraveyard ad.",
+  "hot": {
+   "title": "\"When the ship is sinking, you don't compare buckets.\"",
+   "meta": "Jake · Instagram reel (20s) · Sat Nov 14, 17:31 ET",
+   "url": "https://www.instagram.com/reel/DfvSJYrAqD6/",
+   "why": [
+    "It's the most-engaged post on Instagram, the platform with the most organic report leads this week: 86 engagements (39 likes, 42 shares, 4 comments, 1 save) on 1,940 views, a 4.43% engagement rate.",
+    "It got 42 shares, the most of any post this week. People watched 11.1s of 20s on average, and only 32% skipped it. Urgency plus one concrete image does the work.",
+    "The \"Comment REPORT\" ask got only 4 comments. The reel spreads, but the CTA doesn't convert, so pair it with a tracked bio link."
+   ],
+   "runner": "Runner-up: LinkedIn text post <b>\"Meta ads lead quality: $5,000 a month for six months, and 'one consultant out of it.'\"</b> (Nov 16): 369 impressions, 19 engagements (5.2%), the most comments on Jake's LinkedIn this week."
+  },
+  "hooks": [
+   "\"4,500 dials. 8 demos. Your closers deserve better.\"",
+   "\"$5,000 a month for six months. One consultant to show for it.\"",
+   "\"One customer. Two ad platforms. Two sales reported.\"",
+   "\"We spent $92K on events. We got 10 leads. All 10 came from me.\"",
+   "\"Maxed out your referrals? They won't feed your next 10 hires.\""
+  ],
+  "super": [
+   "\"Your next $1M client works 100 hours a week. He isn't reading your cold email. He's scrolling.\"",
+   "\"When the pipeline is sinking, you don't compare lead vendors. You find the hole.\"",
+   "\"If every deal needs the founder, the founder is the bottleneck. And your reps know it.\""
+  ],
+  "tests": [
+   [
+    "Put a tracked link on every post now that tracking works",
+    "The new al_* fields captured source on 46 of 46 report leads since Nov 18. Add utm_source=linkedin_organic / instagram_organic and utm_content=post-slug to bio and post links, and organic leads can finally be credited to one post."
+   ],
+   [
+    "Instagram: pair the shareable reels with a tracked bio link",
+    "\"Ship is sinking\" got 42 shares and 4 comments. Instagram gave 2 first-touch report leads (0 last week). Run 3 reels with \"link in bio\" + DM keyword and judge them on report leads, not views."
+   ],
+   [
+    "Make the own-number LinkedIn text post a weekly standard",
+    "The top 3 LinkedIn posts were text posts with a hard number or a one-line rule: 5.2%, 8.0% and 9.1% engagement rates. Jake's LinkedIn overall was 4.77% on 47 posts."
+   ],
+   [
+    "Test YouTube long-form with the VSL link",
+    "YouTube organic booked 2 strategy calls (1 qualified) on 11 Shorts and 271 views, the most calls per view of any platform. Try 2 tracked long-form videos built on the Scope-buyer pains."
+   ],
+   [
+    "Treat Threads as reach only",
+    "277k views (87% of all views) for 38 engagements and 0 leads. Keep it automated and don't plan content for it."
+   ]
+  ]
+ },
+ "text": {
+  "title_meta": "Meta: the old locked account is estimated; the new Heat account (live Nov 19) is actual.",
+  "title_src": "Sources: LinkedIn Ads (account 513100372) and Meta Heat via Ryze, GA4 (540656492), Hyros booked calls, GHL contacts and tags, Metricool + Zernio (content). Read-only pull, Fri Nov 20. Prospects shown as first name + last initial.",
+  "spend_h": "~$3,550 spent, flat on last week. LinkedIn budgets are now $190/day.",
+  "spend_sub": "LinkedIn actual $2,080 (−6%), incl. $169 retargeting (uncapped). Meta ~$1,470: the old locked account is estimated at ~$190/day ($1,330, still delivering leads daily), plus $139.89 actual on the new Heat account (first spend Nov 19).",
+  "bud_lbl": "LinkedIn daily budgets now (read Fri Nov 20)",
+  "spend_src": "LinkedIn: campaign report, account 513100372; budgets re-read live Fri Nov 20 (read-only). Prospecting averaged $273/day this week before the overnight trim. Meta Heat: Ryze meta_ads, ad-level daily. Old Meta account: estimate.",
+  "funnel_h": "Report-page visitors +22%, leads +1%. The extra traffic was Meta, and it didn't opt in.",
+  "funnel_notes": [
+   "Meta sent 645 report-page visitors but only 32 leads (5.0%), with ~5s engaged per visitor. LinkedIn ads: 590 visitors, 28.6% opt-in, ~34s.",
+   "Non-paid report leads: 4 (5): Instagram 2, aletto.ai site 1, direct 1. LinkedIn post-text leads count as LinkedIn ads."
+  ],
+  "vsl_d30_lbl": "30 days (Oct 21 – Nov 19)",
+  "vsl_h": "The VSL still books 11.6% of visitors, well over the 2–5% bar. The leak is the report page on mobile.",
+  "vsl_sub": "292 VSL visitors (288 last week) → 34 strategy calls (34). LinkedIn ads 9.7% visitor → book (6.6%). 30 days: 1,130 visitors, 139 books, 12.3%. Only 22.3% (26.8%) of report-page visitors reach the VSL: 14.4% on mobile vs 43.5% on desktop.",
+  "vsl_note3": "GA4 key event book_strategy_call (live Nov 18): 8 events / 4 users, all Nov 19, 7 of 8 with no source. Not usable per source yet.",
+  "books_h": "LinkedIn paid booked more and is back on the Scope board. Meta halved.",
+  "books_notes": [
+   "LinkedIn was first touch on 4 of 9 Scopes: Dianna G. and Dan K. (last touch too), Luis F. and Gibran (last touch Google organic).",
+   "Jenny B.'s Scope: last touch direct, first touch Meta STATIC-hard-to-reach-buyers. Ryan H., Bobby B. and Larry G. have no source.",
+   "Hyros shows 6 \"Organic (LinkedIn)\" books. GHL shows 5 came through the untagged lnkd.in link in LinkedIn ad post text. This slide keeps Hyros' label; the VSL slide counts them as LinkedIn ads (17 books)."
+  ],
+  "cost_h": "All in: ~$254 per qualified call and ~$394 per Scope. LinkedIn: $347 per qualified ($1,107).",
+  "cost_notes": [
+   "LinkedIn: $2,080 for 2 last-touch Scopes (~$1,040 each). Meta: ~$1,470, mostly estimated, for 1.",
+   "Counting the 5 post-text-link calls as LinkedIn: 17 books / 7 qualified, ~$122 per book and ~$297 per qualified.",
+   "Cost per Scope-asked is on the last-$5k slides."
+  ],
+  "l5_end": "11/19",
+  "l5ad_cols": "repeat(3,minmax(0,1fr))",
+  "l5ad_trunc": 14,
+  "l5_h": "coldgraveyard and deadcold earn their money. bg1 US didn't, and it's now paused.",
+  "l5_sub_tail": "Windows end Nov 19 (each campaign's last ~$5k of spend).",
+  "l5ad_h": "coldgraveyard is the only US ad with Scopes. deadcold carries EU but hasn't added a Scope since Oct 31.",
+  "l5ad_sub": "coldgraveyard: $3,230 → 4 Scopes strict, 5 any-Strat ($646 / $538 per Scope-asked). deadcold: $4,556 → 5 Scopes, $911 per asked; its newest Scope came from a Strat booked Oct 31. bg1 US: colddead $2,566 → 0 Scopes; drypipe2 $1,794 → 1 (Dianna G., first touch only).",
+  "cr_h": "coldgraveyard, deadcold and the Meta hard-to-reach static booked 16 of 17 paid calls",
+  "cr_sub": "Paid last-touch books by ad this week. LinkedIn spend is actual; old-account Meta spend per ad can't be seen. Heat's 8 new ABO tests started Nov 19 (no books yet).",
+  "fat_h": "Audiences are thinning: reach fell ~23% in both bg2 campaigns",
+  "fat_sub": "Account CPM $52 → $53 week on week (daily $51 → $55, Nov 13 → 19). Frequency rose in bg2 US (1.25 → 1.41) and bg2 EU (1.21 → 1.39) while reach fell 23–24%.",
+  "fat_src": "LinkedIn campaign and account daily reports; Meta Heat ad-level daily (Ryze). Frequency = impressions ÷ reach for the week.",
+  "org_notes": [
+   "Last week's deck showed 61 organic report leads. Under the Nov 19 lead rule that week restates to 5 (54 were LinkedIn ad post-text leads).",
+   "The new al_* tracking fields are on 46 of 46 report leads since Nov 18. The 8 they label \"Organic Social\" are LinkedIn ad post-text visitors (re-classed as LinkedIn ads)."
+  ],
+  "hot_h": "#1 post, 5 hooks, 3 super hooks, 5 tests",
+  "hot_sub": "Built from what drove leads and calls (shareable Instagram reels, own-number LinkedIn text posts) and the words Scope buyers used on their strategy calls: reps stuck dialing, budget burned on events, buyers who ignore cold outreach.",
+  "hot_src": "Hot post = #1 by engagement on Instagram, the platform with the most organic report leads this week (post-level lead tracking doesn't exist yet). Scope-buyer language: Fathom Scope-buyer swipe file (Nov 9–15, n=5). Nothing was posted or changed.",
+  "recs_src": "Recommendations only; nothing was changed. US-first remakes: us-qualified-remakes-2026-11-09 + Scope-buyer angles A1–A4 (voc-scope-buyers). Heat: Meta ABO account read via Ryze.",
+  "recs_h": "Five moves, all waiting on Jake's go",
+  "recs_sub": "Nothing below has been changed by this pack. The overnight LinkedIn trim (bg1 US + static-test-US paused, bg2 EU $70) was already live when the account was read.",
+  "gaps_notes": [
+   "Biggest unlock: carry the session source through to book_strategy_call, so visitor → book can be read per source and per ad."
+  ],
+  "title_notes": [
+   "Same week window as every Friday pack: Friday to Thursday, Eastern time.",
+   "Meta = ~$190/day estimate for the old locked account + Heat actual from Nov 19."
+  ],
+  "week_notes": [
+   "Lead with the verdict: spend and calls flat, Scopes 8 → 9, LinkedIn paid back on the Scope board.",
+   "Meta booked half as much; Heat is only 1 day old."
+  ],
+  "spend_notes": [
+   "Prospecting now $170 = bg2 US 100 + bg2 EU 70 (bg1 US and static-test-US paused overnight).",
+   "rt-vsl retargeting $20/day on top, uncapped."
+  ],
+  "books_sub_tail": ", 2 from LinkedIn paid (last touch) and 4 with a LinkedIn ad as first touch.",
+  "books_src": "Hyros booked calls, last touch. \"Organic (LinkedIn)\" = organic with a LinkedIn referrer; GHL shows 5 of the 6 came through the LinkedIn ad post-text link (counted as LinkedIn ads on the VSL slide only). \"No source\" includes returning contacts the SDRs set. 3 books have no GHL match, so their qualified status is unknown.",
+  "cost_sub_tail": "LinkedIn spent $2,080 for 2 last-touch Scopes (~$1,040 each). Meta figures use mostly estimated spend.",
+  "cost_src": "Last week in brackets. Spend: LinkedIn actual; Meta = ~$190/day old-account estimate + Heat actual. Scopes are last touch; \"—\" means no Scope to divide by.",
+  "l5_src": "li-trim-2026-11-20: LinkedIn spend (adAnalytics, account 513100372, single-campaign daily) + Hyros Strategy first-book source + Scope-asked CSV + GHL Scope calendar + Hyros Scope calls. \"Asked\" = asked for a Scope. Bruce R. counts in both bg2 US and bg1 US under Any Strat.",
+  "l5_notes": [
+   "Windows: bg2 US Sep 27 – Nov 19 ($5,008), bg1 US Sep 23 – Nov 19 ($5,069), bg2 EU Sep 15 – Nov 19 ($5,056).",
+   "bg2 EU's window moved past an older Scope, so it shows 5 (6 last week)."
+  ],
+  "l5ad_src": "Rows: ads with $50+ in the window or any Scope/asked credit. Green = has a Scope; red = $1k+ with none. \"2013selling\" spent $0 in the window; its credit comes from first touches before it.",
+  "l5ad_notes": [
+   "coldemail ($1,109 in bg2 US) and colddead ($2,566 in bg1 US) booked Strats but no Scope-asked under either method."
+  ],
+  "cr_notes": [
+   "16 of 17 paid calls came from 3 ads.",
+   "bg1 US and static-test-US were paused overnight (not by this pack)."
+  ],
+  "sb_src": "Metricool post analytics (pulled Fri Nov 20, lifetime-to-date per post), cross-checked with Zernio. Views = platform views; LinkedIn and X = impressions. Engagements = likes + comments + shares/reposts + saves. Clicks: X profile clicks, LinkedIn page clicks. *Report leads = GHL first-touch referrer (paid touches win). Facebook page counted once (Aletto). Aletto Instagram and YouTube: 0 posts this week.",
+  "sb_notes": [
+   "Threads = 87% of all views but 5% of engagements and 0 leads.",
+   "Aletto company page: 3 posts, all on Nov 13 (19 the week before)."
+  ],
+  "recs_notes": [
+   "Ask for a yes/no on each of the five."
+  ]
+ }
+}

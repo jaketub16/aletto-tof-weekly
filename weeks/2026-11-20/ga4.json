@@ -1,0 +1,5015 @@
+{
+ "source": "GA4 via Ryze google_analytics, property 540656492 \"Aletto \u2014 aletto\", timezone America/New_York (ET)",
+ "window": {
+  "this": "Fri 2026-11-13 \u2013 Thu 2026-11-19 ET",
+  "prior": "Fri 2026-11-06 \u2013 Thu 2026-11-12 ET"
+ },
+ "pages": {
+  "/saasreport": {
+   "d30": {
+    "users": 4471,
+    "new": 4222,
+    "sessions": 5009,
+    "views": 5452,
+    "eng_s": 109812,
+    "eng_per_user_s": 25.0,
+    "engaged_sessions": 2183,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 1308,
+    "new": 1198,
+    "sessions": 1410,
+    "views": 1583,
+    "eng_s": 25457,
+    "eng_per_user_s": 19.0,
+    "engaged_sessions": 543,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 1076,
+    "new": 961,
+    "sessions": 1149,
+    "views": 1266,
+    "eng_s": 28498,
+    "eng_per_user_s": 26.0,
+    "engaged_sessions": 542,
+    "key_events": 0.0
+   }
+  },
+  "/freetraining-1-7481": {
+   "d30": {
+    "users": 1130,
+    "new": 112,
+    "sessions": 1351,
+    "views": 1293,
+    "eng_s": 76511,
+    "eng_per_user_s": 68.0,
+    "engaged_sessions": 945,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 292,
+    "new": 36,
+    "sessions": 348,
+    "views": 329,
+    "eng_s": 18419,
+    "eng_per_user_s": 63.0,
+    "engaged_sessions": 230,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 288,
+    "new": 23,
+    "sessions": 332,
+    "views": 318,
+    "eng_s": 21105,
+    "eng_per_user_s": 73.0,
+    "engaged_sessions": 236,
+    "key_events": 0.0
+   }
+  },
+  "/freetraining-booking-6842": {
+   "d30": {
+    "users": 326,
+    "new": 319,
+    "sessions": 342,
+    "views": 345,
+    "eng_s": 2309,
+    "eng_per_user_s": 7.0,
+    "engaged_sessions": 85,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 70,
+    "new": 67,
+    "sessions": 80,
+    "views": 83,
+    "eng_s": 711,
+    "eng_per_user_s": 10.0,
+    "engaged_sessions": 25,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 37,
+    "new": 37,
+    "sessions": 37,
+    "views": 37,
+    "eng_s": 297,
+    "eng_per_user_s": 8.0,
+    "engaged_sessions": 14,
+    "key_events": 0.0
+   }
+  },
+  "/ai-growth-funnel": {
+   "d30": {
+    "users": 186,
+    "new": 137,
+    "sessions": 239,
+    "views": 252,
+    "eng_s": 9957,
+    "eng_per_user_s": 54.0,
+    "engaged_sessions": 103,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 49,
+    "new": 33,
+    "sessions": 61,
+    "views": 64,
+    "eng_s": 3616,
+    "eng_per_user_s": 74.0,
+    "engaged_sessions": 27,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 46,
+    "new": 32,
+    "sessions": 56,
+    "views": 59,
+    "eng_s": 1082,
+    "eng_per_user_s": 24.0,
+    "engaged_sessions": 21,
+    "key_events": 0.0
+   }
+  },
+  "/": {
+   "d30": {
+    "users": 122,
+    "new": 109,
+    "sessions": 130,
+    "views": 134,
+    "eng_s": 2367,
+    "eng_per_user_s": 19.0,
+    "engaged_sessions": 53,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 45,
+    "new": 38,
+    "sessions": 47,
+    "views": 48,
+    "eng_s": 415,
+    "eng_per_user_s": 9.0,
+    "engaged_sessions": 14,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 27,
+    "new": 25,
+    "sessions": 28,
+    "views": 27,
+    "eng_s": 435,
+    "eng_per_user_s": 16.0,
+    "engaged_sessions": 12,
+    "key_events": 0.0
+   }
+  },
+  "/training-free": {
+   "d30": {
+    "users": 108,
+    "new": 66,
+    "sessions": 143,
+    "views": 230,
+    "eng_s": 1695,
+    "eng_per_user_s": 16.0,
+    "engaged_sessions": 93,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 29,
+    "new": 11,
+    "sessions": 33,
+    "views": 35,
+    "eng_s": 492,
+    "eng_per_user_s": 17.0,
+    "engaged_sessions": 24,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 24,
+    "new": 6,
+    "sessions": 41,
+    "views": 48,
+    "eng_s": 340,
+    "eng_per_user_s": 14.0,
+    "engaged_sessions": 24,
+    "key_events": 0.0
+   }
+  },
+  "/free-api": {
+   "d30": {
+    "users": 84,
+    "new": 61,
+    "sessions": 96,
+    "views": 115,
+    "eng_s": 634,
+    "eng_per_user_s": 8.0,
+    "engaged_sessions": 36,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 24,
+    "new": 15,
+    "sessions": 28,
+    "views": 35,
+    "eng_s": 42,
+    "eng_per_user_s": 2.0,
+    "engaged_sessions": 9,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 21,
+    "new": 18,
+    "sessions": 22,
+    "views": 25,
+    "eng_s": 247,
+    "eng_per_user_s": 12.0,
+    "engaged_sessions": 9,
+    "key_events": 0.0
+   }
+  },
+  "/freetraining-1-6114": {
+   "d30": {
+    "users": 46,
+    "new": 23,
+    "sessions": 54,
+    "views": 57,
+    "eng_s": 3877,
+    "eng_per_user_s": 84.0,
+    "engaged_sessions": 28,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 23,
+    "new": 15,
+    "sessions": 25,
+    "views": 25,
+    "eng_s": 1737,
+    "eng_per_user_s": 76.0,
+    "engaged_sessions": 10,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 10,
+    "new": 4,
+    "sessions": 13,
+    "views": 17,
+    "eng_s": 817,
+    "eng_per_user_s": 82.0,
+    "engaged_sessions": 9,
+    "key_events": 0.0
+   }
+  },
+  "/confirmed": {
+   "d30": {
+    "users": 7,
+    "new": 3,
+    "sessions": 9,
+    "views": 8,
+    "eng_s": 850,
+    "eng_per_user_s": 121.0,
+    "engaged_sessions": 6,
+    "key_events": 0.0
+   },
+   "prior": {
+    "users": 2,
+    "new": 0,
+    "sessions": 3,
+    "views": 3,
+    "eng_s": 503,
+    "eng_per_user_s": 252.0,
+    "engaged_sessions": 2,
+    "key_events": 0.0
+   },
+   "this": {
+    "users": 0,
+    "new": 0,
+    "sessions": 0,
+    "views": 0,
+    "eng_s": 0,
+    "eng_per_user_s": null,
+    "engaged_sessions": 0,
+    "key_events": 0.0
+   }
+  }
+ },
+ "posttext_moved_users": {
+  "/freetraining-1-7481": {
+   "d30": 141,
+   "prior": 45,
+   "this": 23
+  }
+ },
+ "source_detail": {
+  "/saasreport|d30": [
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1014,
+    "new": 982,
+    "sessions": 1116,
+    "eng_s": 32263
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 669,
+    "new": 633,
+    "sessions": 717,
+    "eng_s": 6704
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 579,
+    "new": 504,
+    "sessions": 605,
+    "eng_s": 2069
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 573,
+    "new": 538,
+    "sessions": 639,
+    "eng_s": 19291
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 468,
+    "new": 439,
+    "sessions": 535,
+    "eng_s": 22170
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 251,
+    "new": 240,
+    "sessions": 266,
+    "eng_s": 7147
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 195,
+    "new": 180,
+    "sessions": 214,
+    "eng_s": 4312
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 176,
+    "new": 160,
+    "sessions": 194,
+    "eng_s": 6517
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 162,
+    "new": 157,
+    "sessions": 166,
+    "eng_s": 2698
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "RT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 72,
+    "new": 73,
+    "sessions": 72,
+    "eng_s": 289
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml-eu",
+    "campaign": "fr-winners-bg1-hc-rm-ml-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 42,
+    "new": 38,
+    "sessions": 61,
+    "eng_s": 2167
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-ORG-T2",
+    "campaign": "FR-ORG-T2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 37,
+    "new": 36,
+    "sessions": 37,
+    "eng_s": 29
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 36,
+    "new": 0,
+    "sessions": 36,
+    "eng_s": 987
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 32,
+    "new": 26,
+    "sessions": 33,
+    "eng_s": 336
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "COLD-EMAIL-REPUTATION",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 29,
+    "new": 28,
+    "sessions": 30,
+    "eng_s": 117
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 23,
+    "new": 23,
+    "sessions": 24,
+    "eng_s": 440
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 16,
+    "new": 11,
+    "sessions": 20,
+    "eng_s": 359
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "20YEARSINSALES",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 15,
+    "new": 15,
+    "sessions": 15,
+    "eng_s": 21
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "HARD-TO-REACH",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 14,
+    "new": 14,
+    "sessions": 14,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS",
+    "campaign": "FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 12,
+    "new": 11,
+    "sessions": 12,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "static-test-US",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 12,
+    "new": 11,
+    "sessions": 14,
+    "eng_s": 163
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "DRYPIPE",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 11,
+    "new": 10,
+    "sessions": 11,
+    "eng_s": 49
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "PHONE-FAX",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 11,
+    "new": 11,
+    "sessions": 11,
+    "eng_s": 67
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTENTION-PRODUCT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 10,
+    "new": 10,
+    "sessions": 10,
+    "eng_s": 97
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "WHY-THE-FUK",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 10,
+    "new": 10,
+    "sessions": 10,
+    "eng_s": 134
+   },
+   {
+    "source": "lnkd.in",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 7,
+    "new": 7,
+    "sessions": 7,
+    "eng_s": 137
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "2013SELLING",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 6,
+    "new": 6,
+    "sessions": 6,
+    "eng_s": 7
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 6,
+    "new": 4,
+    "sessions": 8,
+    "eng_s": 168
+   },
+   {
+    "source": "Site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 2,
+    "sessions": 7,
+    "eng_s": 125
+   },
+   {
+    "source": "x",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 4,
+    "sessions": 14,
+    "eng_s": 57
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 4,
+    "new": 4,
+    "sessions": 8,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "social",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 4,
+    "sessions": 4,
+    "eng_s": 6
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 2,
+    "sessions": 6,
+    "eng_s": 144
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 76
+   },
+   {
+    "source": "lm.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 44
+   },
+   {
+    "source": "m.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 2
+   },
+   {
+    "source": "fb_ad",
+    "medium": "{{adset.name}}",
+    "campaign": "{{adset.name}}",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_organic",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 48
+   },
+   {
+    "source": "ig",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 59
+   },
+   {
+    "source": "li",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 20
+   },
+   {
+    "source": "site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 26
+   },
+   {
+    "source": "x_ad",
+    "medium": "paid_social",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "Medium",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "adsmanager.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "app.gohighlevel.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "blog",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 70
+   },
+   {
+    "source": "chatgpt.com",
+    "medium": "ai-assistant",
+    "campaign": "ai-assistant",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 7
+   },
+   {
+    "source": "fb_ad",
+    "medium": "AOS153-test",
+    "campaign": "AOS153-test",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 37
+   },
+   {
+    "source": "fb_ad",
+    "medium": "BF/MF Viewers RM (90 days) - [HQL]",
+    "campaign": "BF/MF Viewers RM (90 days) - [HQL]",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "EB-CT-HQL27",
+    "campaign": "EB-CT-HQL27",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM-90-HQC",
+    "campaign": "VRM-90-HQC",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS-sch",
+    "campaign": "VRM/LRM-FR-WINNERS-sch",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1-TESTS2",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1-TESTS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winning Creatives EB LA - FR - HQL",
+    "campaign": "Winning Creatives EB LA - FR - HQL",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 349
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST4-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-se-ms-mdas",
+    "campaign": "fr-winners-bg2-se-ms-mdas",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "organic",
+    "campaign": "jake_seo",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "sms",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 3,
+    "eng_s": 4
+   },
+   {
+    "source": "threads",
+    "medium": "social",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "threads",
+    "medium": "social",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "web.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 0
+   }
+  ],
+  "/saasreport|prior": [
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 312,
+    "new": 290,
+    "sessions": 330,
+    "eng_s": 9165
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 226,
+    "new": 197,
+    "sessions": 246,
+    "eng_s": 9021
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 160,
+    "new": 144,
+    "sessions": 174,
+    "eng_s": 6822
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 141,
+    "new": 127,
+    "sessions": 148,
+    "eng_s": 1327
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 132,
+    "new": 114,
+    "sessions": 132,
+    "eng_s": 452
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 45,
+    "new": 43,
+    "sessions": 45,
+    "eng_s": 873
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 18,
+    "new": 15,
+    "sessions": 18,
+    "eng_s": 295
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 9,
+    "new": 0,
+    "sessions": 9,
+    "eng_s": 197
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 9,
+    "new": 7,
+    "sessions": 9,
+    "eng_s": 24
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 3,
+    "sessions": 5,
+    "eng_s": 135
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-ORG-T2",
+    "campaign": "FR-ORG-T2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS",
+    "campaign": "FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "x",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 2,
+    "sessions": 4,
+    "eng_s": 20
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 42
+   },
+   {
+    "source": "li",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 20
+   },
+   {
+    "source": "lnkd.in",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "Site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 12
+   },
+   {
+    "source": "blog",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 42
+   },
+   {
+    "source": "fb_ad",
+    "medium": "BF/MF Viewers RM (90 days) - [HQL]",
+    "campaign": "BF/MF Viewers RM (90 days) - [HQL]",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 49
+   },
+   {
+    "source": "ig",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml-eu",
+    "campaign": "fr-winners-bg1-hc-rm-ml-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-se-ms-mdas",
+    "campaign": "fr-winners-bg2-se-ms-mdas",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "sms",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "threads",
+    "medium": "social",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "x_ad",
+    "medium": "paid_social",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 2
+   }
+  ],
+  "/freetraining-1-7481|d30": [
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 264,
+    "new": 11,
+    "sessions": 305,
+    "eng_s": 18486
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 179,
+    "new": 0,
+    "sessions": 236,
+    "eng_s": 11709
+   },
+   {
+    "source": "linkedin.com/lnkd.in (landed on /saasreport)",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 141,
+    "new": null,
+    "sessions": null,
+    "eng_s": null,
+    "moved_from": "li_org"
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 140,
+    "new": 2,
+    "sessions": 179,
+    "eng_s": 12837
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 124,
+    "new": 0,
+    "sessions": 124,
+    "eng_s": 7389
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 84,
+    "new": 5,
+    "sessions": 90,
+    "eng_s": 2851
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 65,
+    "new": 37,
+    "sessions": 78,
+    "eng_s": 4180
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 61,
+    "new": 0,
+    "sessions": 69,
+    "eng_s": 4767
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 59,
+    "new": 0,
+    "sessions": 75,
+    "eng_s": 4503
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 46,
+    "new": 18,
+    "sessions": 50,
+    "eng_s": 2099
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 37,
+    "new": 3,
+    "sessions": 39,
+    "eng_s": 1782
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml-eu",
+    "campaign": "fr-winners-bg1-hc-rm-ml-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 15,
+    "new": 2,
+    "sessions": 17,
+    "eng_s": 832
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 11,
+    "new": 8,
+    "sessions": 16,
+    "eng_s": 158
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 10,
+    "new": 2,
+    "sessions": 11,
+    "eng_s": 1050
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 6,
+    "new": 2,
+    "sessions": 8,
+    "eng_s": 722
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 5,
+    "new": 0,
+    "sessions": 5,
+    "eng_s": 53
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 0,
+    "sessions": 4,
+    "eng_s": 42
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 5,
+    "eng_s": 1062
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 57
+   },
+   {
+    "source": "fb_ad",
+    "medium": "EB-CT-HQL-W2-04/09/25",
+    "campaign": "EB-CT-HQL-W2-04/09/25",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "RT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 171
+   },
+   {
+    "source": "lnkd.in",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 27
+   },
+   {
+    "source": "teams.public.onecdn.static.microsoft",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 41
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 433
+   },
+   {
+    "source": "app.gohighlevel.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 4
+   },
+   {
+    "source": "casestudy",
+    "medium": "pdf",
+    "campaign": "pdf",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 20
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 638
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM-90-HQC",
+    "campaign": "VRM-90-HQC",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS-sch",
+    "campaign": "VRM/LRM-FR-WINNERS-sch",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winning Creatives EB LA - FR - HQL",
+    "campaign": "Winning Creatives EB LA - FR - HQL",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "20YEARSINSALES",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "PHONE-FAX",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "WHY-THE-FUK",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 414
+   },
+   {
+    "source": "fb_organic",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 17
+   },
+   {
+    "source": "ig",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "static-test-US",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 3
+   },
+   {
+    "source": "site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 25
+   },
+   {
+    "source": "sms",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 129
+   }
+  ],
+  "/saasreport|this": [
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 251,
+    "new": 240,
+    "sessions": 266,
+    "eng_s": 7147
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 239,
+    "new": 222,
+    "sessions": 253,
+    "eng_s": 1298
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 192,
+    "new": 170,
+    "sessions": 198,
+    "eng_s": 434
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 176,
+    "new": 160,
+    "sessions": 194,
+    "eng_s": 6517
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 84,
+    "new": 73,
+    "sessions": 97,
+    "eng_s": 4531
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "RT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 72,
+    "new": 73,
+    "sessions": 72,
+    "eng_s": 289
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 46,
+    "new": 45,
+    "sessions": 48,
+    "eng_s": 1367
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "COLD-EMAIL-REPUTATION",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 29,
+    "new": 28,
+    "sessions": 30,
+    "eng_s": 117
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 28,
+    "new": 18,
+    "sessions": 31,
+    "eng_s": 1138
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 23,
+    "new": 23,
+    "sessions": 24,
+    "eng_s": 440
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-ORG-T2",
+    "campaign": "FR-ORG-T2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 22,
+    "new": 21,
+    "sessions": 22,
+    "eng_s": 7
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "20YEARSINSALES",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 15,
+    "new": 15,
+    "sessions": 15,
+    "eng_s": 21
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "HARD-TO-REACH",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 14,
+    "new": 14,
+    "sessions": 14,
+    "eng_s": 0
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 13,
+    "new": 0,
+    "sessions": 13,
+    "eng_s": 625
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "static-test-US",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 12,
+    "new": 11,
+    "sessions": 14,
+    "eng_s": 163
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "DRYPIPE",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 11,
+    "new": 10,
+    "sessions": 11,
+    "eng_s": 49
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "PHONE-FAX",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 11,
+    "new": 11,
+    "sessions": 11,
+    "eng_s": 67
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 11,
+    "new": 6,
+    "sessions": 18,
+    "eng_s": 93
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTENTION-PRODUCT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 10,
+    "new": 10,
+    "sessions": 10,
+    "eng_s": 97
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "WHY-THE-FUK",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 10,
+    "new": 10,
+    "sessions": 10,
+    "eng_s": 134
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS",
+    "campaign": "FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 9,
+    "new": 8,
+    "sessions": 9,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 7,
+    "new": 6,
+    "sessions": 7,
+    "eng_s": 60
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "2013SELLING",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 6,
+    "new": 6,
+    "sessions": 6,
+    "eng_s": 7
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 3,
+    "sessions": 7,
+    "eng_s": 171
+   },
+   {
+    "source": "x",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 2,
+    "sessions": 10,
+    "eng_s": 37
+   },
+   {
+    "source": "Site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 48
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_organic",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 48
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 12
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml-eu",
+    "campaign": "fr-winners-bg1-hc-rm-ml-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 1
+   },
+   {
+    "source": "m.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 2
+   },
+   {
+    "source": "adsmanager.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "blog",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 28
+   },
+   {
+    "source": "email",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 7
+   },
+   {
+    "source": "fb_ad",
+    "medium": "AOS153-test",
+    "campaign": "AOS153-test",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 37
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 349
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST4-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 25
+   },
+   {
+    "source": "ig",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 59
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 13
+   },
+   {
+    "source": "lm.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 15
+   },
+   {
+    "source": "lnkd.in",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "site",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "sms",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 4
+   },
+   {
+    "source": "threads",
+    "medium": "social",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   }
+  ],
+  "/freetraining-booking-6842|d30": [
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 106,
+    "new": 106,
+    "sessions": 106,
+    "eng_s": 305
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 29,
+    "new": 29,
+    "sessions": 30,
+    "eng_s": 102
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 16,
+    "new": 15,
+    "sessions": 16,
+    "eng_s": 196
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 10,
+    "new": 8,
+    "sessions": 18,
+    "eng_s": 140
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 10,
+    "new": 10,
+    "sessions": 10,
+    "eng_s": 61
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 9,
+    "new": 8,
+    "sessions": 10,
+    "eng_s": 142
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 9,
+    "new": 9,
+    "sessions": 9,
+    "eng_s": 71
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 8,
+    "new": 8,
+    "sessions": 8,
+    "eng_s": 41
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 7,
+    "new": 7,
+    "sessions": 7,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 7,
+    "new": 7,
+    "sessions": 7,
+    "eng_s": 87
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 5,
+    "sessions": 5,
+    "eng_s": 0
+   },
+   {
+    "source": "li",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 5,
+    "new": 5,
+    "sessions": 5,
+    "eng_s": 227
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 4,
+    "sessions": 4,
+    "eng_s": 9
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 4,
+    "sessions": 4,
+    "eng_s": 18
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 13
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 27
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 24
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 11
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "li",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 200
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 24
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 3,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "fr",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 64
+   },
+   {
+    "source": "187appcs",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 15
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 11
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 51
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 20
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 26
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 217
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 15
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 22
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 25
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 39
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 1
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 71
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 14
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fr",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "sms",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   }
+  ],
+  "/freetraining-1-7481|prior": [
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 73,
+    "new": 0,
+    "sessions": 82,
+    "eng_s": 4836
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 62,
+    "new": 0,
+    "sessions": 78,
+    "eng_s": 5819
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 62,
+    "new": 0,
+    "sessions": 77,
+    "eng_s": 3911
+   },
+   {
+    "source": "linkedin.com/lnkd.in (landed on /saasreport)",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 45,
+    "new": null,
+    "sessions": null,
+    "eng_s": null,
+    "moved_from": "li_org"
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 28,
+    "new": 0,
+    "sessions": 28,
+    "eng_s": 1769
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 20,
+    "new": 10,
+    "sessions": 21,
+    "eng_s": 1361
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 18,
+    "new": 1,
+    "sessions": 20,
+    "eng_s": 525
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 12,
+    "new": 7,
+    "sessions": 12,
+    "eng_s": 316
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 0,
+    "sessions": 3,
+    "eng_s": 802
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 1,
+    "sessions": 3,
+    "eng_s": 1032
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 40
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 11
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 638
+   },
+   {
+    "source": "fb_ad",
+    "medium": "Winners-APLUS-FR-HQL-2-HC1",
+    "campaign": "Winners-APLUS-FR-HQL-2-HC1",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 3
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 1
+   },
+   {
+    "source": "teams.public.onecdn.static.microsoft",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 41
+   }
+  ],
+  "/freetraining-1-7481|this": [
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 61,
+    "new": 0,
+    "sessions": 69,
+    "eng_s": 4767
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 59,
+    "new": 0,
+    "sessions": 75,
+    "eng_s": 4503
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "untracked",
+    "posttext": false,
+    "users": 31,
+    "new": 0,
+    "sessions": 31,
+    "eng_s": 2572
+   },
+   {
+    "source": "linkedin.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "li_org",
+    "posttext": false,
+    "users": 31,
+    "new": 0,
+    "sessions": 43,
+    "eng_s": 1122
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 26,
+    "new": 13,
+    "sessions": 28,
+    "eng_s": 1785
+   },
+   {
+    "source": "linkedin.com/lnkd.in (landed on /saasreport)",
+    "medium": "referral",
+    "campaign": "unattributed (post-text link)",
+    "bucket": "li_ads",
+    "posttext": true,
+    "users": 23,
+    "new": null,
+    "sessions": null,
+    "eng_s": null,
+    "moved_from": "li_org"
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es-eu",
+    "campaign": "fr-winners-bg2-ss-sd-es-eu",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 22,
+    "new": 9,
+    "sessions": 26,
+    "eng_s": 1852
+   },
+   {
+    "source": "fb_ad",
+    "medium": "FR-WINNERS2",
+    "campaign": "FR-WINNERS2",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 18,
+    "new": 0,
+    "sessions": 19,
+    "eng_s": 130
+   },
+   {
+    "source": "fb_ad",
+    "medium": "VRM/LRM-FR-WINNERS",
+    "campaign": "VRM/LRM-FR-WINNERS",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 16,
+    "new": 6,
+    "sessions": 17,
+    "eng_s": 113
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 2,
+    "sessions": 9,
+    "eng_s": 48
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 5,
+    "new": 0,
+    "sessions": 5,
+    "eng_s": 53
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg2-ss-sd-es",
+    "campaign": "fr-winners-bg2-ss-sd-es",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 3,
+    "new": 0,
+    "sessions": 6,
+    "eng_s": 0
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 3
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "RT",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 171
+   },
+   {
+    "source": "app.gohighlevel.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 2,
+    "eng_s": 4
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 20
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "fb_ad",
+    "medium": "EB-CT-HQL-W2-04/09/25",
+    "campaign": "EB-CT-HQL-W2-04/09/25",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "20YEARSINSALES",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "ATTR-TEST-ADSET",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "PHONE-FAX",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fb_ad",
+    "medium": "paid_social",
+    "campaign": "WHY-THE-FUK",
+    "bucket": "meta_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 414
+   },
+   {
+    "source": "fb_organic",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 17
+   },
+   {
+    "source": "ig",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "l.facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 703
+   },
+   {
+    "source": "linkedin",
+    "medium": "fr-winners-bg1-hc-rm-ml",
+    "campaign": "fr-winners-bg1-hc-rm-ml",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "linkedin",
+    "medium": "paid_social",
+    "campaign": "static-test-US",
+    "bucket": "li_ads",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 3
+   },
+   {
+    "source": "sms",
+    "medium": "",
+    "campaign": "",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 129
+   }
+  ],
+  "/freetraining-booking-6842|prior": [
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 27,
+    "new": 27,
+    "sessions": 27,
+    "eng_s": 108
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 10,
+    "new": 8,
+    "sessions": 18,
+    "eng_s": 140
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 5,
+    "sessions": 5,
+    "eng_s": 21
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 4,
+    "new": 3,
+    "sessions": 4,
+    "eng_s": 51
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "ig",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 217
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 22
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 39
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 71
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 6
+   },
+   {
+    "source": "fr",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "fr",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 20
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 16
+   }
+  ],
+  "/freetraining-booking-6842|this": [
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 5,
+    "new": 5,
+    "sessions": 5,
+    "eng_s": 26
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 22
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 13
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 27
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 3,
+    "new": 3,
+    "sessions": 3,
+    "eng_s": 24
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 24
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 10
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 11
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 51
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "email",
+    "medium": "newsletter",
+    "campaign": "newsletter",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 14
+   },
+   {
+    "source": "jfr_dm",
+    "medium": "jfr",
+    "campaign": "jfr",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 17
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 48
+   }
+  ],
+  "/confirmed|d30": [
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "campaign": "(none)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 2,
+    "sessions": 2,
+    "eng_s": 9
+   },
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 3,
+    "eng_s": 373
+   },
+   {
+    "source": "yt",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 2,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 225
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "campaign": "(referral)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 1,
+    "sessions": 1,
+    "eng_s": 0
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 243
+   }
+  ],
+  "/confirmed|prior": [
+   {
+    "source": "email",
+    "medium": "(not set)",
+    "campaign": "(not set)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 2,
+    "eng_s": 260
+   },
+   {
+    "source": "google",
+    "medium": "organic",
+    "campaign": "(organic)",
+    "bucket": "other",
+    "posttext": false,
+    "users": 1,
+    "new": 0,
+    "sessions": 1,
+    "eng_s": 243
+   }
+  ]
+ },
+ "by_source": [
+  {
+   "key": "li_ads",
+   "label": "LinkedIn ads",
+   "this": {
+    "vsl_users": 175,
+    "optin_users": 590,
+    "optin_to_vsl": 29.7,
+    "books": 17,
+    "vsl_to_book": 9.7,
+    "leads": 169,
+    "optin_rate": 28.6,
+    "optin_posttext_users": 85,
+    "vsl_posttext_users": 23
+   },
+   "prior": {
+    "vsl_users": 182,
+    "optin_users": 720,
+    "optin_to_vsl": 25.3,
+    "books": 12,
+    "vsl_to_book": 6.6,
+    "leads": 179,
+    "optin_rate": 24.9,
+    "optin_posttext_users": 162,
+    "vsl_posttext_users": 45
+   },
+   "d30": {
+    "vsl_users": 723,
+    "optin_users": 2763,
+    "optin_to_vsl": 26.2,
+    "books": 64,
+    "vsl_to_book": 8.9,
+    "leads": null,
+    "optin_posttext_users": 475,
+    "vsl_posttext_users": 141
+   }
+  },
+  {
+   "key": "meta_ads",
+   "label": "Meta ads",
+   "this": {
+    "vsl_users": 41,
+    "optin_users": 645,
+    "optin_to_vsl": 6.4,
+    "books": 5,
+    "vsl_to_book": 12.2,
+    "leads": 32,
+    "optin_rate": 5.0
+   },
+   "prior": {
+    "vsl_users": 31,
+    "optin_users": 281,
+    "optin_to_vsl": 11.0,
+    "books": 10,
+    "vsl_to_book": 32.3,
+    "leads": 18,
+    "optin_rate": 6.4
+   },
+   "d30": {
+    "vsl_users": 142,
+    "optin_users": 1490,
+    "optin_to_vsl": 9.5,
+    "books": 26,
+    "vsl_to_book": 18.3,
+    "leads": null
+   }
+  },
+  {
+   "key": "li_org",
+   "label": "LinkedIn organic",
+   "this": {
+    "vsl_users": 8,
+    "optin_users": 0,
+    "optin_to_vsl": null,
+    "books": 1,
+    "vsl_to_book": 12.5,
+    "leads": null
+   },
+   "prior": {
+    "vsl_users": 17,
+    "optin_users": 2,
+    "optin_to_vsl": 850.0,
+    "books": 3,
+    "vsl_to_book": 17.6,
+    "leads": null
+   },
+   "d30": {
+    "vsl_users": 40,
+    "optin_users": 2,
+    "optin_to_vsl": 2000.0,
+    "books": 19,
+    "vsl_to_book": 47.5,
+    "leads": null
+   }
+  },
+  {
+   "key": "other",
+   "label": "Direct, email, IG, YouTube & other",
+   "this": {
+    "vsl_users": 44,
+    "optin_users": 76,
+    "optin_to_vsl": 57.9,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   },
+   "prior": {
+    "vsl_users": 32,
+    "optin_users": 72,
+    "optin_to_vsl": 44.4,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   },
+   "d30": {
+    "vsl_users": 127,
+    "optin_users": 261,
+    "optin_to_vsl": 48.7,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   }
+  },
+  {
+   "key": "untracked",
+   "label": "No source in GA4 ((not set))",
+   "this": {
+    "vsl_users": 31,
+    "optin_users": 13,
+    "optin_to_vsl": 238.5,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   },
+   "prior": {
+    "vsl_users": 28,
+    "optin_users": 9,
+    "optin_to_vsl": 311.1,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   },
+   "d30": {
+    "vsl_users": 124,
+    "optin_users": 36,
+    "optin_to_vsl": 344.4,
+    "books": null,
+    "vsl_to_book": null,
+    "leads": null
+   }
+  }
+ ],
+ "by_source_rest": {
+  "key": "rest",
+  "label": "Everything else (direct, email, IG, YouTube, no source)",
+  "this": {
+   "vsl_users": 75,
+   "optin_users": 89,
+   "optin_to_vsl": 84.3,
+   "books": 11,
+   "vsl_to_book": 14.7
+  },
+  "prior": {
+   "vsl_users": 60,
+   "optin_users": 81,
+   "optin_to_vsl": 74.1,
+   "books": 9,
+   "vsl_to_book": 15.0
+  },
+  "d30": {
+   "vsl_users": 251,
+   "optin_users": 297,
+   "optin_to_vsl": 84.5,
+   "books": 30,
+   "vsl_to_book": 12.0
+  }
+ },
+ "steps": {
+  "this": {
+   "optin_users": 1308,
+   "vsl_users": 292,
+   "vsl_new_users": 36,
+   "booking_page_users": 37,
+   "confirmed_users": 0,
+   "vsl_eng_per_user_s": 63.0,
+   "books": 34,
+   "optin_to_vsl": 22.3,
+   "vsl_to_book": 11.6,
+   "leads": 205,
+   "optin_rate": 15.7,
+   "vsl_untracked_users": 31,
+   "vsl_untracked_pct": 10.6
+  },
+  "prior": {
+   "optin_users": 1076,
+   "vsl_users": 288,
+   "vsl_new_users": 23,
+   "booking_page_users": 70,
+   "confirmed_users": 2,
+   "vsl_eng_per_user_s": 73.0,
+   "books": 34,
+   "optin_to_vsl": 26.8,
+   "vsl_to_book": 11.8,
+   "leads": 202,
+   "optin_rate": 18.8,
+   "vsl_untracked_users": 28,
+   "vsl_untracked_pct": 9.7
+  },
+  "d30": {
+   "optin_users": 4471,
+   "vsl_users": 1130,
+   "vsl_new_users": 112,
+   "booking_page_users": 326,
+   "confirmed_users": 7,
+   "vsl_eng_per_user_s": 68.0,
+   "books": 139,
+   "optin_to_vsl": 25.3,
+   "vsl_to_book": 12.3,
+   "vsl_untracked_users": 124,
+   "vsl_untracked_pct": 11.0
+  }
+ },
+ "device": {
+  "/saasreport|d30": {
+   "mobile": 2941,
+   "desktop": 1515,
+   "tablet": 23
+  },
+  "/saasreport|this": {
+   "mobile": 942,
+   "desktop": 359,
+   "tablet": 11
+  },
+  "/saasreport|prior": {
+   "mobile": 624,
+   "desktop": 449,
+   "tablet": 4
+  },
+  "/freetraining-1-7481|d30": {
+   "desktop": 583,
+   "mobile": 542,
+   "tablet": 5
+  },
+  "/freetraining-1-7481|prior": {
+   "desktop": 171,
+   "mobile": 115,
+   "tablet": 2
+  },
+  "/freetraining-1-7481|this": {
+   "desktop": 156,
+   "mobile": 136,
+   "tablet": 0
+  }
+ },
+ "daily": {
+  "/saasreport": {
+   "2026-11-18": 284,
+   "2026-11-19": 266,
+   "2026-11-16": 199,
+   "2026-11-06": 195,
+   "2026-11-12": 179,
+   "2026-11-17": 178,
+   "2026-11-11": 175,
+   "2026-11-09": 164,
+   "2026-11-15": 161,
+   "2026-11-10": 154,
+   "2026-11-13": 152,
+   "2026-11-08": 133,
+   "2026-11-14": 124,
+   "2026-11-07": 120
+  },
+  "/freetraining-1-7481": {
+   "2026-11-19": 59,
+   "2026-11-11": 55,
+   "2026-11-18": 55,
+   "2026-11-16": 53,
+   "2026-11-06": 50,
+   "2026-11-10": 50,
+   "2026-11-17": 50,
+   "2026-11-12": 47,
+   "2026-11-09": 43,
+   "2026-11-13": 42,
+   "2026-11-15": 33,
+   "2026-11-07": 31,
+   "2026-11-08": 28,
+   "2026-11-14": 25
+  },
+  "/freetraining-booking-6842": {
+   "2026-11-09": 25,
+   "2026-11-06": 19,
+   "2026-11-11": 12,
+   "2026-11-10": 10,
+   "2026-11-17": 10,
+   "2026-11-18": 7,
+   "2026-11-16": 6,
+   "2026-11-19": 5,
+   "2026-11-13": 4,
+   "2026-11-12": 3,
+   "2026-11-15": 3,
+   "2026-11-07": 2,
+   "2026-11-08": 2,
+   "2026-11-14": 2
+  },
+  "/confirmed": {
+   "2026-11-12": 2,
+   "2026-11-10": 1
+  }
+ },
+ "tracking": {
+  "key_events_total": 0,
+  "confirmed_vs_books": [
+   0,
+   34
+  ],
+  "vsl_untracked_pct": 10.6,
+  "li_ads_campaign_in_medium": [
+   "fr-winners-bg1-hc-rm-ml",
+   "fr-winners-bg1-hc-rm-ml-eu",
+   "fr-winners-bg2-ss-sd-es",
+   "fr-winners-bg2-ss-sd-es-eu",
+   "paid_social"
+  ],
+  "li_ads_campaigns": [
+   "fr-winners-bg1-hc-rm-ml",
+   "fr-winners-bg1-hc-rm-ml-eu",
+   "fr-winners-bg2-ss-sd-es",
+   "fr-winners-bg2-ss-sd-es-eu",
+   "static-test-US"
+  ],
+  "li_ads_posttext_optin_users": 85,
+  "meta_campaign_in_medium": [
+   "AOS153-test",
+   "EB-CT-HQL-W2-04/09/25",
+   "FR-ORG-T2",
+   "FR-WINNERS",
+   "FR-WINNERS2",
+   "VRM/LRM-FR-WINNERS",
+   "Winners-APLUS-FR-HQL-2-HC1",
+   "paid_social"
+  ],
+  "meta_campaigns": [
+   "2013SELLING",
+   "20YEARSINSALES",
+   "AOS153-test",
+   "ATTENTION-PRODUCT",
+   "ATTR-TEST-ADSET",
+   "ATTR-TEST4-ADSET",
+   "COLD-EMAIL-REPUTATION",
+   "DRYPIPE",
+   "EB-CT-HQL-W2-04/09/25",
+   "FR-ORG-T2",
+   "FR-WINNERS",
+   "FR-WINNERS2",
+   "HARD-TO-REACH",
+   "PHONE-FAX",
+   "RT",
+   "VRM/LRM-FR-WINNERS",
+   "WHY-THE-FUK",
+   "Winners-APLUS-FR-HQL-2-HC1"
+  ],
+  "booking_page_sources_this": [
+   [
+    "(direct)",
+    5
+   ],
+   [
+    "email",
+    3
+   ],
+   [
+    "email",
+    3
+   ],
+   [
+    "email",
+    3
+   ],
+   [
+    "email",
+    3
+   ],
+   [
+    "email",
+    3
+   ],
+   [
+    "email",
+    2
+   ],
+   [
+    "email",
+    2
+   ],
+   [
+    "email",
+    2
+   ],
+   [
+    "email",
+    2
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "email",
+    1
+   ],
+   [
+    "jfr_dm",
+    1
+   ],
+   [
+    "yt",
+    1
+   ]
+  ],
+  "meta_optin_eng_per_user_s": 5.0,
+  "li_optin_eng_per_user_s": 34.0
+ },
+ "by_ad": [
+  {
+   "source": "linkedin",
+   "ad": "deadcold",
+   "vsl_users": 79,
+   "books": 6,
+   "vsl_to_book": 7.6
+  },
+  {
+   "source": "linkedin",
+   "ad": "coldgraveyard",
+   "vsl_users": 52,
+   "books": 5,
+   "vsl_to_book": 9.6
+  },
+  {
+   "source": "fb_ad",
+   "ad": "STATIC-hard-to-reach-buyers -W",
+   "vsl_users": 18,
+   "books": 5,
+   "vsl_to_book": 27.8
+  },
+  {
+   "source": "fb_ad",
+   "ad": "13-100KDEALS-W",
+   "vsl_users": 5,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "datadoesn'tlie",
+   "vsl_users": 5,
+   "books": 1,
+   "vsl_to_book": 20.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "HUMANITARIAN-VRM/LRM",
+   "vsl_users": 4,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "STATIC-inmails-map-eu",
+   "vsl_users": 4,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "drypipe_v2",
+   "vsl_users": 4,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "50BOOKS-FR-VRM",
+   "vsl_users": 3,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "drypipe",
+   "vsl_users": 3,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "12k-ON-LINKEDIN-VRM",
+   "vsl_users": 2,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "Duplicate_drypipe",
+   "vsl_users": 2,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "20YEARSINSALES-AD",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "ATTR-TEST-AD",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "CONSORTIA-VSL-VRM/LRM",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "PHONE-FAX-AD",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "Q4-RT",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "REFERRALS-RT",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "RICHLEADS-FAPI-VRM/LRM",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "TOF-FR-T16W",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "fb_ad",
+   "ad": "WHY-THE-FUK-AD",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "Duplicate_Ad_3_11May2026",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "STATIC-inmails-map",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  },
+  {
+   "source": "linkedin",
+   "ad": "drypipe2",
+   "vsl_users": 1,
+   "books": 0,
+   "vsl_to_book": 0.0
+  }
+ ],
+ "notes_extra": [
+  "Per ad (VSL visitors \u2192 books, this week): deadcold 79 \u2192 6 (7.6%); coldgraveyard 52 \u2192 5 (9.6%); STATIC-hard-to-reach-buyers 18 \u2192 5 (27.8%)."
+ ]
+}

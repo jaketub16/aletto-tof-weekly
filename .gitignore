@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+*.bak-*
+ga4_raw/*/hyros_d30_extra.json

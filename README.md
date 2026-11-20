@@ -14,8 +14,13 @@ Arrow keys / space / swipe to move, **N** for speaker notes, `?static` turns ani
 # 0. content data: refresh Metricool (read-only) and save Zernio daily metrics (optional cross-check)
 /workspace/content-performance/run_daily.sh 30          # -> /workspace/content-performance/data/<Friday>/
 #    Zernio MCP analytics_get_daily_metrics(from_date=<prior Fri>, to_date=<Thu>) -> save JSON as /workspace/content-week-<date>/zernio_daily.json
-# 0b. GA4 (read-only): run the 5 queries in ga4_queries.json through Ryze google_analytics__runRawReport
+# 0b. GA4 (read-only): run the 6 queries in ga4_queries.json through Ryze google_analytics__runRawReport
 #     (propertyId "540656492", request as a JSON *string*) and save them + the 30-day Hyros extra into ga4_raw/<YYYY-MM-DD>/
+#     src_funnel.json is ~600 rows and the Ryze result gets truncated (omittedItems/fullTextId): read the full text with
+#     native__read_tool_output in 30,000-char chunks before saving. Then re-split Hyros organic-'li' books with GHL:
+python3 books_resplit.py --hyros /workspace/friday-pack-<dates>/raw/hyros_*.json ga4_raw/<YYYY-MM-DD>/hyros_d30_extra.json \
+    --contacts '/workspace/friday-pack-<dates>/raw/ct/*.json' '/workspace/friday-pack-<dates>/raw/lookups/*' --this <Fri> <Thu> --prior <Fri-7> <Thu-7> --d30 <Thu-29> \
+    --out ga4_raw/<YYYY-MM-DD>/books_resplit.json      # GHL contact pages (+ email lookups for older bookers)
 # 1. numbers from the new Friday pack + latest last-$5k run (+ content.json when --metricool, + ga4.json when --ga4)
 python3 extract.py --pack /workspace/friday-pack-<dates> --last5k /workspace/li-trim-<date> --out weeks/<YYYY-MM-DD>/data.json \
     --metricool /workspace/content-performance/data/<Friday> --zernio /workspace/content-week-<date>/zernio_daily.json \
@@ -53,3 +58,23 @@ Files: `extract.py` (pack → data.json, + content.json, + ga4.json), `ga4_extra
 
 Privacy: prospects are first name + last initial only; no emails, phones or companies of prospects.
 Meta spend is an estimate (~$190/day) while the Aletto Meta ad account is locked, and is labelled that way on every slide.
+
+### Lead channels (2026-11-19, reporting-only fix)
+One shared rule for GHL leads: `utm_scheme.classify_lead(contact)`. The pack's `leads.py`, the daily pulse `classify.py` and `content_extract.py` use it.
+- Paid UTMs or click IDs from **any** touch win: LinkedIn (`utm_source=linkedin` with a paid or ad-set medium, `lnk_id`, `li_fat_id`) or Meta (`fb_ad`, `fbclid`). A later paid click beats an earlier organic or referral visit. After that come the new tracking custom fields.
+- No UTMs on the first touch, plus a referrer of linkedin.com, lnkd.in or com.linkedin.android (first touch or the new `referrer` field), plus landing on `/saasreport` = **LinkedIn Ads (post-text link, untracked)**. These are counted inside "LinkedIn ads" with ad set and ad `unattributed` (`li_posttext` in leads_summary).
+  - Why: every /saasreport ad has an untagged `lnkd.in/eUvfBJqe` link in its post text.
+  - See /workspace/li-organic-misattribution-2026-11-19/README.md.
+- GHL's `utmSessionSource` labels ("Social media", "Paid Social", "Direct traffic") are never used. The ad set comes from utm_campaign, or from utm_medium for old-scheme contacts, read off the landing URL.
+- GA4 (`ga4_extract.bucket`): linkedin.com and lnkd.in referral sessions on `/saasreport` count as LinkedIn ads. `li` and LinkedIn referrals on other pages stay organic.
+  - VSL/booking pages (fixed 2026-11-19): `src_landing.json` (pagePath × sessionSource × landingPage, LinkedIn referral hosts only, ~20 rows) shows where those sessions landed. GA4 users don't add up across landing pages, so ga4_extract moves the **share** that landed on `/saasreport`: `moved = round(li_org_referral × saasreport_landings / all_LinkedIn_landings)`. Landings on the VSL itself, `/`, other pages or `(not set)`, and tagged `li` links stay organic. Page totals don't change.
+  - Books: Hyros last-touch calls post-text bookers organic `li`. `books_resplit.py` looks each one up in GHL by email and moves the ones `classify_lead` calls LinkedIn ads into li_ads (`books_resplit.json`; no GHL match stays organic). ga4_extract and verify.py use both files if present.
+- Contacts tagged `test` are skipped. Run `python3 test_utm_scheme.py` after any change.
+- Next Friday: copy `/workspace/friday-pack-2026-11-06-12/leads.py` into the new pack. It takes `python3 leads.py <this_start> <this_end>` (ET dates).
+
+## 2026-11-20 changes
+- `story.json` can carry a `"text"` dict that overrides any slide prose in build.py (keys: title_*, week_notes, spend_*, bud_lbl, bud_labels, funnel_*, vsl_*, books_*, cost_*, l5_*, l5ad_* incl. l5ad_cols / l5ad_trunc, cr_*, fat_*, sb_*, org_notes, hot_*, recs_*, gaps_notes). Rewrite them every week; defaults are the Nov 13 words.
+- `budgets_now/` in the pack must hold ACTIVE campaigns only (paused ones inflate the prospecting sum).
+- content_extract.py skips `test`-tagged contacts and uses `utm_scheme.classify_lead` for paid vs not paid, so the content lead table ties to the pack's lead channels.
+- verify.py: week-specific literal checks live in `WEEK[date]` and `L5PAT[date]`; add this week's before running.
+- `ga4_raw/*/hyros_d30_extra.json` holds prospect emails and is git-ignored (the repo is public). Never commit it.

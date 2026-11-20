@@ -6,6 +6,7 @@ Raw inputs live in <raw>/ (saved from Ryze `google_analytics__runRawReport`, req
 queries are in ga4_queries.json, fill {THIS_START} etc.):
   pages_funnel.json  pagePath x 3 date ranges (this, prior, d30), host go.aletto.ai
   src_funnel.json    pagePath x sessionSource x sessionMedium x 3 ranges (funnel pages)
+  src_landing.json   optional: VSL/confirmed/booking pagePath x LinkedIn-referral sessionSource x landingPage x 3 ranges (post-text-link split)
   device.json        pagePath x deviceCategory x 3 ranges
   daily.json         pagePath x date (prior start .. this end)
   hyros_d30_extra.json  optional: Hyros hyros_list_calls from d30 start to prior start (30-day books)
@@ -26,12 +27,19 @@ BUCKETS = [('li_ads', 'LinkedIn ads'), ('meta_ads', 'Meta ads'), ('li_org', 'Lin
 HY = {'LinkedIn ads': 'li_ads', 'Meta ads': 'meta_ads', 'Organic (probable LinkedIn)': 'li_org', 'Organic other': 'rest', 'No source': 'rest'}
 
 
-def bucket(src, med=None):
+LI_REF_SOURCES = ('linkedin.com', 'lnkd.in', 'com.linkedin.android', 'www.linkedin.com', 'm.linkedin.com')
+
+
+def bucket(src, med=None, path=None):
     s = (src or '').lower()
     m = (med or '').strip()
     # source=linkedin stays paid (old and new UTMs). Also catch paid_social if source is a LinkedIn host.
     if s == 'linkedin' or (is_paid_generic_medium(m) and 'linkedin' in s): return 'li_ads'
     if s == 'fb_ad': return 'meta_ads'
+    # 2026-11-19: linkedin.com / lnkd.in referral sessions on the report page (/saasreport) are LinkedIn ads: every
+    # /saasreport ad has an untagged lnkd.in link in its post text (dark ad posts). Count them as LinkedIn ads
+    # (post-text link). 'li' (tagged personal links) and LinkedIn referrals on other pages stay organic.
+    if s in LI_REF_SOURCES and (path or '').rstrip('/') == OPTIN: return 'li_ads'
     if s in ('linkedin.com', 'lnkd.in', 'li', 'com.linkedin.android', 'www.linkedin.com'): return 'li_org'
     if s in ('(not set)', '(data not available)', ''): return 'untracked'
     return 'other'
@@ -82,15 +90,50 @@ def main():
         n, by, nraw = hyros_extra(J('hyros_d30_extra.json'))
         b30 = C.Counter(); [b30.update({HY.get(k, 'rest'): v}) for k, v in by.items()]
         bk['d30'] = {'total': n + bk['this']['total'] + bk['prior']['total'], 'by': b30 + bk['this']['by'] + bk['prior']['by'], 'extra_calls_read': nraw}
+    # 2026-11-19: Hyros files post-text-link bookers as organic 'li'. If books_resplit.py ran, move the books GHL says are
+    # LinkedIn ads (tagged or post-text link) from li_org to li_ads. Totals unchanged.
+    if os.path.exists(J('books_resplit.json')):
+        BR = json.load(open(J('books_resplit.json')))
+        for w in W:
+            if w in bk and w in BR:
+                mv = min(BR[w].get('li_org_to_li_ads', 0), bk[w]['by'].get('li_org', 0))
+                bk[w]['by']['li_org'] -= mv; bk[w]['by']['li_ads'] += mv; bk[w]['books_moved_li_org_to_li_ads'] = mv
     # ---- sources (per page, per window)
     src = C.defaultdict(lambda: C.defaultdict(lambda: C.Counter()))  # page -> window -> bucket -> users
     detail = C.defaultdict(list)
     for r in rows(J('src_funnel.json')):
         if r['totalUsers'] <= 0: continue
-        b = bucket(r['sessionSource'], r.get('sessionMedium'))
+        b = bucket(r['sessionSource'], r.get('sessionMedium'), r.get('landingPage') or r['pagePath'])
         src[r['pagePath']][r['dateRange']][b] += int(r['totalUsers'])
-        detail[(r['pagePath'], r['dateRange'])].append({'source': r['sessionSource'], 'medium': r.get('sessionMedium'), 'campaign': campaign_from_ga4(r), 'bucket': b, 'users': int(r['totalUsers']),
+        if b == 'li_org' and (r['sessionSource'] or '').lower() in LI_REF_SOURCES: src[r['pagePath']][r['dateRange']]['li_org_ref'] += int(r['totalUsers'])
+        pt = b == 'li_ads' and (r['sessionSource'] or '').lower() in LI_REF_SOURCES
+        if pt: src[r['pagePath']][r['dateRange']]['li_ads_posttext'] += int(r['totalUsers'])
+        detail[(r['pagePath'], r['dateRange'])].append({'source': r['sessionSource'], 'medium': r.get('sessionMedium'), 'campaign': 'unattributed (post-text link)' if pt else campaign_from_ga4(r), 'bucket': b, 'posttext': pt, 'users': int(r['totalUsers']),
                                                        'new': int(r['newUsers']), 'sessions': int(r['sessions']), 'eng_s': int(r['userEngagementDuration'])})
+    # 2026-11-19: downstream pages (VSL, /confirmed, booking page) have no landing page in src_funnel.json. src_landing.json
+    # (pagePath x sessionSource x landingPage, LinkedIn referral sources only) says how many of those LinkedIn-referral users
+    # LANDED on /saasreport, i.e. came through the untagged post-text link in the /saasreport ads. Move them from li_org to
+    # li_ads, capped at the li_org total, so page totals never change. Landing elsewhere / (not set) / tagged 'li' stays organic.
+    moved = C.defaultdict(dict)
+    if os.path.exists(J('src_landing.json')):
+        lp, lall = C.defaultdict(int), C.defaultdict(int)
+        for r in rows(J('src_landing.json')):
+            if (r.get('sessionSource') or '').lower() not in LI_REF_SOURCES: continue
+            lall[(r['pagePath'], r['dateRange'])] += int(r['totalUsers'])
+            if (r.get('landingPage') or '').split('?')[0].rstrip('/') == OPTIN:
+                lp[(r['pagePath'], r['dateRange'])] += int(r['totalUsers'])
+        for (pth, w), n in lp.items():
+            if pth == OPTIN: continue  # /saasreport rows are already handled by bucket()
+            # users aren't additive across landing pages, so move the /saasreport SHARE of the li_org users
+            # (not the raw count); landing elsewhere / (not set) keeps its share as organic.
+            # only the linkedin.com/lnkd.in part of li_org is split; tagged 'li' users always stay organic
+            mv = min(src[pth][w]['li_org_ref'], round(src[pth][w]['li_org_ref'] * n / lall[(pth, w)])) if lall[(pth, w)] else 0
+            if mv <= 0: continue
+            src[pth][w]['li_org'] -= mv; src[pth][w]['li_ads'] += mv; src[pth][w]['li_ads_posttext'] += mv
+            moved[pth][w] = mv
+            detail[(pth, w)].append({'source': 'linkedin.com/lnkd.in (landed on /saasreport)', 'medium': 'referral', 'campaign': 'unattributed (post-text link)', 'bucket': 'li_ads',
+                                     'posttext': True, 'users': mv, 'new': None, 'sessions': None, 'eng_s': None, 'moved_from': 'li_org'})
+    G['posttext_moved_users'] = {k: dict(v) for k, v in moved.items()}
     G['source_detail'] = {f'{p}|{w}': sorted(v, key=lambda x: -x['users']) for (p, w), v in detail.items() if p in (VSL, OPTIN, BOOKPG, CONF)}
     leads_by = {w: D['leads'][w]['by_ch'] for w in ('this', 'prior')}
     LB = {'li_ads': 'LinkedIn ads', 'meta_ads': 'Meta ads'}
@@ -103,6 +146,9 @@ def main():
             row[w] = {'vsl_users': v, 'optin_users': o, 'optin_to_vsl': rate(v, o), 'books': books, 'vsl_to_book': rate(books, v) if books is not None else None,
                       'leads': leads_by.get(w, {}).get(LB.get(key, ''), None) if key in LB else None}
             if key in LB and w in leads_by: row[w]['optin_rate'] = rate(row[w]['leads'], o)
+            if key == 'li_ads':
+                row[w]['optin_posttext_users'] = src[OPTIN][w]['li_ads_posttext']  # linkedin.com/lnkd.in on /saasreport (untagged post-text link)
+                row[w]['vsl_posttext_users'] = src[VSL][w]['li_ads_posttext']  # LinkedIn-referral VSL users who landed on /saasreport (src_landing.json)
         by_source.append(row)
     # combined "everything else" row: GA4 other + untracked vs Hyros Organic other + No source
     rest = {'key': 'rest', 'label': 'Everything else (direct, email, IG, YouTube, no source)'}
@@ -137,8 +183,9 @@ def main():
         'key_events_total': sum((p.get(w, {}).get('key_events') or 0) for p in G['pages'].values() for w in W),
         'confirmed_vs_books': [t['confirmed_users'], t['books']],
         'vsl_untracked_pct': t['vsl_untracked_pct'],
-        'li_ads_campaign_in_medium': sorted({x['medium'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads'}),
-        'li_ads_campaigns': sorted({x['campaign'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads' and x.get('campaign')}),
+        'li_ads_campaign_in_medium': sorted({x['medium'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads' and not x.get('posttext')}),
+        'li_ads_campaigns': sorted({x['campaign'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'li_ads' and x.get('campaign') and not x.get('posttext')}),
+        'li_ads_posttext_optin_users': src[OPTIN]['this']['li_ads_posttext'],
         'meta_campaign_in_medium': sorted({x['medium'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'meta_ads'}),
         'meta_campaigns': sorted({x['campaign'] for x in detail[(VSL, 'this')] + detail[(OPTIN, 'this')] if x['bucket'] == 'meta_ads' and x.get('campaign')}),
         'booking_page_sources_this': [(x['source'], x['users']) for x in G['source_detail'].get(f'{BOOKPG}|this', [])],

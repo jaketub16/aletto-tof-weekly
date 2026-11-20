@@ -95,7 +95,6 @@ def is_linkedin_paid(attr, source=''):
     url = attr.get('pageUrl') or attr.get('url') or ''
     us = _get(attr, q, 'utmSource', 'utm_source').lower()
     med = _get(attr, q, 'utmMedium', 'utm_medium')
-    sess = _get(attr, q, 'utmSessionSource', 'sessionSource', 'session_source')
     src = (source or '').strip().lower()
     # Meta ads also carry Hyros h_ad_id, so h_ad_id alone is not a LinkedIn signal.
     if us in ('fb_ad', 'facebook', 'fb', 'ig') or 'fbclid=' in url or 'fbclid' in url:
@@ -110,8 +109,138 @@ def is_linkedin_paid(attr, source=''):
         return True
     if us == 'linkedin' and med and not is_generic_medium(med):
         return True
-    if us == 'linkedin' and sess.lower().startswith('paid'):
-        return True
+    # 2026-11-19: never use GHL's utmSessionSource label ('Paid Social', 'Social media', 'Direct traffic') as a signal.
     if src == 'linkedin' and (q.get('lnk_id') or 'li_fat_id' in url or is_paid_generic_medium(med) or (med and not is_generic_medium(med))):
         return True
     return False
+
+
+# ---------------------------------------------------------------------------
+# Lead channel for GHL contacts (2026-11-19, Jake approved reporting-only fix)
+# ---------------------------------------------------------------------------
+# Why: every /saasreport LinkedIn ad has a link in the POST TEXT (lnkd.in/eUvfBJqe -> goadstra.com/saasreport
+# -> go.aletto.ai/saasreport, and lnkd.in/e83PihWj on 2013selling_v2_inmails). LinkedIn only adds the URL
+# tracking parameters to the ad's destination link, so those clicks arrive with no UTMs and only a linkedin.com
+# referrer. They are ad leads (dark ad posts, same US mix and qualified rate), not organic.
+# Rules, in order:
+#   1. Paid signals win, from ANY attribution (first touch first): LinkedIn paid (utm_source=linkedin with a paid
+#      or ad-set medium, lnk_id, li_fat_id, h_ad_id with a LinkedIn source) or Meta (fb_ad/fbclid). A later paid
+#      click beats an earlier organic/referral visit (Shy, 19 Nov). Then the new tracking custom fields.
+#   2. No paid signal + referrer linkedin.com / lnkd.in / com.linkedin.android (first touch or the new referrer
+#      field) + landing on /saasreport  =>  LI_POSTTEXT, counted inside LinkedIn ad leads, ad set/ad 'unattributed'.
+#   3. '5 Ways' form source => organic. Else Other.
+# GHL's utmSessionSource label is never used.
+LI_ADS = 'LinkedIn ads'
+META_ADS = 'Meta ads'
+LI_POSTTEXT = 'LinkedIn Ads (post-text link, untracked)'
+ORGANIC_5WAYS = 'Organic (5 Ways report)'
+OTHER = 'Other'
+UNATTRIBUTED = 'unattributed'
+LI_AD_CHANNELS = (LI_ADS, LI_POSTTEXT)
+LI_REFERRER_HOSTS = ('linkedin.com', 'lnkd.in', 'com.linkedin.android')
+# New GHL contact custom fields (live 2026-11-18 ~21:45 Madrid)
+CF_IDS = {'SS1rGyiAZhUMz7uPRWwU': 'utm_source', 'ndQ7bJ2nzt2srCXkQ4lq': 'utm_medium', 'MtiXmkHrCZTR8gV4lWNc': 'utm_campaign',
+          'FOGZ6aL6Mw4WYu6poMD4': 'utm_content', 'qyiekIFiCE0fq4pbr0k6': 'utm_term', '0hgmf9iaQtLODcLfkMEu': 'referrer',
+          'IgvD53McTKcGrYfxrrjY': 'landing_page', 'EVzuBhDTNIJ50xxFOgXz': 'lead_source_channel'}
+
+
+def contact_fields(contact):
+    """New tracking custom fields as {name: value}."""
+    out = {}
+    for f in (contact or {}).get('customFields') or []:
+        k = CF_IDS.get(f.get('id'))
+        if k and f.get('value') not in (None, ''):
+            out[k] = str(f.get('value'))
+    return out
+
+
+def ordered_attributions(contact):
+    """First touch first, then middle ones, last touch last."""
+    att = [a for a in ((contact or {}).get('attributions') or []) if isinstance(a, dict)]
+    first = [a for a in att if a.get('isFirst')]
+    last = [a for a in att if a.get('isLast') and not a.get('isFirst')]
+    mid = [a for a in att if a not in first and a not in last]
+    return first + mid + last
+
+
+def is_meta_paid(attr, source=''):
+    attr = attr or {}
+    q = attr_qs(attr)
+    url = attr.get('pageUrl') or attr.get('url') or ''
+    us = _get(attr, q, 'utmSource', 'utm_source').lower()
+    med = _get(attr, q, 'utmMedium', 'utm_medium')
+    if us in ('fb_ad', 'facebook') or 'fbclid' in url or 'fbc_id' in url or attr.get('utmFbclid'):
+        return True
+    if us in ('facebook', 'fb', 'ig', 'instagram', 'meta') and (is_paid_generic_medium(med) or (med and not is_generic_medium(med))):
+        return True
+    return (source or '').strip().lower() == 'fb_ad' and attr.get('isFirst')
+
+
+def _host(u):
+    u = (u or '').strip()
+    if u.startswith('android-app://'):
+        return u[len('android-app://'):].split('/')[0].lower()
+    try:
+        return (urlparse(u).hostname or '').lower()
+    except Exception:
+        return ''
+
+
+def _is_li_referrer(u):
+    h = _host(u)
+    return any(h == d or h.endswith('.' + d) for d in LI_REFERRER_HOSTS)
+
+
+def _path(u):
+    try:
+        return urlparse(u or '').path.rstrip('/') or '/'
+    except Exception:
+        return ''
+
+
+def _camp_ad(a):
+    """Ad set / ad, preferring the exact values on the landing URL (GHL capitalises utmCampaign, e.g. 'Fr-winners-...')."""
+    q = attr_qs({'pageUrl': (a or {}).get('pageUrl') or ''})
+    if q.get('utm_campaign') or q.get('utm_medium') or q.get('utm_content') or q.get('h_ad_name'):
+        return campaign_ad({'pageUrl': a.get('pageUrl')})
+    return campaign_ad(a)
+
+
+def classify_lead(contact):
+    """Return dict(ch, adset, ad, reason, attr) for one GHL contact. See rules above."""
+    contact = contact or {}
+    src = (contact.get('source') or '').strip()
+    att = ordered_attributions(contact)
+    cf = contact_fields(contact)
+    # 1. paid signals from any attribution (first touch wins among paid ones)
+    for a in att:
+        if is_meta_paid(a, src):
+            camp, ad = _camp_ad(a)
+            return dict(ch=META_ADS, adset=camp, ad=ad, reason='meta_paid' + ('' if a.get('isFirst') else '_later_touch'), attr=a)
+        if is_linkedin_paid(a, src):
+            camp, ad = _camp_ad(a)
+            return dict(ch=LI_ADS, adset=camp, ad=ad, reason='li_paid' + ('' if a.get('isFirst') else '_later_touch'), attr=a)
+    cfs, cfm = cf.get('utm_source', '').lower(), cf.get('utm_medium', '')
+    cfch = cf.get('lead_source_channel', '')
+    if cfs == 'fb_ad' or cfch == 'Paid Social - Meta':
+        camp = cf.get('utm_campaign') if is_generic_medium(cfm) or not cfm else cfm
+        return dict(ch=META_ADS, adset=camp or '', ad=cf.get('utm_content', ''), reason='meta_custom_fields', attr=None)
+    if (cfs == 'linkedin' and (is_paid_generic_medium(cfm) or (cfm and not is_generic_medium(cfm)))) or cfch == 'Paid Social - LinkedIn':
+        camp = cf.get('utm_campaign') if is_generic_medium(cfm) or not cfm else cfm
+        return dict(ch=LI_ADS, adset=camp or '', ad=cf.get('utm_content', ''), reason='li_custom_fields', attr=None)
+    if src.lower() == 'fb_ad':
+        return dict(ch=META_ADS, adset='', ad='', reason='meta_ghl_source', attr=att[0] if att else None)
+    if src.lower() == 'linkedin':  # GHL source set from utm_source=linkedin by a form
+        return dict(ch=LI_ADS, adset='', ad='', reason='li_ghl_source', attr=att[0] if att else None)
+    # 2. post-text link: LinkedIn referrer + /saasreport, no UTMs/click ids anywhere
+    first = att[0] if att else {}
+    refs = [first.get('referrer') or '', cf.get('referrer', '')]
+    lands = [first.get('url') or first.get('pageUrl') or '', cf.get('landing_page', '')]
+    # only the first touch / first-touch fields matter here: later email/SMS visits (utm_source=email|sms) don't make it organic
+    has_utm = bool(_get(first, attr_qs(first), 'utmSource', 'utm_source')) or bool(cfs)
+    if not has_utm and any(_is_li_referrer(r) for r in refs) and any(_path(l) == '/saasreport' for l in lands if l):
+        return dict(ch=LI_POSTTEXT, adset=UNATTRIBUTED, ad=UNATTRIBUTED, reason='li_referrer_saasreport_no_utm', attr=first)
+    # 3. organic / other
+    if '5 ways' in src.lower():
+        return dict(ch=ORGANIC_5WAYS, adset='', ad='', reason='5ways_form_no_paid_signal', attr=first)
+    return dict(ch=OTHER, adset='', ad='', reason='no_paid_signal', attr=first)

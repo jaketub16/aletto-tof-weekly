@@ -17,7 +17,7 @@ Output has no prospect emails/phones; prospects appear as first name + last init
 import argparse, collections as C, datetime as dt, glob, json, os, re
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
-from utm_scheme import is_linkedin_paid
+from utm_scheme import is_linkedin_paid, classify_lead, LI_ADS, META_ADS, LI_POSTTEXT
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--metricool', required=True); ap.add_argument('--pack', required=True); ap.add_argument('--out', required=True)
@@ -154,6 +154,9 @@ def net(x):
     host = urlparse(ref).netloc or ref
     if is_linkedin_paid(x) or 'li_fat_id' in u: return 'Paid LinkedIn'
     if us in ('fb_ad',) or ('fbclid' in u and ('utm_' in u or us == 'facebook')): return 'Paid Meta'
+    # 2026-11-19: no UTMs + LinkedIn referrer/app + report page = the untagged lnkd.in link in the /saasreport ads' post text
+    if not us and ('linkedin' in ref or 'lnkd' in ref or 'LinkedInApp' in ua) and urlparse(u).path.rstrip('/') == '/saasreport':
+        return 'Paid LinkedIn (post-text link, untracked)'
     if 'linkedin' in ref or 'lnkd' in ref or 'LinkedInApp' in ua or 'linkedin' in us: return 'LinkedIn organic'
     if 'instagram' in ref or 'Instagram' in ua or us in ('ig', 'instagram'): return 'Instagram'
     if 'youtube' in ref or 'youtu.be' in ref or us in ('yt', 'youtube'): return 'YouTube'
@@ -180,8 +183,16 @@ for c in cs.values():
     fi = next((x for x in att if x.get('isFirst')), att[0] if att else {}); la = next((x for x in att if x.get('isLast')), att[-1] if att else {})
     tags = set(c.get('tags', [])); page = urlparse(fi.get('pageUrl') or fi.get('url') or '').path
     rep = 'saasreport' in tags or 'saasreport' in page or '5 ways' in (c.get('source') or '').lower()
-    if 'hiring' in tags: continue
-    G.append(dict(wk=wk, first=net(fi), last=net(la), rep=rep, q='qualified lead' in tags, page=page or '(none)'))
+    if 'hiring' in tags or 'test' in tags: continue  # 2026-11-20: skip test contacts, same as leads.py
+    nf = net(fi)
+    if not nf.startswith('Paid'):  # a later paid click beats an earlier organic/referral visit
+        nf = next((n for n in (net(x) for x in att if x is not fi) if n in ('Paid LinkedIn', 'Paid Meta')), nf)
+    # 2026-11-20: paid/not-paid follows the shared lead rule (utm_scheme.classify_lead), so this table ties to the pack's lead channels
+    cl = classify_lead(c)
+    if cl['ch'] == META_ADS: nf = 'Paid Meta'
+    elif cl['ch'] in (LI_ADS, LI_POSTTEXT): nf = 'Paid LinkedIn (post-text link, untracked)' if cl['reason'].startswith('li_referrer') else 'Paid LinkedIn'
+    elif nf.startswith('Paid'): nf = 'Direct / no referrer'
+    G.append(dict(wk=wk, first=nf, last=net(la), rep=rep, q='qualified lead' in tags, page=page or '(none)'))
 OUT['ghl'] = {}
 for w in W:
     g = [x for x in G if x['wk'] == w]
@@ -197,7 +208,7 @@ for w in W:
 H = json.load(open(os.path.join(a.pack, 'hyros_parsed.json')))
 NAME = {'li': 'LinkedIn organic', 'linkedin': 'LinkedIn organic', 'ig': 'Instagram', 'instagram': 'Instagram', 'fb': 'Facebook organic', 'yt': 'YouTube',
         'youtube': 'YouTube', 'x': 'X', 'tw': 'X', 'twitter': 'X', 'threads': 'Threads', 'tiktok': 'TikTok', 'google-organic': 'Google organic',
-        'email': 'Email', 'freereport': 'Free report (nurture)', 'skool': 'Skool'}
+        'youtube-organic': 'YouTube', 'facebook-organic': 'Facebook organic', 'linkedin-organic': 'LinkedIn organic', 'instagram-organic': 'Instagram', 'email': 'Email', 'freereport': 'Free report (nurture)', 'skool': 'Skool'}
 
 
 def lab(s):
@@ -213,7 +224,7 @@ for w in W:
     for touch, key in (('last', 'lt'), ('first', 'ft')):
         t = C.defaultdict(lambda: {'strat': 0, 'q': 0, 'scope': 0, 'scope_who': []})
         for h in R2:
-            k = lab(h[key]); nm = f"{h['first']} {h['last'][:1]}."
+            k = lab(h[key]); nm = f"{h['first']} {h['last'][:1]}." if h['last'] else h['first']
             if h['kind'] == 'strategy':
                 t[k]['strat'] += 1; t[k]['q'] += bool(q.get((nm, h['day'], h['state'])))
             else:
