@@ -39,7 +39,12 @@ def main():
             x = lj(f); x = x.get('data', x)
             for c in x.get('contacts', []) + ([x['contact']] if isinstance(x.get('contact'), dict) else []): cs[c['id']] = c
     em = {}
-    for c in sorted(cs.values(), key=lambda c: c.get('dateAdded') or ''): em.setdefault((c.get('email') or '').lower(), c)
+    for c in sorted(cs.values(), key=lambda c: c.get('dateAdded') or ''):
+        em.setdefault((c.get('email') or '').lower(), c)
+        # 2026-11-27: also match additionalEmails (Hyros sometimes keeps a different booking email than the GHL primary email)
+        for e2 in (c.get('additionalEmails') or []):
+            e2 = e2.get('email') if isinstance(e2, dict) else e2
+            if e2: em.setdefault(e2.lower(), c)
     calls = {}
     for f in a.hyros:
         for x in lj(f)['result']: calls[x.get('id') or (x['creationDate'], x['lead'].get('email'))] = x

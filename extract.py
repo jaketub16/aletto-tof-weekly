@@ -49,7 +49,7 @@ for f in sorted(glob.glob(os.path.join(a.pack, 'raw/budgets_now/*.json'))):
 D['budgets_now'] = bud
 
 # ---- leads, books, funnel
-D['leads'] = {w: {k: S['leads'][w][k] for k in ('total', 'by_ch', 'qlead', 'li_utm', 'meta_utm', 'by_day') if k in S['leads'][w]} for w in ('this', 'prior')}
+D['leads'] = {w: {k: S['leads'][w][k] for k in ('total', 'by_ch', 'qlead', 'qlead_by_ch', 'li_utm', 'meta_utm', 'by_day') if k in S['leads'][w]} for w in ('this', 'prior')}
 D['books'] = {w: {k: S['books'][w].get(k) for k in ('strategy', 'people', 'q', 'unk', 'by_ch', 'by_cr', 'scopes', 'scopes_by_ch', 'scope_list')} for w in ('this', 'prior')}
 D['funnel'] = S['funnel']
 
@@ -82,7 +82,7 @@ for k, v in L.items():
     ads = [{'ad': x['name'], 'spend': round(x['spend'], 2), 'strats': x['lt'][0], 'asked': x['lt'][1], 'scopes': x['lt'][2],
             'ft_scopes': x['ft'][2]} for x in v['ads'].values()]
     ads.sort(key=lambda x: -x['spend'])
-    l5.append({'camp': label, 'id': cid, 'start': v['start'], 'spend': round(v['spend'], 2),
+    l5.append({'camp': label, 'id': cid, 'start': v['start'], 'end': v.get('end'), 'spend': round(v['spend'], 2),
                'strict': {'strats': v['tot']['lt'][0], 'asked': v['tot']['lt'][1], 'scopes': v['tot']['lt'][2]},
                'ft_scopes': v['tot']['ft'][2], 'any': alt.get(cid), 'ads': ads})
 D['last5k'] = l5

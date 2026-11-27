@@ -148,7 +148,7 @@ def build(wdir):
  <div class="glass card col" style="justify-content:center">{fun}</div>
  <div class="glass card col"><div class="lbl">Free-report leads by source</div><div class="chart"><canvas id="cLeads"></canvas></div></div>
 </div>
-<div class="src">Report leads: GHL contacts created in the week with the free-report tag/URL or the "5 Ways" source. {'Report-page and VSL visitors: GA4 unique users on go.aletto.ai/saasreport and /freetraining-1-7481 (ET week). ' if GA else ''}Books: Hyros "Free AI Strategy Call". Qualified: GHL tag. Bar widths are scaled (square root) so the small steps stay readable.</div>
+<div class="src">Report leads: GHL contacts created in the week with the free-report tag/URL or the "5 Ways" source. {'Report-page and VSL visitors: GA4 unique users on go.aletto.ai/saasreport and /freetraining-1-7481 (ET week). ' if GA else ''}{tx('funnel_books_src', 'Books: Hyros "Free AI Strategy Call". Qualified: GHL tag.')} Bar widths are scaled (square root) so the small steps stay readable.</div>
 {notes(*tx('funnel_notes', ['Organic "5 Ways" leads were the only lead source that grew (52 → 61).', ('VSL visitors come from GA4 (connected Nov 13). More people see the VSL than become new leads because repeat opt-ins and email/DM clicks land there too.' if GA else 'VSL visitors are the missing step; GA4 fixes it (recommendation 5).')]))}</section>''')
 
     # 4b VSL throughput by source (GA4)
@@ -183,8 +183,7 @@ def build(wdir):
                 f'Meta sends {me_s[T]["optin_users"]} visitors who stay ~{trk["meta_optin_eng_per_user_s"]:.0f}s and opt in at {me_s[T]["optin_rate"]}% (LinkedIn ads: ~{trk["li_optin_eng_per_user_s"]:.0f}s, {li_s[T]["optin_rate"]}%).</p></div>'
                 f'<div class="glass card flag a"><b>Mobile drops before the VSL</b><p>Mobile: {dt_["mobile"][1]} report-page visitors → {dt_["mobile"][0]} on the VSL ({dt_["mobile"][2]}%). '
                 f'Desktop: {dt_["desktop"][1]} → {dt_["desktop"][0]} ({dt_["desktop"][2]}%). Last week {dp_["mobile"][2]}% vs {dp_["desktop"][2]}%.</p></div>'
-                f'<div class="glass card flag g" style="border-left-color:var(--blu)"><b>How to read it</b><p>Books are Hyros last touch in the same week, not a cohort of these visitors. '
-                f'Meta\'s {me_s[T]["vsl_to_book"]}% is inflated: Meta bookers often come back through email or DM, so GA4 logs their VSL visit there.</p></div>')
+                f'<div class="glass card flag g" style="border-left-color:var(--blu)"><b>How to read it</b><p>' + tx('vsl_read', f'Books are Hyros last touch in the same week, not a cohort of these visitors. Meta\'s {me_s[T]["vsl_to_book"]}% is inflated: Meta bookers often come back through email or DM, so GA4 logs their VSL visit there.') + '</p></div>')
         slides.append(f'''<section class="slide" data-title="VSL throughput">{top('VSL throughput by source')}
 <h2>{tx('vsl_h', f"The VSL books {st[T]['vsl_to_book']}% of visitors, well over the 2–5% bar. The leak is before it.")}</h2>
 <p class="sub">{tx('vsl_sub', f"{st[T]['vsl_users']} VSL visitors ({st[P]['vsl_users']} last week) → {st[T]['books']} strategy calls booked ({st[P]['books']}). LinkedIn ads fell from {li_s[P]['vsl_to_book']}% to {li_s[T]['vsl_to_book']}% visitor → book, still above the bar. Only {st[T]['optin_to_vsl']}% of report-page visitors reach the VSL.")}</p>
@@ -193,7 +192,7 @@ def build(wdir):
   <div class="scroll fill"><table class="tb2" style="font-size:13px"><tr><th style="text-align:left">Source</th><th>Report-page<br>visitors</th><th>→ VSL</th><th>VSL<br>visitors</th><th>Books</th><th>VSL →<br>book</th></tr>{vr}</table></div></div>
  <div class="col" style="gap:10px">{leak}</div>
 </div>
-<div class="src">GA4 (property 540656492, ET): unique users on go.aletto.ai/saasreport and /freetraining-1-7481, by session source. LinkedIn/Meta ads = utm_source linkedin / fb_ad; LinkedIn organic = linkedin.com referrer. Source rows can overlap slightly (one person, two sources). Books: Hyros strategy calls, last touch; "Everything else" books = Hyros organic other + no source.</div>
+<div class="src">GA4 (property 540656492, ET): unique users on go.aletto.ai/saasreport and /freetraining-1-7481, by session source. LinkedIn/Meta ads = utm_source linkedin / fb_ad; LinkedIn organic = linkedin.com referrer. Source rows can overlap slightly (one person, two sources). {tx('vsl_books_src', 'Books: Hyros strategy calls, last touch; "Everything else" books = Hyros organic other + no source.')}</div>
 {notes(f"VSL visitors {st[T]['vsl_users']} vs {st[P]['vsl_users']}; 30 days {d30['vsl_users']:,} visitors and {d30['books']} books = {d30['vsl_to_book']}%.", f"{st[T]['vsl_untracked_users']} VSL visitors ({st[T]['vsl_untracked_pct']}%) have no source in GA4.", tx('vsl_note3', 'The calendar sits on the VSL page itself, so GA4 can\'t see the booking yet; see Data gaps.'), *GA.get('notes_extra', []))}</section>''')
 
     # 5 books & scopes by source
@@ -203,12 +202,15 @@ def build(wdir):
         nm, d_, rest = [x.strip() for x in s.split('—', 2)]
         m_ = _re.match(r'^(.*) \(([^;]*); first touch (.*)\)$', rest)
         ch, ad, ft = (m_.group(1), m_.group(2).strip(), m_.group(3).strip()) if m_ else (rest, '', '')
+        if ch.startswith('LinkedIn ads (unattributed'): ch, ad = 'LinkedIn ads', 'unattributed (post-text link)'  # nested parens in the scope_list string
         ad = {'li': 'LinkedIn (organic)', 'freereport': 'free report', '': '—'}.get(ad, ad)
-        ftn = '' if (not ft or ft.startswith(ch)) else f'<div class="hint" style="font-size:11.5px">first touch: {E(ch_short(ft.split("  ")[0]))}</div>'
+        ad = {'unattributed (post-text link)': 'post-text link (untagged)'}.get(ad, ad)
+        # 2026-11-27: GHL source wins; only show a Hyros first touch when it is a different PAID channel
+        ftn = '' if (not ft or ft.startswith(ch) or not ft.startswith(('LinkedIn ads', 'Meta ads'))) else f'<div class="hint" style="font-size:11.5px">first touch: {E(ch_short(ft.split("  ")[0]))}</div>'
         sl.append(f'<tr><td>{E(nm)}</td><td>{d_[5:]}</td><td style="text-align:left">{E(ch_short(ch))}</td><td style="text-align:left;color:var(--mut);white-space:normal">{E(ad)}{ftn}</td></tr>')
     slides.append(f'''<section class="slide" data-title="Books & Scopes">{top('Books & Scopes by source')}
 <h2>{tx('books_h', 'Meta and organic booked more. LinkedIn paid halved.')}</h2>
-<p class="sub">Last-touch source. Meta {chb(bk_t, 'Meta ads', 'books')} books / {chb(bk_t, 'Meta ads', 'q')} qualified ({chb(bk_p, 'Meta ads', 'books')} / {chb(bk_p, 'Meta ads', 'q')}). LinkedIn ads {chb(bk_t, 'LinkedIn ads', 'books')} / {chb(bk_t, 'LinkedIn ads', 'q')} ({chb(bk_p, 'LinkedIn ads', 'books')} / {chb(bk_p, 'LinkedIn ads', 'q')}). Organic {org(bk_t, 'books')} / {org(bk_t, 'q')}. Scopes {bk_t['scopes']} ({bk_p['scopes']}){tx('books_sub_tail', ', none from LinkedIn paid.')}</p>
+<p class="sub">GHL source (a paid touch wins). Meta {chb(bk_t, 'Meta ads', 'books')} books / {chb(bk_t, 'Meta ads', 'q')} qualified ({chb(bk_p, 'Meta ads', 'books')} / {chb(bk_p, 'Meta ads', 'q')}). LinkedIn ads {chb(bk_t, 'LinkedIn ads', 'books')} / {chb(bk_t, 'LinkedIn ads', 'q')} ({chb(bk_p, 'LinkedIn ads', 'books')} / {chb(bk_p, 'LinkedIn ads', 'q')}). Organic {org(bk_t, 'books')} / {org(bk_t, 'q')}. Scopes {bk_t['scopes']} ({bk_p['scopes']}){tx('books_sub_tail', ', none from LinkedIn paid.')}</p>
 <div class="grid g2 fill" style="grid-template-columns:1.2fr 1fr">
  <div class="glass card col"><div class="lbl">Calls booked and qualified, this week vs last</div><div class="chart"><canvas id="cBooks"></canvas></div></div>
  <div class="glass card col"><div class="lbl">The {bk_t['scopes']} Scopes booked this week</div>
@@ -219,16 +221,30 @@ def build(wdir):
 {notes(*tx('books_notes', ['Andrew S. Scope: last touch the free report, first touch the Meta STATIC-hard-to-reach-buyers ad.', 'LinkedIn paid had 2 last-touch Scopes last week, 0 this week.']))}</section>''')
 
     # 6 cost per qualified / scope
+    # 2026-11-27: Jake's rule - lead with the cost columns ($/lead, $/qualified lead, $/Strat, $/qualified Strat, $/Scope booked)
+    # and rank paid sources by lowest cost per qualified lead. Leads = GHL free-report leads (lead channel rule); qualified lead = GHL tag.
+    lq = lambda w, c: (D['leads'][w].get('qlead_by_ch') or {}).get(c, 0)
+    lch = lambda w, c: D['leads'][w]['by_ch'].get(c, 0)
+    lead_of = {'All sources': (ld_t['total'], ld_p['total'], ld_t.get('qlead', 0), ld_p.get('qlead', 0)),
+               'LinkedIn ads': (lch(T, 'LinkedIn ads'), lch(P, 'LinkedIn ads'), lq(T, 'LinkedIn ads'), lq(P, 'LinkedIn ads')),
+               'Meta ads': (lch(T, 'Meta ads'), lch(P, 'Meta ads'), lq(T, 'Meta ads'), lq(P, 'Meta ads'))}
+    def _cpql(r):
+        L_ = lead_of.get(r[0]); return per(r[1], L_[2]) if (L_ and r[1]) else None
+    rows_sorted = [src_rows[0]] + sorted([r for r in src_rows[1:] if r[1]], key=lambda r: (_cpql(r) is None, _cpql(r) or 0)) + [r for r in src_rows[1:] if not r[1]]
     trs = ''
-    for lab, s1, s0, est, b1, b0, q1, q0, c1, c0 in src_rows:
+    for lab, s1, s0, est, b1, b0, q1, q0, c1, c0 in rows_sorted:
         e = est
+        L1, L0, QL1, QL0 = lead_of.get(lab, (None, None, None, None))
         def cell(v, v0):
             if s1 is None: return '<td class="z">no ad spend</td>'
             return f'<td>{money(v, est=e) if v else "—"} <span class="hint">({money(v0, est=e) if v0 else "—"})</span></td>'
-        trs += (f'<tr><td>{lab}{" " + EST if est and s1 else ""}</td><td>{money(s1, est=est) if s1 else "—"}</td><td>{b1} <span class="hint">({b0})</span></td><td>{q1} <span class="hint">({q0})</span></td><td>{c1} <span class="hint">({c0})</span></td>'
+        trs += (f'<tr><td>{lab}{" " + EST if est and s1 else ""}</td>'
+                + cell(per(s1, L1) if (s1 and L1) else None, per(s0, L0) if (s0 and L0) else None)
+                + cell(per(s1, QL1) if (s1 and QL1) else None, per(s0, QL0) if (s0 and QL0) else None)
                 + cell(per(s1, b1) if s1 else None, per(s0, b0) if s0 else None)
                 + cell(per(s1, q1) if s1 else None, per(s0, q0) if s0 else None)
-                + (cell(per(s1, c1), per(s0, c0)) if s1 else '<td class="z">no ad spend</td>') + '</tr>')
+                + (cell(per(s1, c1), per(s0, c0)) if s1 else '<td class="z">no ad spend</td>')
+                + f'<td>{money(s1, est=est) if s1 else "—"}</td><td>{L1 if L1 is not None else "—"} · {QL1 if QL1 is not None else "—"}</td><td>{b1} · {q1} <span class="hint">({b0} · {q0})</span></td><td>{c1} <span class="hint">({c0})</span></td></tr>')
     slides.append(f'''<section class="slide" data-title="Cost by source">{top('Cost per qualified call & per Scope')}
 <h2>{tx('cost_h', f"Meta is the cheapest paid source on the estimate. LinkedIn cost {money(per(li_t, chb(bk_t, 'LinkedIn ads', 'q')))} per qualified call.")}</h2>
 <p class="sub">All in: {money(tot_t / bk_t['q'], est=True)} per qualified call ({money(tot_p / bk_p['q'], est=True)}) and {money(tot_t / bk_t['scopes'], est=True)} per Scope ({money(tot_p / bk_p['scopes'], est=True)}). {tx('cost_sub_tail', f'LinkedIn spent {money(li_t)} for 0 last-touch Scopes. Meta figures use estimated spend.')}</p>
@@ -236,7 +252,7 @@ def build(wdir):
  <div class="glass card col"><div class="lbl">Cost per qualified call (lower is better)</div><div class="chart"><canvas id="cCpq"></canvas></div></div>
  <div class="glass card col"><div class="lbl">Cost per Scope booked (lower is better)</div><div class="chart"><canvas id="cCps"></canvas></div></div>
 </div>
-<div class="glass card scroll" style="margin-top:14px;flex:none"><table class="tb2"><tr><th>Source</th><th>Spend</th><th>Books</th><th>Qualified</th><th>Scopes</th><th>$ / book</th><th>$ / qualified</th><th>$ / Scope</th></tr>{trs}</table></div>
+<div class="glass card scroll" style="margin-top:14px;flex:none"><table class="tb2"><tr><th>Source</th><th>$ / lead</th><th>$ / qualified lead</th><th>$ / Strat</th><th>$ / qualified Strat</th><th>$ / Scope booked</th><th>Spend</th><th>Leads · qualified</th><th>Strats · qualified</th><th>Scopes</th></tr>{trs}</table></div>
 <div class="src">{tx('cost_src', 'Last week in brackets. Spend: LinkedIn actual; Meta ~$190/day estimate. Scopes are last touch; "—" means no Scope to divide by.')}</div>
 {notes(*tx('cost_notes', ['LinkedIn per qualified went from $346 to $554.', 'Meta went from ~$665 to ~$222 per qualified, but the spend is an estimate.']))}</section>''')
 
@@ -246,7 +262,7 @@ def build(wdir):
     cards = ''
     for c in order:
         a_ = c['any']
-        cards += f'''<div class="glass card" style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="l5h"><b>{c['camp']}</b><span class="hint">{c['start'][5:].replace('-', '/')} → {tx('l5_end', '11/11')} · {money(c['spend'])}</span></div>
+        cards += f'''<div class="glass card" style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="l5h"><b>{c['camp']}</b><span class="hint">{c['start'][5:].replace('-', '/')} → {(c.get('end') or '')[5:].replace('-', '/') or tx('l5_end', '11/11')} · {money(c['spend'])}</span></div>
 <div class="l5k"><div><div class="t">Strict · first Strat</div><div class="n">{c['strict']['scopes']} <span style="font-size:13px;color:var(--mut)">Scopes</span></div><div class="hint">{c['strict']['asked']} asked · {money(per(c['spend'], c['strict']['asked'])) if c['strict']['asked'] else '—'} / asked</div></div>
 <div><div class="t">Any Strat in window</div><div class="n" style="color:var(--grn)">{a_['scopes']} <span style="font-size:13px;color:var(--mut)">Scopes</span></div><div class="hint">{a_['asked']} asked · {money(per(c['spend'], a_['asked']))} / asked</div></div></div></div>'''
     slides.append(f'''<section class="slide" data-title="Last $5k">{top('Last $5k per LinkedIn campaign')}
@@ -275,7 +291,7 @@ def build(wdir):
             pa = money(ad['spend'] / a_['asked']) if a_['asked'] and ad['spend'] else ('$0 spend' if a_['asked'] else '—')
             who = ', '.join(dict.fromkeys(a_['who']))
             rows += f'<tr class="{cls}"><td class="ad" title="{E(ad["ad"])}">{E(ad["ad"] if len(ad["ad"]) <= tx('l5ad_trunc', 18) else ad["ad"][:tx('l5ad_trunc', 18) - 1] + "…")}</td><td>{money(ad["spend"])}</td>{pair(ad["asked"], ad["scopes"])}{pair(a_["asked"], a_["scopes"])}<td>{pa}</td></tr>' + (f'<tr class="{cls}"><td colspan="5" class="hint" style="text-align:left;white-space:normal;padding-top:0">Scopes: {E(who)}</td></tr>' if who else '')
-        return f'''<div class="glass card col"><div class="l5h"><b>{c['camp']}</b><span class="hint">{money(c['spend'])}</span></div><div class="scroll fill"><table class="tb2"><tr><th>Ad</th><th>Spend</th><th>Strict<br>asked · Scopes</th><th>Any Strat<br>asked · Scopes</th><th>$ / asked<br>(any)</th></tr>{rows}</table></div></div>'''
+        return f'''<div class="glass card col"><div class="l5h"><b>{c['camp']}</b><span class="hint">{money(c['spend'])}</span></div><div class="scroll fill"><table class="tb2" style="{tx('l5ad_tstyle', '')}"><tr><th>Ad</th><th>Spend</th><th>Strict<br>asked · Scopes</th><th>Any Strat<br>asked · Scopes</th><th>$ / asked<br>(any)</th></tr>{rows}</table></div></div>'''
     slides.append(f'''<section class="slide" data-title="Last $5k by ad">{top('Last $5k · per ad')}
 <h2>{tx('l5ad_h', 'deadcold carries EU. coldgraveyard is the only US ad with Scopes on real spend.')}</h2>
 <p class="sub">{tx('l5ad_sub', f"deadcold: {money(next(a['spend'] for c in l5 for a in c['ads'] if a['ad'] == 'deadcold'))} → 6 Scopes, $762 per Scope-asked. coldgraveyard: $2,965 → 1 Scope strict, 2 any-Strat, $741 per asked. datadoesn'tlie: Will H. on just $144. 2013selling's 2 Scopes are old first touches on $0 spend in the window, and its bg1 remake was rejected by LinkedIn.")}</p>
@@ -294,7 +310,7 @@ def build(wdir):
  <div class="glass card col"><div class="lbl">Books by ad (paid, last touch)</div><div class="chart"><canvas id="cCr"></canvas></div></div>
  <div class="col"><div class="lbl c-r">Bottom 3</div><div class="cr">{crc(S['losers'], '#ff6b6b')}</div></div>
 </div>
-<div class="src">Hyros last-touch ad on each strategy call; GHL qualified tag; LinkedIn creative report. Report leads from GHL UTM content.</div>
+<div class="src">{tx('cr_src', 'Hyros last-touch ad on each strategy call; GHL qualified tag; LinkedIn creative report. Report leads from GHL UTM content.')}</div>
 {notes(*tx('cr_notes', ['coldgraveyard spent the most for 1 book; bg2 US gets the US-first remakes test.', 'ghosted_v2 already paused Nov 12.']))}</section>''')
 
     # 10 fatigue
@@ -404,7 +420,7 @@ def build(wdir):
 <h2>What we can't see yet</h2>
 <p class="sub">Each gap below is labelled wherever it touches a number in this deck.</p>
 <div class="grid {'g3 gaps gaps6' if len(S['gaps']) > 5 else 'g2 gaps'}" style="align-content:start{';grid-template-columns:repeat(3,1fr)' if len(S['gaps']) > 5 else ''}">{gp}</div>
-<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email. Leads: GHL contacts by date added. {'Page visitors: GA4 property 540656492 (ET), unique users. ' if GA else ''}Content: Metricool post analytics, cross-checked with Zernio. Built {S['title_date']}, read-only.</p></div>
+<div class="glass card" style="margin-top:16px"><div class="lbl">Method</div><p class="hint" style="font-size:13.5px;line-height:1.5;color:#c3c9d6">Week = Fri–Thu Eastern time vs the week before. LinkedIn: Ryze LinkedIn Ads reports, account 513100372 (campaign, creative and daily views agree: {money(li_t, 2)} / {lt['clk']} clicks). {tx('method_books', 'Books: Hyros "Free AI Strategy Call", last touch. Scopes: Hyros "Scope Call". Qualified: GHL tag matched by booking email.')} Leads: GHL contacts by date added. {'Page visitors: GA4 property 540656492 (ET), unique users. ' if GA else ''}Content: Metricool post analytics, cross-checked with Zernio. Built {S['title_date']}, read-only.</p></div>
 <div class="src">Rebuilt weekly from the Friday pack with build.py. Past weeks: /archive/.</div>
 {notes(*tx('gaps_notes', ['Biggest unlock now: a GA4 booking event on the VSL calendar, so visitor → book is measured per person instead of matched to Hyros totals.' if GA else 'Biggest unlock: GA4 on the VSL page.']))}</section>''')
 

@@ -39,6 +39,11 @@ WEEK = {
    ('bg2 US strict $/asked', '$1,002'), ('bg2 US any $/asked', '$715'), ('bg2 EU $/asked', '$1,011'), ('coldgraveyard strict $/asked', '$646'), ('coldgraveyard any $/asked', '$538'),
    ('deadcold $/asked', '$911'), ('coldgraveyard spend', '$668'), ('deadcold spend', '$644'), ("datadoesn'tlie spend", '$264'), ('Heat actual', '$139.89'),
    ('VSL visitors', '292 VSL visitors (288 last week)'), ('booking event', '8 events / 4 users'), ('al_* coverage', '46 of 46')],
+ '2026-11-27': [('LinkedIn budgets now', '$190/day'), ('Heat actual', '$1,286'), ('old-account estimate', '~$1,330'),
+   ('bg2 US any $/asked', '$561'), ('bg2 EU $/asked', '$834'), ('coldgraveyard strict $/asked', '$587'), ('coldgraveyard any $/asked', '$504'),
+   ('deadcold $/asked', '$906'), ('coldgraveyard spend', '$617'), ('deadcold spend', '$480'), ('COLD-EMAIL-REPUTATION spend', '$142'),
+   ('VSL visitors', '260 VSL visitors (292)'), ('booking event', '32 events / 17 users'), ('LI $/qualified call', '$113 per qualified call ($208)'),
+   ('Scopes', '9 Scopes'), ('hot post views', '1,003 views')],
 }
 checks += WEEK.get(a.date, [])
 # ---- content slides (content.json from content_extract.py)
@@ -124,7 +129,9 @@ if a.ga4:
 # last5k text cross-checks
 L5PAT = {'2026-11-13': [(r'bg2 US \(ss-sd-es\) 732802984 spend \$5002 Strats 31 asked 6 scopes 4 \$/asked \$834', '$834'), (r'bg1 US \(hc-rm-ml\) 700616844 spend \$5039 Strats 31 asked 5 scopes 3 \$/asked \$1008', '$1,008'), (r'deadcold 1534286044\s+\$4570\.30 \| LT S35 A6 Sc6 \$762/ask', '$762')],
  '2026-11-20': [(r'bg2 US \(ss-sd-es\) 732802984 spend \$5008 Strats 29 asked 7 scopes 6 \$/asked \$715', '$715'), (r'bg2 EU \(ss-sd-es-eu\) 887084114 spend \$5056 Strats 41 asked 5 scopes 5 \$/asked \$1011', '$1,011'),
-                (r'coldgraveyard 1304484614\s+\$3230\.33 \| LT S16 A5 Sc4 \$646/ask', '$646'), (r'deadcold 1534286044\s+\$4556\.22 \| LT S37 A5 Sc5 \$911/ask', '$911')]}
+                (r'coldgraveyard 1304484614\s+\$3230\.33 \| LT S16 A5 Sc4 \$646/ask', '$646'), (r'deadcold 1534286044\s+\$4556\.22 \| LT S37 A5 Sc5 \$911/ask', '$911')],
+ '2026-11-27': [(r'bg2 US \(ss-sd-es\) 732802984 spend \$5052 Strats 34 asked 9 scopes 8 \$/asked \$561', '$561'), (r'bg2 EU \(ss-sd-es-eu\) 887084114 spend \$5001 Strats 43 asked 6 scopes 6 \$/asked \$834', '$834'),
+                (r'coldgraveyard 1304484614\s+\$3524\.68 \| LT S20 A6 Sc6 \$587/ask', '$587'), (r'deadcold 1534286044\s+\$4532\.39 \| LT S37 A5 Sc5 \$906/ask', '$906')]}
 for pat, want in L5PAT.get(a.date, []):
     checks.append(('last5k source has ' + want, want if re.search(pat, L5) else '__MISSING_IN_SOURCE__'))
 fail = 0

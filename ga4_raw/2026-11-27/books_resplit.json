@@ -1,0 +1,177 @@
+{
+ "this": {
+  "posttext": 5,
+  "tagged": 2,
+  "li_org_to_li_ads": 7
+ },
+ "prior": {
+  "tagged": 1,
+  "posttext": 4,
+  "kept_org": 1,
+  "li_org_to_li_ads": 5
+ },
+ "d30": {
+  "tagged": 5,
+  "posttext": 15,
+  "kept_org": 1,
+  "no_match": 10,
+  "li_org_to_li_ads": 20
+ },
+ "_people": [
+  [
+   "2026-10-28",
+   "J",
+   "no_match"
+  ],
+  [
+   "2026-10-31",
+   "Mark",
+   "no_match"
+  ],
+  [
+   "2026-11-02",
+   "Adityasrivastavaib",
+   "no_match"
+  ],
+  [
+   "2026-11-02",
+   "Clinton",
+   "no_match"
+  ],
+  [
+   "2026-11-03",
+   "Ashwin",
+   "no_match"
+  ],
+  [
+   "2026-11-03",
+   "Sean",
+   "posttext"
+  ],
+  [
+   "2026-11-04",
+   "Mike",
+   "no_match"
+  ],
+  [
+   "2026-11-05",
+   "Fredj",
+   "posttext"
+  ],
+  [
+   "2026-11-05",
+   "Harry",
+   "posttext"
+  ],
+  [
+   "2026-11-05",
+   "Luis",
+   "posttext"
+  ],
+  [
+   "2026-11-05",
+   "N",
+   "no_match"
+  ],
+  [
+   "2026-11-06",
+   "Matthew",
+   "tagged"
+  ],
+  [
+   "2026-11-09",
+   "Maria",
+   "no_match"
+  ],
+  [
+   "2026-11-10",
+   "Manuel",
+   "posttext"
+  ],
+  [
+   "2026-11-10",
+   "Marcus",
+   "no_match"
+  ],
+  [
+   "2026-11-10",
+   "Sean",
+   "posttext"
+  ],
+  [
+   "2026-11-11",
+   "Paul",
+   "no_match"
+  ],
+  [
+   "2026-11-12",
+   "Roy",
+   "tagged"
+  ],
+  [
+   "2026-11-13",
+   "Olivier",
+   "posttext"
+  ],
+  [
+   "2026-11-16",
+   "Kemi",
+   "kept_org"
+  ],
+  [
+   "2026-11-17",
+   "Bglen",
+   "posttext"
+  ],
+  [
+   "2026-11-17",
+   "Javier",
+   "posttext"
+  ],
+  [
+   "2026-11-18",
+   "Roy",
+   "tagged"
+  ],
+  [
+   "2026-11-18",
+   "Vladyslav",
+   "posttext"
+  ],
+  [
+   "2026-11-20",
+   "Bertvan",
+   "posttext"
+  ],
+  [
+   "2026-11-22",
+   "Ronvd",
+   "posttext"
+  ],
+  [
+   "2026-11-23",
+   "Marc",
+   "posttext"
+  ],
+  [
+   "2026-11-23",
+   "Marc",
+   "tagged"
+  ],
+  [
+   "2026-11-24",
+   "Stephen",
+   "posttext"
+  ],
+  [
+   "2026-11-25",
+   "Danny",
+   "tagged"
+  ],
+  [
+   "2026-11-26",
+   "Andrew",
+   "posttext"
+  ]
+ ]
+}
